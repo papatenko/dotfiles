@@ -2,6 +2,7 @@
 
 processes=~/scripts/processes.txt #File for which processes are stored in
 numLines=$(wc -l < $processes) #Number of lines present in processes file
+hour=$(date +"%H")
 ((numLines++))
 i=1 #Starting index
 
@@ -31,10 +32,13 @@ done
 
 sleep 1
 redshift -O 7500K
-rclone sync ~/scripts/ onedrive:scripts/
 
 # If DisplayPort-3 is plugged in (xrandrOutput has any value to it)
 if [[ -n "$(xrandr | grep "DisplayPort-3 connected")" ]]; then
+
+# If the hour is before 10 pm or after 8 am (when nigh color is turned on to reduce blue light) 	
+    if [[ $hour < 22 && $hour > 8 ]]; then
+    	redshift -x
+    fi
     imwheel 45
-    redshift -x
 fi

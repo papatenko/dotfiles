@@ -52,6 +52,8 @@ bind '"\e[B":history-search-forward'
 
 ## All Aliases
 
+alias keychron='echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode' #fixes keychron issue, idk how to automate this yet
+
 # List Files
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
