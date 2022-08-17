@@ -1,13 +1,13 @@
 #!/bin/bash
 
-processes=~/scripts/processes.txt #File for which processes are stored in
-numLines=$(wc -l < $processes) #Number of lines present in processes file
+processes=~/scripts/startup/processes.txt #File for which processes are stored in
+numLines=$(wc -l <$processes)             #Number of lines present in processes file
 hour=$(date +"%H")
 ((numLines++))
 i=1 #Starting index
 
 #Creates directory if they are not present
-dirs=("sync" "memez" "compSciProjects" "wallpapers") 
+dirs=("sync" "memez" "wallpapers")
 for dir in "${dirs[@]}"; do
     [ ! -d ~/$dir ] && mkdir ~/$dir
 done
@@ -36,9 +36,9 @@ redshift -O 7500K
 # If DisplayPort-3 is plugged in (xrandrOutput has any value to it)
 if [[ -n "$(xrandr | grep "DisplayPort-3 connected")" ]]; then
 
-# If the hour is before 10 pm or after 8 am (when nigh color is turned on to reduce blue light) 	
+    # If the hour is before 10 pm or after 8 am (when nigh color is turned on to reduce blue light)
     if [[ $hour < 22 && $hour > 8 ]]; then
-    	redshift -x
+        redshift -x
     fi
     imwheel 45
 fi
