@@ -52,33 +52,14 @@ bind '"\e[B":history-search-forward'
 
 ## All Aliases
 
-alias keychron='echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode' #fixes keychron issue, idk how to automate this yet
-
 # List Files
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 
-# Git Aliases
-alias gs='git status'
-alias ga='git add'
-alias gaa='git add --all'
-alias gcm='git commit'
-
 # Dotfiles for github
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/home/justink'
 
-# Dotfiles Aliases
-alias ds='dotfiles status'
-alias da='dotfiles add'
-alias dcm='dotfiles commit'
-alias dpush='dotfiles push origin master'
-alias dpull='dotfiles pull origin master'
-
 # Other
-alias c='clear'
-alias h='history'
-alias e='exit'
-alias s='shutdown now'
-alias r='reboot'
+alias update='sudo pacman -Syu --noconfirm && flatpak update --noninteractive'

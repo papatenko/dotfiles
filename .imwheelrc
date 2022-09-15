@@ -1,18 +1,4 @@
-"^brave-browser$"
-None, Up, Button4, 2
-None, Down, Button5, 2
-"^code$"
-None, Up, Button4, 2
-None, Down, Button5, 2
-"^jetbrains-idea-ce$"
-None, Up, Button4, 2
-None, Down, Button5, 2
-"^discord$"
-None, Up, Button4, 2
-None, Down, Button5, 2
-"^Steam$"
-None, Up, Button4, 2
-None, Down, Button5, 2
-"^spotify$"
+# Applies propertie to all applications
+".*"
 None, Up, Button4, 2
 None, Down, Button5, 2

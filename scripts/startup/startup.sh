@@ -7,7 +7,8 @@ hour=$(date +"%H")
 i=1 #Starting index
 
 #Creates directory if they are not present
-dirs=("sync" "memez" "wallpapers")
+dirs=("sync" "memez" "wallpapers"
+    "projects" "projects/randomWebsites" "projects/odin" "projects/other")
 for dir in "${dirs[@]}"; do
     [ ! -d ~/$dir ] && mkdir ~/$dir
 done

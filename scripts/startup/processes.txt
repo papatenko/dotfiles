@@ -1,4 +1,4 @@
-rclone mount onedrive:/mystuff/memez ~/memez --vfs-cache-mode full 
+rclone mount onedrive:/myStuff/memez ~/memez --vfs-cache-mode full 
 rclone mount onedrive:/sync ~/sync --vfs-cache-mode full 
 pwsh ~/scripts/startup/downloadAuto.ps1
 pwsh ~/scripts/startup/rcloneSync.ps1

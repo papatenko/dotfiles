@@ -19,7 +19,7 @@ $downloads = "$HOME\Downloads"
 $documentsFolder = "$HOME\Documents"
 $ytvideosFolder = $HOME + "\Videos\Youtube"
 $videosFolder = $HOME + "\Videos"
-$imagesFolder = $HOME + "\Pictures"
+$imagesFolder = $HOME + "\OneDrive\Pictures"
 $musicFolder = $HOME + "\Music"
 
 # File Specification references

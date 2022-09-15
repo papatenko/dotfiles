@@ -5,6 +5,9 @@
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
+" Lets me see the rest of my possible commands
+set wildmenu
+
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
 
