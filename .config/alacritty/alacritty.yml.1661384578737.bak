@@ -3,13 +3,13 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-# Uncommet the line below to get allacrity to start with tmux
-#shell:
-#program: /bin/sh
-#args:
-#- -l
-#- -c
-#- "tmux attach || tmux" 
+shell:
+  program: /bin/sh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
 env:
   # TERM variable
   #
@@ -40,8 +40,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 10
-    y: 10
+    x: 5
+    y: 5
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
   # Window decorations
@@ -84,7 +84,6 @@ window:
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
   #multiplier: 3
-  opacity: 0.95
 # Font configuration
 font:
   # Normal (roman) font face

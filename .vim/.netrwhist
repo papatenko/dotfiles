@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/justink/scripts/startup'
+let g:netrw_dirhist_3='/home/justink/.tmux'
 let g:netrw_dirhist_2='/home/justink/scripts'
 let g:netrw_dirhist_1='/home/justink/scripts/linuxInstall'
 let g:netrw_dirhist_0='/home/justink/scripts'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_8='/home/justink/.tmux/.git'
 let g:netrw_dirhist_7='/home/justink/.tmux'
 let g:netrw_dirhist_6='/home/justink/.config/alacritty'
 let g:netrw_dirhist_5='/home/justink/.steam'
-let g:netrw_dirhist_4='/home/justink/.vim'
-let g:netrw_dirhist_3='/home/justink/.config/alacritty'
