@@ -41,7 +41,7 @@ call plug#end()
 """"""""""""
 
 " Split window
-nmap ss :split<Return><C-w>w
+nmap sb :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 " Move window
 map sh <C-w>h
@@ -51,3 +51,7 @@ map sl <C-w>l
 " Switch tab
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
+" Exit/Save window
+nmap sq :q<Return>
+nmap sw :w<Return>
+nmap se :wq<Return>
