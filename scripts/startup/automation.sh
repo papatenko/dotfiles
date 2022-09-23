@@ -16,8 +16,6 @@ do
 	# If connected to dock
 	if [[ $(xrandr | grep "DisplayPort-[0-9] connected") ]]; then
 
-		bluetoothctl connect DC:2C:26:2C:E6:31
-
 		# If imwheel not already active 
 		# (process imwheel will already show up once due to grep)
 		if [ $(ps aux | grep -o -i "imwheel 45" | wc -l) = 1 ]; then
