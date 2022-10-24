@@ -5,6 +5,8 @@
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
+set relativenumber
+
 " Lets me see the rest of my possible commands
 set wildmenu
 
@@ -51,7 +53,9 @@ map sl <C-w>l
 " Switch tab
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
-" Exit/Save window
-nmap sq :q<Return>
+" Save and Exits
+nmap sq :q!
 nmap sw :w<Return>
 nmap se :wq<Return>
+" Other
+nmap ss :

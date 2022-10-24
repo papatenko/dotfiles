@@ -1,9 +1,12 @@
 #!/bin/bash
 
-processes=~/scripts/startup/processList.txt #File for which processes are stored in
-numLines=$(wc -l < $processes)             #Number of lines present in processes file
 hour=$(date +"%H")
+
+processes=~/scripts/startup/processList.txt #File for which processes are stored in
+
+numLines=$(wc -l < $processes) #Number of lines present in processes file
 ((numLines++))
+
 i=1 #Starting index
 
 #Creates directory if they are not present
@@ -32,7 +35,10 @@ done
 
 sleep 1 # not sure why this script doesn't work without this line
 
-# If the hour is before 9 pm or after 8 am (when night color is on)
-if [[ $hour -lt 21 && $hour -gt 8 ]]; then
-	redshift -O 7500K
+# If connected to dock
+if [[ ! $(xrandr | grep "DisplayPort-[0-9] connected") ]]; then
+	# If the hour is before 9 pm or after 8 am (when night color is on)
+	if [[ $hour -lt 21 && $hour -gt 8 ]]; then
+		redshift -O 7500K
+	fi
 fi

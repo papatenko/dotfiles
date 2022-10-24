@@ -59,7 +59,7 @@ alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles exce
 
 # Tmux Commands
 alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 67 && tmux split-window -h && nvim .'
-alias work='tmux split-window -v -p 80 && tmux split-window -h && countdown 1h'
+alias work='tmux split-window -v -p 75 && tmux split-window -h && countdown 1h'
 
 # Dotfiles for github
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
