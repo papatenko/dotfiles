@@ -11,9 +11,9 @@ animeList=(
 	"Chainsaw Man"
 	"Boku no Hero Academia 6th Season"
 	"Mob Psycho 100 III"
-	"Made in Abyss: Retsujitsu no Ougonkyou"
 	)
 
 for animeName in "${animeList[@]}"; do
+	echo $animeName
 	animdl download --download-dir ~/Videos/anime/ --index 1 "$animeName"
 done

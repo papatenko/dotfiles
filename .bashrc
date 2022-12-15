@@ -52,14 +52,18 @@ bind '"\e[B":history-search-forward'
 
 ## All Aliases
 
-# List Files
-alias ls='ls --color=auto'
-alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+# Replace ls with lsd
+alias ls='lsd'
+
+# Anime related
+alias animedownload='animdl download -d ~/Videos/anime/'
+
+# Rclone related
+alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
 
 # Tmux Commands
+alias t='tmux' 
 alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 67 && tmux split-window -h && nvim .'
-alias work='tmux split-window -v -p 75 && tmux split-window -h && countdown 1h'
 
 # Dotfiles for github
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -67,3 +71,4 @@ alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/hom
 
 # Other
 alias update='sudo pacman -Syu --noconfirm && flatpak update --noninteractive'
+

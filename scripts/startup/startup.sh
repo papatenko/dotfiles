@@ -16,6 +16,17 @@ for dir in "${dirs[@]}"; do
     [ ! -d ~/$dir ] && mkdir ~/$dir
 done
 
+: '	Instant command processes
+'
+
+# If connected to dock
+if [[ ! $(xrandr | grep "DisplayPort-[0-9] connected") ]]; then
+	# If the hour is before 9 pm or after 8 am (when night color is on)
+	if [[ $hour -lt 21 && $hour -gt 8 ]]; then
+		redshift -O 7500K
+	fi
+fi
+
 : '	Background Processes
 		- disowns each process so it can move to the background
 		- Using a text file because saving the file in VSCode keeps erasing my disown commands
@@ -34,11 +45,3 @@ done
 '
 
 sleep 1 # not sure why this script doesn't work without this line
-
-# If connected to dock
-if [[ ! $(xrandr | grep "DisplayPort-[0-9] connected") ]]; then
-	# If the hour is before 9 pm or after 8 am (when night color is on)
-	if [[ $hour -lt 21 && $hour -gt 8 ]]; then
-		redshift -O 7500K
-	fi
-fi
