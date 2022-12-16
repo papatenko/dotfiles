@@ -22,10 +22,12 @@ do
 			imwheel 45
 		fi
 	fi
+
 	# If disconnected from dock
 	if [[ ! $(xrandr | grep "DisplayPort-[0-9] connected") ]]; then
 		pkill imwheel
 	fi
+
 	#1 second delay
 	sleep 1 
 done

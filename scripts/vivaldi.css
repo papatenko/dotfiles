@@ -1,4 +1,0 @@
-/* Disable white background behind favicon on active tab */
-.tab-position .tab.active .tab-header .favicon {
-  filter: none !important;
-}
