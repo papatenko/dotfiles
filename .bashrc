@@ -61,8 +61,7 @@ alias animedownload='animdl download -d ~/Videos/anime/'
 # Rclone related
 alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
 
-# Tmux Commands
-alias t='tmux' 
+# tmux commands
 alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 67 && tmux split-window -h && nvim .'
 
 # Dotfiles for github
@@ -72,3 +71,7 @@ alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/hom
 # Other
 alias update='sudo pacman -Syu --noconfirm && flatpak update --noninteractive'
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

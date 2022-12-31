@@ -1,3 +1,4 @@
 pwsh ~/scripts/startup/downloadAuto.ps1
 pwsh ~/scripts/startup/rcloneSync.ps1
+sh ~/scripts/startup/automation.sh
 keynav
