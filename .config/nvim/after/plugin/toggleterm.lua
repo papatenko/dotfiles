@@ -2,7 +2,7 @@ local status_ok, toggleterm = pcall(require, "toggleterm")
 
 -- Settings
 toggleterm.setup({
-    open_mapping=[[<C-\>]],
+    open_mapping=[[<C-t>]],
     direction="float"
 })
 

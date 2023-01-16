@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
     use 'jiangmiao/auto-pairs'
     use 'rafamadriz/friendly-snippets'
     use 'mbbill/undotree'
+    use 'mfussenegger/nvim-dap'
     use {
         'numToStr/Comment.nvim',
         config = function()

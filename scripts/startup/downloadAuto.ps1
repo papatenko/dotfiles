@@ -2,7 +2,7 @@
 - This is for automating the file names and destinations within the Downloads folder:
 
 1) Name files that are downloaded by 9convert to not have that tag
-2) Have anything download from 9convert transfered to "video editing" folder
+2) Have anything download from 9convert transfered to 'video editing' folder
 3) Organize where all the other files go, like images to images, and videos to videos, etc.
 4) Unzips any folder and deletes the zipped one
 
@@ -15,50 +15,48 @@ Notes to Self
 #>
 
 # Folder Destination references
-$downloads = "$HOME\Downloads"
-$documentsFolder = "$HOME\Documents"
-$ytvideosFolder = $HOME + "\Videos\Youtube"
-$videosFolder = $HOME + "\Videos"
-$imagesFolder = $HOME + "\Pictures"
-$musicFolder = $HOME + "\Music"
+$downloadsFolder = $HOME + '\Downloads'
+$documentsFolder = $HOME + '\Documents'
+$ytVideosFolder = $HOME + '\Videos\Youtube'
+$videosFolder = $HOME + '\Videos'
+$imagesFolder = $HOME + '\Pictures'
+$musicFolder = $HOME + '\Music'
+
+$destinations = @($ytVideosFolder, $videosFolder, $imagesFolder, $otherFolder, $musicFolder, $documentsFolder)
 
 # File Specification references
-$9convert = "\9convert.com - *" 
-$imageExtensions = @("jpeg", "jpg", "png", "webp", "gif", "jfif")
-$videoExtensions = @("mov", "MOV", "MP4", "mp4")
-$musicExtensions = @("mp3", "wav")
+$9convert = '\9convert.com - *' 
+$imageExtensions = @('jpeg', 'jpg', 'png', 'webp', 'gif', 'jfif')
+$videoExtensions = @('mov', 'MOV', 'MP4', 'mp4')
+$musicExtensions = @('mp3', 'wav')
+$documentExtensions = @('pdf', 'docx', 'txt')
 
-# Create Folder Destinations if they don't exist
-$destinations = @($ytvideosFolder, $videosFolder, $imagesFolder, $otherFolder, $musicFolder)
-$documentExtensions = @("pdf", "docx", "txt")
-
-# Create Folder Destinations if they don't exist
-$destinations = @($ytvideosFolder, $videosFolder, $imagesFolder, $otherFolder, $musicFolder, $documentsFolder)
-
-# Fills in missing folders
-foreach ($dest in $destinations) {
-    if (!(Test-Path $dest)) {
-        #f is used to force the creation of directories the parent directory doesn't exist as well
-        New-Item -Path $dest -ItemType Directory -f
+# Fills in missing folders/destinations
+foreach ($destination in $destinations) {
+    if (!(Test-Path $destination)) {
+        New-Item -Path $destination -ItemType Directory -f
     }
 }
 
-# Movies files to the specific destination 
+# Movies files to the specific folder 
 for (; ; ) {
-    Move-Item -Path $downloads$9Convert -Destination $ytvideosFolder
+    Move-Item -Path $downloadsFolder$9Convert -Destination $ytVideosFolder
+
+    Get-ChildItem $ytVideosFolder'9convert - *' |
+    ForEach-Object {Rename-Item $_ -NewName ($_.name -replace '9convert - ', '')}
 
     foreach ($extension in $documentExtensions) {
-        Move-Item -Path $downloads"\*."$extension -Destination $documentsFolder
+        Move-Item -Path $downloadsFolder'\*.'$extension -Destination $documentsFolder
     }
     foreach ($extension in $imageExtensions) {
-        Move-Item -Path $downloads"\*."$extension -Destination $imagesFolder
+        Move-Item -Path $downloadsFolder'\*.'$extension -Destination $imagesFolder
     }
     foreach ($extension in $videoExtensions) {
-        Move-Item -Path $downloads"\*."$extension -Destination $videosFolder
+        Move-Item -Path $downloadsFolder'\*.'$extension -Destination $videosFolder
     }
     foreach ($extension in $musicExtensions) {
-        Move-Item -Path $downloads"\*."$extension -Destination $musicFolder
+        Move-Item -Path $downloadsFolder'\*.'$extension -Destination $musicFolder
     }
 
-    Start-Sleep 1 # Pauses for 1 second
-}
+    Start-Sleep 1 #in seconds
+} 
