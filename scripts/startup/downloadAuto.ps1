@@ -42,7 +42,7 @@ foreach ($destination in $destinations) {
 for (; ; ) {
     Move-Item -Path $downloadsFolder$9Convert -Destination $ytVideosFolder
 
-    Get-ChildItem $ytVideosFolder'9convert.com - *' |
+    Get-ChildItem $ytVideosFolder'\9convert.com - *' |
     ForEach-Object {Rename-Item $_ -NewName ($_.name -replace '9convert.com - ', '')}
 
     foreach ($extension in $documentExtensions) {
