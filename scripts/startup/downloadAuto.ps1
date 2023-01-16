@@ -27,9 +27,9 @@ $destinations = @($ytVideosFolder, $videosFolder, $imagesFolder, $otherFolder, $
 # File Specification references
 $9convert = '\9convert.com - *' 
 $imageExtensions = @('jpeg', 'jpg', 'png', 'webp', 'gif', 'jfif')
-$videoExtensions = @('mov', 'MOV', 'MP4', 'mp4')
-$musicExtensions = @('mp3', 'wav')
-$documentExtensions = @('pdf', 'docx', 'txt')
+$videoExtensions = @('mov', 'MOV', 'MP4', 'mp4', 'avi')
+$musicExtensions = @('mp3', 'wav', 'WAV')
+$documentExtensions = @('pdf', 'docx', 'txt', 'pptx', 'html')
 
 # Fills in missing folders/destinations
 foreach ($destination in $destinations) {
