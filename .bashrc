@@ -62,7 +62,7 @@ alias animedownload='animdl download -d ~/Videos/anime/'
 alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
 
 # tmux commands
-alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 67 && tmux split-window -h && nvim .'
+alias split='tmux new-session \; split-window -h \; attach'
 
 # Dotfiles for github
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -70,7 +70,7 @@ alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/hom
 
 # Other
 alias update='sudo pacman -Syu --noconfirm && flatpak update --noninteractive'
-
+alias g++='gcc -lstdc++'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

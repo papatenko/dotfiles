@@ -25,4 +25,4 @@ map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- Helps releave pain from my left pinky
 map("n", "Z", ":")
 -- Changes neovim directory to where the buffer is 
-map("n", "cd", ":cd %:h<CR>")
+map("n", "<leader>cd", ":cd %:h<CR>")

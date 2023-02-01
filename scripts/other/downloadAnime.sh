@@ -6,14 +6,10 @@ Status
 '
 
 animeList=(
-	"Blue Lock"
-	"Spy X Family Part 2"
-	"Chainsaw Man"
-	"Boku no Hero Academia 6th Season"
-	"Mob Psycho 100 III"
+	"Boku no Hero Academia Season 6"
+    "Tokyo Revengers: Seiya Kessen-hen"
 	)
 
 for animeName in "${animeList[@]}"; do
-	echo $animeName
-	animdl download --download-dir ~/Videos/anime/ --index 1 "$animeName"
+	animdl download --download-dir ~/Plex/Shows/ --index 1 "$animeName"
 done
