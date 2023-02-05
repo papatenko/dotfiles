@@ -8,7 +8,7 @@ map("n", "<leader>j", "<C-w>j")
 map("n", "<leader>l", "<C-w>l")
 
 -- Saving, Quiting, and Exiting
-map("n", "<leader>w", vim.cmd.w)
+map("n", "<leader>w", "gg=G``:w<CR>") --Indent and Save
 map("n", "<leader>q", vim.cmd.q)
 map("n", "<leader>e", vim.cmd.wq)
 
@@ -24,5 +24,6 @@ map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Helps releave pain from my left pinky
 map("n", "Z", ":")
+
 -- Changes neovim directory to where the buffer is 
 map("n", "<leader>cd", ":cd %:h<CR>")
