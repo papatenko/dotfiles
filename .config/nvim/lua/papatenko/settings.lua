@@ -31,3 +31,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 
 -- Other
 set.autoindent = true
+-- set.clipboard = 'unnamedplus'

@@ -8,7 +8,8 @@ map("n", "<leader>j", "<C-w>j")
 map("n", "<leader>l", "<C-w>l")
 
 -- Saving, Quiting, and Exiting
-map("n", "<leader>w", "gg=G``:w<CR>") --Indent and Save
+map("n", "<leader>w", vim.cmd.w) --Indent and Save
+map("n", "<leader>z", "gg=G``:w<CR>") --Indent and Save
 map("n", "<leader>q", vim.cmd.q)
 map("n", "<leader>e", vim.cmd.wq)
 
@@ -27,3 +28,7 @@ map("n", "Z", ":")
 
 -- Changes neovim directory to where the buffer is 
 map("n", "<leader>cd", ":cd %:h<CR>")
+map("n", "<leader>ch", ":cd ~<CR>")
+
+-- I keep forgetting what this is called
+map("n", "<leader>m", vim.cmd.Mason)
