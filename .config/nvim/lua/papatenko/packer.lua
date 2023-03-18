@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
     use 'preservim/nerdtree'
 
     -- Coding Conveinences
+    use 'vim-autoformat/vim-autoformat'
     use 'jiangmiao/auto-pairs'
     use 'rafamadriz/friendly-snippets'
     use 'mbbill/undotree'
@@ -58,9 +59,20 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
+
 
     -- Rest of useful plugins
-    use 'nvim-lua/plenary.nvim' 
+    use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-obsession'
+    use 'jakewvincent/mkdnflow.nvim'
 
 end)

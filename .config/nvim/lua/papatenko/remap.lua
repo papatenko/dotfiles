@@ -7,11 +7,12 @@ map("n", "<leader>k", "<C-w>k")
 map("n", "<leader>j", "<C-w>j")
 map("n", "<leader>l", "<C-w>l")
 
--- Saving, Quiting, and Exiting
-map("n", "<leader>w", vim.cmd.w) --Indent and Save
-map("n", "<leader>z", "gg=G``:w<CR>") --Indent and Save
+-- Saving, Quiting, Formating, etc.
+map("n", "<leader>w", vim.cmd.w)
+map("n", "<leader>a", vim.cmd.Autoformat)
 map("n", "<leader>q", vim.cmd.q)
 map("n", "<leader>e", vim.cmd.wq)
+map("n", "<leader>s", vim.cmd.so)
 
 -- Buffers
 map("n", "<leader>d", ":bd ")
@@ -20,13 +21,13 @@ map("n", "<leader>d", ":bd ")
 map("n", "<leader>b", ":sp<CR><C-w>w")
 map("n", "<leader>v", ":vs<CR><C-w>w")
 
--- Useful ThePrimeagon Keybinds
+-- Global Rename
 map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Helps releave pain from my left pinky
 map("n", "Z", ":")
 
--- Changes neovim directory to where the buffer is 
+-- Changes neovim directory to where the buffer is
 map("n", "<leader>cd", ":cd %:h<CR>")
 map("n", "<leader>ch", ":cd ~<CR>")
 

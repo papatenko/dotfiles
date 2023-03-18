@@ -4,7 +4,7 @@
 # environment variables. Some entries may override variables
 # set by alacritty itself.
 # Uncommet the line below to get allacrity to start with tmux
-shell: /bin/zsh
+#shell:
 #program: /bin/sh
 #args:
 #- -l

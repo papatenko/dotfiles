@@ -25,10 +25,10 @@ set.signcolumn = 'yes'
 -- *Thanks to: https://gitlab.com/jokeyrhyme
 set.autoread = true
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-  command = "if mode() != 'c' | checktime | endif",
-  pattern = { "*" },
+    command = "if mode() != 'c' | checktime | endif",
+    pattern = { "*" },
 })
 
 -- Other
 set.autoindent = true
--- set.clipboard = 'unnamedplus'
+set.shell = "zsh"
