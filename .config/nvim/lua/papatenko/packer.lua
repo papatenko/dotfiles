@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
     -- LSP and Language Support
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -40,18 +41,17 @@ return require('packer').startup(function(use)
     }
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-    -- UI Adjustments
+    -- UI Adjustments --
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
     use "akinsho/toggleterm.nvim"
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
     use 'preservim/nerdtree'
+    use 'mbbill/undotree'
 
     -- Coding Conveinences
     use 'vim-autoformat/vim-autoformat'
     use 'jiangmiao/auto-pairs'
-    use 'rafamadriz/friendly-snippets'
-    use 'mbbill/undotree'
     use 'mfussenegger/nvim-dap'
     use {
         'numToStr/Comment.nvim',
@@ -69,10 +69,9 @@ return require('packer').startup(function(use)
         end
     })
 
-
     -- Rest of useful plugins
     use 'nvim-lua/plenary.nvim'
+    use 'ThePrimeagen/harpoon'
     use 'tpope/vim-obsession'
-    use 'jakewvincent/mkdnflow.nvim'
 
 end)

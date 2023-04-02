@@ -8,4 +8,4 @@ map('n', '<leader>pb', builtin.buffers, {})
 map('n', '<leader>ph', builtin.help_tags, {})
 
 -- Git File Search
-map('n', '<C-p>', builtin.git_files, {})
+map('n', '<leader>pg', builtin.git_files, {})

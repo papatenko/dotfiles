@@ -9,13 +9,13 @@ map("n", "<leader>l", "<C-w>l")
 
 -- Saving, Quiting, Formating, etc.
 map("n", "<leader>w", vim.cmd.w)
-map("n", "<leader>a", vim.cmd.Autoformat)
 map("n", "<leader>q", vim.cmd.q)
 map("n", "<leader>e", vim.cmd.wq)
 map("n", "<leader>s", vim.cmd.so)
 
 -- Buffers
-map("n", "<leader>d", ":bd ")
+map("n", "<leader>b", ":bd ")
+map("n", "<C-w>", vim.cmd.bd)
 
 -- Splits
 map("n", "<leader>b", ":sp<CR><C-w>w")
@@ -31,5 +31,5 @@ map("n", "Z", ":")
 map("n", "<leader>cd", ":cd %:h<CR>")
 map("n", "<leader>ch", ":cd ~<CR>")
 
--- I keep forgetting what this is called
+-- Activate plugins
 map("n", "<leader>m", vim.cmd.Mason)

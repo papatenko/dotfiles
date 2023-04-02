@@ -8,25 +8,21 @@ filetype indent on
 syntax on
 set number
 
-" interesting
-" Plugins
-" call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-" Plug 'itchyny/vim-cursorword'
-" call plug#end()
-
 " Keybinds
 let mapleader = " "
 
-map <C-h> <C-w>h
-map <C-k> <C-w>k
-map <C-j> <C-w>j
-map <C-l> <C-w>l
+nnoremap <leader>h <C-w>h
+nnoremap <leader>k <C-w>k
+nnoremap <leader>j <C-w>j
+nnoremap <leader>i <C-w>i
 
-nmap <Space>q :q!
-nmap <Space>w :w<Return>
-nmap <Space>e :wq<Return>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>e :wq<CR>
 
-map<leader>r [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-map<leader>pv :Ex<Return>
+nnoremap <leader>d :bd
 
-nmap Z :
+nnoremap <leader>b :sp<CR><C-w>w
+nnoremap <leader>d :sp<CR><C-w>w
+
+nnoremap <leader>Z :
