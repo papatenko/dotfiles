@@ -11,18 +11,15 @@ set number
 " Keybinds
 let mapleader = " "
 
-nnoremap <leader>h <C-w>h
-nnoremap <leader>k <C-w>k
-nnoremap <leader>j <C-w>j
-nnoremap <leader>i <C-w>i
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-l> <C-w>l
 
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>e :wq<CR>
+nnoremap <Space>w :w<CR>
+nnoremap <Space>q :q<CR>
+nnoremap <Space>e :wq<CR>
 
-nnoremap <leader>d :bd
-
-nnoremap <leader>b :sp<CR><C-w>w
-nnoremap <leader>d :sp<CR><C-w>w
-
-nnoremap <leader>Z :
+nnoremap \ :sp<CR><C-w>w
+nnoremap Z :sp<CR><C-w>w
+nnoremap | :vs<CR><C-w>w

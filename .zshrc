@@ -80,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Aliases
-alias ls='lsd'
+
 # Anime related
 alias animedownload='animdl download -d ~/Videos/anime/'
 # Rclone related
@@ -93,6 +93,10 @@ alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/hom
 # Other
 alias update='sudo pacman -Syu --noconfirm && flatpak update --noninteractive'
 alias g++='gcc -lstdc++'
+alias ls='lsd'
+alias rm='trash'
+alias turnoffscreen='sleep 0.1 && qdbus org.kde.kglobalaccel /component/org_kde_powerdevil invokeShortcut "Turn Off Screen"'
+
 
 # Other Sourced Plugins
 source /home/justink/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
