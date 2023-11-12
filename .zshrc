@@ -81,8 +81,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 
-# Anime related
-alias animedownload='animdl download -d ~/Videos/anime/'
 # Rclone related
 alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
 # tmux commands
@@ -96,6 +94,12 @@ alias g++='gcc -lstdc++'
 alias ls='lsd'
 alias rm='trash'
 alias turnoffscreen='sleep 0.1 && qdbus org.kde.kglobalaccel /component/org_kde_powerdevil invokeShortcut "Turn Off Screen"'
+alias virtdisplay='
+cvt 240 360 10 ;
+xrandr --newmode  "240x360_10.00" 1.00  240 248 264 288  360 363 373 376 -hsync +vsync ;
+xrandr --addmode HDMI-A-0 "240x360_10.00" ;
+xrandr --output HDMI-A-0 --mode "240x360_10.00" --scale 3.5x3.5 --right-of eDP'
+alias virtdisplayoff='xrandr --output HDMI-A-0 --off'
 
 
 # Other Sourced Plugins
