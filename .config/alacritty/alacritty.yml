@@ -142,4 +142,4 @@ font:
   #  y: 0
 
 import:
- - ~/.config/alacritty/alacritty-theme/themes/catppuccin_mocha.yaml
+ - ~/.config/alacritty/alacritty-theme/themes/catppuccin_macchiato.yaml
