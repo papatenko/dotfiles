@@ -79,22 +79,25 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Aliases
-ipad_res="240x360_10.00"
-
-# Rclone related
-alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
-# tmux commands
-alias split='tmux new-session \; split-window -h \; attach'
-# Dotfiles for github
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/home/justink'
-# Other
-alias update='sudo pacman -Syu --noconfirm && flatpak update --noninteractive'
+# Replacements
 alias g++='gcc -lstdc++'
 alias ls='lsd'
 alias rm='trash'
-alias turnoffscreen='sleep 0.1 && qdbus org.kde.kglobalaccel /component/org_kde_powerdevil invokeShortcut "Turn Off Screen"'
+
+# Aliases
+ipad_res="240x360_10.00"
+
+# Rclone
+alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
+
+# Tmux
+alias split='tmux new-session \; split-window -h \; attach'
+
+# Dotfiles for github
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/home/justink'
+
+# Virtual Display
 alias virtdisplay='
 cvt 240 360 10 ;
 xrandr --newmode  $ipad_res 1.00  240 248 264 288  360 363 373 376 -hsync +vsync ;
@@ -102,6 +105,10 @@ xrandr --addmode HDMI-A-0 $ipad_res ;
 xrandr --output HDMI-A-0 --mode $ipad_res --scale 3.5x3.5 --right-of eDP'
 alias virtdisplayoff='xrandr --output HDMI-A-0 --off'
 
+# Other
+alias update='sudo pacman -Syyu --noconfirm && flatpak update --noninteractive'
+alias turnoffscreen='sleep 0.1 && qdbus org.kde.kglobalaccel /component/org_kde_powerdevil invokeShortcut "Turn Off Screen"'
+alias davincimenu='qdbus org.kde.kded5 /kded org.kde.kded5.unloadModule "appmenu" && progl /opt/resolve/bin/resolve %u & sleep 10 && qdbus org.kde.kded5 /kded org.kde.kded5.loadModule "appmenu"'
 
 # Other Sourced Plugins
 source /home/justink/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
