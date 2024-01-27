@@ -24,3 +24,7 @@ nnoremap <Space>e :wq<CR>
 nnoremap \ :sp<CR><C-w>w
 nnoremap Z :sp<CR><C-w>w
 nnoremap | :vs<CR><C-w>w
+
+" Disable Keybinds
+
+nnoremap <C-p> <Nop>

@@ -72,7 +72,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    sudo
     zsh-autosuggestions
+    dirhistory
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,6 +111,7 @@ alias virtdisplayoff='xrandr --output HDMI-A-0 --off'
 alias update='sudo pacman -Syyu --noconfirm && flatpak update --noninteractive'
 alias turnoffscreen='sleep 0.1 && qdbus org.kde.kglobalaccel /component/org_kde_powerdevil invokeShortcut "Turn Off Screen"'
 alias davincimenu='qdbus org.kde.kded5 /kded org.kde.kded5.unloadModule "appmenu" && progl /opt/resolve/bin/resolve %u & sleep 10 && qdbus org.kde.kded5 /kded org.kde.kded5.loadModule "appmenu"'
+alias opendavinciresolve='progl /opt/resolve/bin/resolve'
 
 # Other Sourced Plugins
 source /home/justink/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
