@@ -95,10 +95,6 @@ alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
 # Tmux
 alias split='tmux new-session \; split-window -h \; attach'
 
-# Dotfiles for github
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/home/justink'
-
 # Virtual Display
 alias virtdisplay='
 cvt 240 360 10 ;
@@ -115,3 +111,6 @@ alias opendavinciresolve='progl /opt/resolve/bin/resolve'
 
 # Other Sourced Plugins
 source /home/justink/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"

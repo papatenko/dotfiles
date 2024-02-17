@@ -1,4 +1,4 @@
-import = ["/home/justink/.config/alacritty/alacritty-theme/themes/catppuccin_macchiato.toml"]
+import = ["/home/justink/.config/alacritty/alacritty-theme/themes/catppuccin_mocha.toml"]
 shell = "/bin/zsh"
 
 [env]
