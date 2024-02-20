@@ -1,5 +1,7 @@
 # My dotfiles
 
+![image](./screenshot.png)
+
 This directory contains the dotfiles for my system (tho I copied this README from a YouTuber hehe)
 
 ## Requirements
