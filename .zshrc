@@ -79,26 +79,27 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
 # Replacements
 alias g++='gcc -lstdc++'
 alias ls='lsd'
 alias rm='trash'
+alias cat='bat'
+eval "$(zoxide init --cmd cd zsh)"
 
-# Aliases
-ipad_res="240x360_10.00"
+# Variables
+ipad_res="960x1280_60.00"
 
 # Rclone
 alias mountonedrive='rclone mount onedrive:/ ~/Onedrive --vfs-cache-mode full'
 
 # Tmux
-alias split='tmux new-session \; split-window -h \; attach'
+alias splitv='tmux new-session \; split-window -v \; attach'
+alias splith='tmux new-session \; split-window -h \; attach'
 
 # Virtual Display
 alias virtdisplay='
-cvt 240 360 10 ;
-xrandr --newmode  $ipad_res 1.00  240 248 264 288  360 363 373 376 -hsync +vsync ;
+cvt 960 1280 60 ;
+xrandr --newmode $ipad_res 103.00  960 1032 1128 1296  1280 1283 1293 1327 -hsync +vsync
 xrandr --addmode HDMI-A-0 $ipad_res ;
 xrandr --output HDMI-A-0 --mode $ipad_res --scale 3.5x3.5 --right-of eDP'
 alias virtdisplayoff='xrandr --output HDMI-A-0 --off'
@@ -111,6 +112,3 @@ alias opendavinciresolve='progl /opt/resolve/bin/resolve'
 
 # Other Sourced Plugins
 source /home/justink/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Zoxide
-eval "$(zoxide init --cmd cd zsh)"
