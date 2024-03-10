@@ -1,5 +1,3 @@
--- For Harpoon Keybinds
-
 -- Mapping data with "desc" stored directly by vim.keymap.set().
 --
 -- Please use this mappings table to set keyboard mapping since this is the
@@ -24,12 +22,7 @@ return {
     ["<leader>v"] = { name = " Venv" },
     ["<leader>vs"] = { "<cmd>VenvSelect<cr>" },
     ["<leader>vc"] = { "<cmd>VenvSelectCached<cr>" },
-    -- ChatGPT --
-    ["<leader>a"] = { name = "󱚤 ChatGPT" },
-    ["<leader>aa"] = { "<cmd>ChatGPT<cr>" },
-    ["<leader>ac"] = { "<cmd>ChatGPTCompleteCode<cr>" },
-    ["<leader>ae"] = { "<cmd>ChatGPTRun explain_code<cr>" },
-    ["<leader>af"] = { "<cmd>ChatGPTRun fix_bugs<cr>" },
+    -- Gen --
     -- Change directory --
     ["<leader>cd"] = { ":cd %:h<cr>", desc = "Changes nvim dir relative to dir of file" },
     ["<leader>ch"] = { "<cmd>cd ~<cr>" },
@@ -41,15 +34,27 @@ return {
     -- Undo Tree --
     ["<leader>s"] = { "<cmd>UndotreeToggle<cr>", desc = "Undotree" },
     ["<leader>k"] = { "<cmd>UndotreeFocus<cr>", desc = "Undotree" },
+
+    -- AI --
+    ["<leader>a"] = {
+      name = "󱚤 AI",
+      c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
+      n = { "<cmd>Gen<CR>", "Gen" },
+      e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
+      g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },
+      t = { "<cmd>ChatGPTRun translate<CR>", "Translate", mode = { "n", "v" } },
+      k = { "<cmd>ChatGPTRun keywords<CR>", "Keywords", mode = { "n", "v" } },
+      d = { "<cmd>ChatGPTRun docstring<CR>", "Docstring", mode = { "n", "v" } },
+      a = { "<cmd>ChatGPTRun add_tests<CR>", "Add Tests", mode = { "n", "v" } },
+      o = { "<cmd>ChatGPTRun optimize_code<CR>", "Optimize Code", mode = { "n", "v" } },
+      s = { "<cmd>ChatGPTRun summarize<CR>", "Summarize", mode = { "n", "v" } },
+      f = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix Bugs", mode = { "n", "v" } },
+      x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain Code", mode = { "n", "v" } },
+      r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "Roxygen Edit", mode = { "n", "v" } },
+      l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
+    },
   },
-  v = {
-    -- ChatGPT --
-    ["<leader>a"] = { name = "󱚤 ChatGPT" },
-    ["<leader>ac"] = { "<cmd>ChatGPTCompleteCode<cr>" },
-    ["<leader>aa"] = { "<cmd>ChatGPT<cr>" },
-    ["<leader>ae"] = { "<cmd>ChatGPTRun explain_code<cr>" },
-    ["<leader>af"] = { "<cmd>ChatGPTRun fix_bugs<cr>" },
-  },
+  v = {},
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,

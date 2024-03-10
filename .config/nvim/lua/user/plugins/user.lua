@@ -91,6 +91,14 @@ return {
     end,
   },
   {
+    "David-Kunz/gen.nvim",
+    event = "BufEnter",
+    opts = {
+      model = "codellama",
+      display_mode = "split",
+    },
+  },
+  {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     dependencies = {
