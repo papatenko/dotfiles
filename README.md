@@ -2,74 +2,78 @@
 
 ![image](./screenshot.png)
 
-This directory contains the dotfiles for my system 
-
-*(tho I copied this README from a YouTuber hehe)*
+This directory contains the dotfiles for my **I use Arch BTW** system.
 
 ## Requirements
 
-Ensure you have the following installed on your system
+Base Dependencies:
 
-```
-yay -S git stow konsave
+```bash
+yay -S git stow konsave tmux nvim alacritty
 ```
 
 ## Installation
 
-First, check out the dotfiles repo in your $HOME directory using git
+Download:
 
-```
+```bash
 git clone git@github.com:papatenko/dotfiles.git
 cd dotfiles
 ```
 
-then use GNU stow to create symlinks
+GNU stow to create symlinks:
 
-```
+```bash
 # --adopt changes any files found on system to symlink to dotfiles directory
 stow --adopt .
 ```
 
 ### KDE Settings 
 
-Import file and apply
+Import file and apply:
 
-```
+```bash
 konsave -i ./konsave.knsv
 konsave -a konsave
 ```
 
 ## Nvim
 
-Install astronvim using their [setup guide](https://docs.astronvim.com/) or these commands
+Install AstroNvim:
 
-```
+```bash
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim
 ```
 
-my user config should already work out of the box 
+User config should work out of the box.
 
 ### Tmux 
 
-Source tmux config file
+Source config file:
 
-*(note that most of the config is sourced from a guy named [tony](https://github.com/tony/tmux-config))*
-
-```
+```bash
 tmux source .tmux/.tmux.conf
 ```
 
-incase plugins aren't installed, press `prefix` + `I` (yes, a capital i)
+Incase plugins aren't installed, press `prefix` + <kbd>I<kbd> (yes, a capital i).
 
-## Packages
+## Rest of Packages
 
-Install all packages from pacman
+### AUR
 
-```
+Install:
+
+```bash
 yay -S --needed - < package-lists/pacman.txt
 ```
 
-unfortunately, there's no way to install multiple packages using flatpak,
-so refer to the `flatpak.txt` within package-lists/
+### Flatpak
 
+Unfortunately, there's no way to install multiple packages using flatpak.
+
+Refer to `package-lists/flatpak.txt` for the flatpak package list.
+
+## References
+- [AstroNvim Installation Guide](https://docs.astronvim.com/)
+- [Tony's Tmux Config](https://github.com/tony/tmux-config)
