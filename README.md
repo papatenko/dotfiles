@@ -55,7 +55,7 @@ User config should work out of the box.
 Source config file:
 
 ```bash
-tmux source .tmux/.tmux.conf
+tmux source ~/.tmux.conf
 ```
 
 ## References
