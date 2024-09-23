@@ -61,5 +61,6 @@ tmux source .tmux/.tmux.conf
 ## References
 
 - [GNU Stow](https://www.youtube.com/watch?v=y6XCebnB9gs)
+- [ZSH Config](https://www.youtube.com/watch?v=ud7YxC33Z3w)
 - [AstroNvim Installation Guide](https://docs.astronvim.com/)
 - [Tmux Config](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/)
