@@ -41,14 +41,7 @@ konsave -a plasma6
 
 ### Nvim
 
-Install AstroNvim:
-
-```bash
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-nvim
-```
-
-User config should work out of the box.
+User config should work out of the box (not tested).
 
 ### Tmux
 
