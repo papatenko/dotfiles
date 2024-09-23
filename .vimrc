@@ -1,9 +1,7 @@
 " Settings
 set nocompatible
 set relativenumber
-set wildmenu
 filetype on
-filetype plugin on
 filetype indent on
 syntax on
 set number
@@ -19,12 +17,10 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Space>w :w<CR>
 nnoremap <Space>q :q<CR>
-nnoremap <Space>e :wq<CR>
 
-nnoremap \ :sp<CR><C-w>w
-nnoremap Z :sp<CR><C-w>w
-nnoremap | :vs<CR><C-w>w
+imap jj <Esc>
+imap jk <Esc>
 
-" Disable Keybinds
+" Disable Keybinds for VSCode
 
 nnoremap <C-p> <Nop>

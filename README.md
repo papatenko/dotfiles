@@ -21,6 +21,8 @@ git clone git@github.com:papatenko/dotfiles.git
 cd dotfiles
 ```
 
+### Dotfiles in Home
+
 GNU stow to create symlinks:
 
 ```bash
@@ -28,16 +30,16 @@ GNU stow to create symlinks:
 stow --adopt .
 ```
 
-### KDE Settings 
+### KDE Settings
 
 Import file and apply:
 
 ```bash
-konsave -i ./konsave.knsv
-konsave -a konsave
+konsave -i ./plasma6.knsv
+konsave -a plasma6
 ```
 
-## Nvim
+### Nvim
 
 Install AstroNvim:
 
@@ -48,7 +50,7 @@ nvim
 
 User config should work out of the box.
 
-### Tmux 
+### Tmux
 
 Source config file:
 
@@ -56,24 +58,8 @@ Source config file:
 tmux source .tmux/.tmux.conf
 ```
 
-Incase plugins aren't installed, press `prefix` + <kbd>I<kbd> (yes, a capital i).
-
-## Rest of Packages
-
-### AUR
-
-Install:
-
-```bash
-yay -S --needed - < package-lists/pacman.txt
-```
-
-### Flatpak
-
-Unfortunately, there's no way to install multiple packages using flatpak.
-
-Refer to `package-lists/flatpak.txt` for the flatpak package list.
-
 ## References
+
+- [GNU Stow](https://www.youtube.com/watch?v=y6XCebnB9gs)
 - [AstroNvim Installation Guide](https://docs.astronvim.com/)
-- [Tony's Tmux Config](https://github.com/tony/tmux-config)
+- [Tmux Config](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/)

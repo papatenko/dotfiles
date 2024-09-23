@@ -4,13 +4,13 @@
 '
 
 # If connected to dock
-if [[ ! $(xrandr | grep "DisplayPort-[0-9] connected") ]]; then
-	# If the hour is after 8 am and before 9 pm
-	hour=$(date +"%H")
-	if [[ $hour -lt 21 && $hour -gt 8 ]]; then 
-    redshift -O 7500K
-	fi
-fi
+# if [[ ! $(xrandr | grep "DisplayPort-[0-9] connected") ]]; then
+# 	# If the hour is after 8 am and before 9 pm
+# 	hour=$(date +"%H")
+# 	if [[ $hour -lt 21 && $hour -gt 8 ]]; then 
+#     redshift -O 7500K
+# 	fi
+# fi
 
 : '	Background Processes
 		- disowns each process so it can move to the background
