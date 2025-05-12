@@ -1,0 +1,151 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[2064f43f-346c-4049-a24e-a443a26abcfc]
+Description=Settings for todoist
+desktops=e1ffce3a-df36-4fee-b94c-50aba61af3a6
+desktopsrule=3
+wmclass=todoist
+wmclassmatch=1
+
+[21541c38-896d-423c-b492-0afd677cc44e]
+Description=New window settings
+noborder=true
+noborderrule=2
+
+[25e90f68-f15c-4de5-b706-978e8e6659d4]
+Description=Set Minimum Geometry Size
+minsize=1,1
+minsizerule=2
+
+[2dacaace-7e3d-43fc-b9b8-ab5012c0cb3f]
+Description=Settings for firefox
+desktops=6f986973-5452-4e61-8359-b1d3f531d435
+desktopsrule=3
+wmclass=firefox
+wmclassmatch=1
+
+[34499163-8493-4cbd-a577-64d72a4fff5b]
+Description=Settings for brave
+desktops=6f986973-5452-4e61-8359-b1d3f531d435
+desktopsrule=3
+wmclass=brave
+wmclassmatch=1
+
+[35899765-27a5-48cc-9012-a3ea5e80a034]
+Description=Windows go smol
+minsizerule=2
+types=1
+
+[49b52f23-b027-4fe7-9277-63749e8bdd71]
+Description=Setting Minimum Geometry Size
+minsizerule=2
+types=1
+
+[49bd3ba8-8d7f-4d9f-a427-2bbd7cc480cc]
+Description=Settings for brave
+desktops=6f986973-5452-4e61-8359-b1d3f531d435
+desktopsrule=3
+wmclass=brave
+wmclassmatch=1
+
+[507eeb2b-4bec-4f67-9a24-7948e3991f81]
+Description=Min Size
+minsizerule=2
+
+[6]
+Description=New window settings
+wmclassmatch=1
+
+[641d2d08-f825-4449-871b-f3a199869236]
+Description=Minimum Geometry Size
+minsizerule=2
+types=1
+
+[6590c05b-8081-4806-a86a-6430acc3cd4d]
+Description=Settings for .*
+noborder=true
+noborderrule=2
+wmclass=.*
+
+[7762a887-8f81-402c-bdf6-ca136700c548]
+noborder=true
+noborderrule=2
+wmclasscomplete=true
+wmclassmatch=1
+
+[7e19ba60-ba54-4e0b-b902-e9ed72feee1b]
+Description=Settings for brave-browser
+desktops=6f986973-5452-4e61-8359-b1d3f531d435
+desktopsrule=4
+wmclass=brave-browser
+wmclassmatch=1
+
+[8509e1c2-4ac3-4f9c-8059-7f5000540331]
+Description=Settings for brave
+desktops=6f986973-5452-4e61-8359-b1d3f531d435
+desktopsrule=3
+wmclass=brave-browser
+wmclassmatch=1
+
+[8522f89c-1054-4d59-8f2a-113711678fc4]
+Description=No titlebar and frame
+noborder=true
+noborderrule=2
+
+[General]
+count=1
+rules=507eeb2b-4bec-4f67-9a24-7948e3991f81
+
+[a8cf12cd-8994-4e9a-9615-340df3954f3c]
+Description=Settings for solaar
+minimize=true
+minimizerule=3
+wmclass=solaar
+wmclassmatch=1
+
+[a95dda3f-2c1a-449a-a77e-67a021b78df8]
+Description=New window settings
+wmclassmatch=1
+
+[aaef2778-c74e-4c26-ad44-ac5c96e09d01]
+Description=Settings for brave-browser
+desktops=6f986973-5452-4e61-8359-b1d3f531d435
+desktopsrule=3
+wmclass=brave-browser
+wmclassmatch=1
+
+[b4b91a16-2e2a-49aa-bead-ce6a3224dc98]
+Description=Removes borders
+noborder=true
+noborderrule=2
+wmclass=.*
+
+[b5bb4c71-f0c5-40d9-b51a-2a980a46a5ff]
+Description=Settings for todoist
+minimize=true
+minimizerule=3
+wmclass=todoist
+wmclassmatch=1
+
+[c16a2ff3-4199-42de-9958-988cd4c8214b]
+Description=New window settings
+noborder=true
+noborderrule=2
+
+[e52e59c2-ee83-4062-8bf6-aa45c794197f]
+Description=Settings for prospect mail
+desktops=cab65364-165f-42d3-9099-bdd6a6d83f31
+desktopsrule=3
+wmclass=prospect mail
+wmclassmatch=1
+
+[ee87218a-1f7a-493f-add2-44cdce432a98]
+Description=Settings for joplin
+maxsizerule=2
+wmclass=joplin
+wmclassmatch=1
+
+[fe87d168-953a-4b5f-87d7-e9716ed20ab7]
+Description=Minimum Geometry Size
+minsizerule=2

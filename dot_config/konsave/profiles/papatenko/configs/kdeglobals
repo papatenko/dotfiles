@@ -1,0 +1,169 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=56,56,56
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65000000000000002
+ContrastEffect=1
+Enable=
+IntensityAmount=0.10000000000000001
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=112,111,110
+ColorAmount=0.025000000000000001
+ColorEffect=2
+ContrastAmount=0.10000000000000001
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=64,69,82
+BackgroundNormal=65,72,87
+DecorationFocus=82,148,226
+DecorationHover=82,148,226
+ForegroundActive=61,174,233
+ForegroundInactive=137,141,153
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[Colors:Complementary]
+ForegroundLink=29,153,243
+ForegroundVisited=155,89,182
+
+[Colors:Selection]
+BackgroundAlternate=29,153,243
+BackgroundNormal=82,148,226
+DecorationFocus=82,148,226
+DecorationHover=82,148,226
+ForegroundActive=252,252,252
+ForegroundInactive=147,186,227
+ForegroundLink=20,109,172
+ForegroundNegative=160,48,50
+ForegroundNeutral=182,85,0
+ForegroundNormal=211,218,227
+ForegroundPositive=27,123,67
+ForegroundVisited=155,89,182
+
+[Colors:Tooltip]
+BackgroundAlternate=47,52,63
+BackgroundNormal=53,57,69
+DecorationFocus=82,148,226
+DecorationHover=82,148,226
+ForegroundActive=61,174,233
+ForegroundInactive=137,141,153
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[Colors:View]
+BackgroundAlternate=64,69,82
+BackgroundNormal=64,69,82
+DecorationFocus=82,148,226
+DecorationHover=82,148,226
+ForegroundActive=61,174,233
+ForegroundInactive=137,141,153
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[Colors:Window]
+BackgroundAlternate=47,52,63
+BackgroundNormal=47,52,63
+DecorationFocus=82,148,226
+DecorationHover=82,148,226
+ForegroundActive=61,174,233
+ForegroundInactive=137,141,153
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[DirSelect Dialog]
+DirSelectDialog Size=768,831
+History Items[$e]=file:$HOME/OneDrive/notes,file:$HOME/Games/smash,file:$HOME/Games,file:$HOME/Documents,file:$HOME/Downloads/3DS-DCIM,file:$HOME/OneDrive,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects/dig-arts,file:$HOME/Downloads/my-projects/3d-logos,file:$HOME,file:$HOME/Downloads,file:$HOME/comp-sci/python/snake/Pixelify_Sans,file:$HOME/Downloads/semester-5,file:$HOME/Pictures/crt,file:$HOME/Downloads/metro,file:$HOME/Downloads/mc-thumbnail,file:$HOME/Pictures/crt,file:$HOME/Pictures/dev_roadmap,file:$HOME/Pictures/arrows,file:$HOME/Pictures/gimp/rivals-thumbnail,file:$HOME/comp-sci/webdev/my-odin-projects,file:$HOME/Downloads/art,file:$HOME/Downloads/speech,file:$HOME/comp-sci/java,file:$HOME/Downloads/TTIGRAAHSIASC-main,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Downloads,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/sunset pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Galveston 2012,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Phone,file:$HOME/Documents/VMs,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum,file:$HOME/Downloads/Orchis-kde,file:$HOME/Games/Submissions/other_sub,file:$HOME/Games/Submissions/hello-ahh,file:$HOME/Games/Submissions/Hackathon_2024_Arena,file:$HOME/Games/Submissions/DragonSeige,file:$HOME/Documents/yt-vids,file:$HOME/Documents/VIDEO_TS,file:$HOME/Dropbox/HackerTime,file:$HOME/Downloads/vim-notion/dist,file:$HOME/Dropbox,file:$HOME/Dropbox,file:$HOME/Dropbox,gdrive:/google3,file:$HOME/Documents,gdrive:/google3/Obsidian Vault
+
+[General]
+BrowserApplication=brave-browser.desktop
+ColorScheme=ArcDark
+ColorSchemeHash=fe6711d5312a664b695e8bc1d1d4b53f52ba20f0
+LastUsedCustomAccentColor=233,58,154
+Name=Catppuccin Mocha Blue
+TerminalApplication=kitty +open %U
+TerminalService=kitty-open.desktop
+UseSystemBell=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
+accentActiveTitlebar=false
+shadeSortColumn=true
+widgetStyle=Lightly
+
+[Icons]
+Theme=Papirus-Dark
+
+[KDE]
+AnimationDurationFactor=0
+LookAndFeelPackage=org.kde.breezedark.desktop
+ShowDeleteCommand=false
+contrast=4
+widgetStyle=Breeze
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=false
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Date
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=175
+View Style=Simple
+
+[KScreen]
+ScaleFactor=1.25
+ScreenScaleFactors=eDP-1=1.25;HDMI-A-1=1.25;
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[Shortcuts]
+SaveOptions=
+TipofDay=
+
+[WM]
+activeBackground=47,52,63
+activeBlend=47,52,63
+activeForeground=211,218,227
+inactiveBackground=47,52,63
+inactiveBlend=47,52,63
+inactiveForeground=102,106,115

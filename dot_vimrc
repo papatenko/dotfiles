@@ -1,0 +1,26 @@
+" Settings
+set nocompatible
+set relativenumber
+filetype on
+filetype indent on
+syntax on
+set number
+set clipboard=unnamedplus
+
+" Keybinds
+let mapleader = " "
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-l> <C-w>l
+
+nnoremap <Space>w :w<CR>
+nnoremap <Space>q :q<CR>
+
+imap jj <Esc>
+imap jk <Esc>
+
+" Disable Keybinds for VSCode
+
+nnoremap <C-p> <Nop>

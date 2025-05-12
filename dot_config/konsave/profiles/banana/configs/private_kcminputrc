@@ -1,0 +1,30 @@
+[$Version]
+update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize,kcminputrc_fix_botched_5_21_0.upd:kcminputrc_fix_botched_5_21_0_pre,kcminputrc_fix_botched_5_21_0.upd:kcminputrc_fix_botched_5_21_0,kcminputrc_repeat.upd:kcminputrc_migrate_key_repeat
+
+[Libinput][1133][16468][Logitech Wireless Mouse]
+PointerAccelerationProfile=1
+ScrollFactor=1.5
+
+[Libinput][1133][16500][Logitech G305]
+PointerAccelerationProfile=1
+
+[Libinput][1133][16505][Logitech G Pro]
+PointerAcceleration=-0.200
+PointerAccelerationProfile=1
+
+[Libinput][1739][52861][SYNA32B3:01 06CB:CE7D Mouse]
+PointerAcceleration=0.000
+PointerAccelerationProfile=1
+ScrollFactor=1.5
+
+[Libinput][1739][52861][SYNA32B3:01 06CB:CE7D Touchpad]
+NaturalScroll=true
+PointerAccelerationProfile=1
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true
+XLbInptAccelProfileFlat=true
+XLbInptLeftHanded=false
+XLbInptPointerAcceleration=0
+cursorSize=32
+cursorTheme=Banana

@@ -1,0 +1,192 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=36, 39, 58
+ColorAmount=0.30000000000000004
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=0
+Enable=
+IntensityAmount=-1
+IntensityEffect=0
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=36, 39, 58
+ColorAmount=0.5
+ColorEffect=3
+ContrastAmount=0
+ContrastEffect=0
+Enable=true
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=138,173,244
+BackgroundNormal=54, 58, 79
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[Colors:Complementary]
+BackgroundAlternate=24, 25, 38
+BackgroundNormal=30, 32, 48
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[Colors:Header]
+BackgroundAlternate=24, 25, 38
+BackgroundNormal=30, 32, 48
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[Colors:Selection]
+BackgroundAlternate=138,173,244
+BackgroundNormal=138,173,244
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=30, 32, 48
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=24, 25, 38
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[Colors:Tooltip]
+BackgroundAlternate=27,25,35
+BackgroundNormal=36, 39, 58
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[Colors:View]
+BackgroundAlternate=30, 32, 48
+BackgroundNormal=36, 39, 58
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[Colors:Window]
+BackgroundAlternate=24, 25, 38
+BackgroundNormal=30, 32, 48
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[DirSelect Dialog]
+DirSelectDialog Size=927,584
+History Items[$e]=file:$HOME/Downloads,file:$HOME/Videos/OBS,file:$HOME/OneDrive/notes,file:$HOME/Games/smash,file:$HOME/Games,file:$HOME/Documents,file:$HOME/Downloads/3DS-DCIM,file:$HOME/OneDrive,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects/dig-arts,file:$HOME/Downloads/my-projects/3d-logos,file:$HOME,file:$HOME/Downloads,file:$HOME/comp-sci/python/snake/Pixelify_Sans,file:$HOME/Downloads/semester-5,file:$HOME/Pictures/crt,file:$HOME/Downloads/metro,file:$HOME/Downloads/mc-thumbnail,file:$HOME/Pictures/crt,file:$HOME/Pictures/dev_roadmap,file:$HOME/Pictures/arrows,file:$HOME/Pictures/gimp/rivals-thumbnail,file:$HOME/comp-sci/webdev/my-odin-projects,file:$HOME/Downloads/art,file:$HOME/Downloads/speech,file:$HOME/comp-sci/java,file:$HOME/Downloads/TTIGRAAHSIASC-main,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Downloads,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/sunset pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Galveston 2012,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Phone,file:$HOME/Documents/VMs,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum,file:$HOME/Downloads/Orchis-kde,file:$HOME/Games/Submissions/other_sub,file:$HOME/Games/Submissions/hello-ahh,file:$HOME/Games/Submissions/Hackathon_2024_Arena,file:$HOME/Games/Submissions/DragonSeige,file:$HOME/Documents/yt-vids,file:$HOME/Documents/VIDEO_TS,file:$HOME/Dropbox/HackerTime,file:$HOME/Downloads/vim-notion/dist,file:$HOME/Dropbox,file:$HOME/Dropbox,file:$HOME/Dropbox,gdrive:/google3
+
+[General]
+BrowserApplication=brave-browser.desktop
+ColorSchemeHash=8934f8d6cffa7bcd10144e9b73c3f5b47de91506
+LastUsedCustomAccentColor=233,58,154
+Name=Catppuccin Mocha Blue
+TerminalApplication=kitty +open %U
+TerminalService=kitty-open.desktop
+UseSystemBell=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
+accentActiveTitlebar=false
+shadeSortColumn=true
+widgetStyle=Lightly
+
+[Icons]
+Theme=Papirus-Dark
+
+[KDE]
+AnimationDurationFactor=0
+LookAndFeelPackage=Catppuccin-Macchiato-Blue
+ShowDeleteCommand=false
+contrast=4
+widgetStyle=Breeze
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=false
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Date
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=175
+View Style=Simple
+
+[KScreen]
+ScaleFactor=1.25
+ScreenScaleFactors=eDP-1=1.25;HDMI-A-1=1.25;DP-1=1.25;
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[Shortcuts]
+SaveOptions=
+TipofDay=
+
+[WM]
+activeBackground=36,39,58
+activeBlend=202,211,245
+activeForeground=202,211,245
+inactiveBackground=24,25,38
+inactiveBlend=165,173,203
+inactiveForeground=165,173,203

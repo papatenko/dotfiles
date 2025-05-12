@@ -1,0 +1,19 @@
+lastupdatecheck: 0
+recentrepos:
+    - /home/justink/OneDrive/projects/comp_sci/webdev/vite/rps-tournament
+    - /home/justink/OneDrive/projects/comp_sci/webdev/socketio/rock-paper-scissors
+    - /home/justink/OneDrive/projects/comp_sci/webdev/clients/Incarnate-Editors-Website-v2.0
+    - /home/justink/OneDrive/projects/comp_sci/webdev/react/portfolio
+startuppopupversion: 5
+lastversion: 0.48.0
+customcommandshistory:
+    - q
+    - q!
+hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 2
+renamesimilaritythreshold: 50
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
