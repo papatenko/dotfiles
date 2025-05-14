@@ -1,11 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/justink/OneDrive/projects/comp_sci/webdev/vite/rps-tournament
-    - /home/justink/OneDrive/projects/comp_sci/webdev/socketio/rock-paper-scissors
-    - /home/justink/OneDrive/projects/comp_sci/webdev/clients/Incarnate-Editors-Website-v2.0
-    - /home/justink/OneDrive/projects/comp_sci/webdev/react/portfolio
+    - /home/jkondratenko/OneDrive/projects/comp_sci/webdev/vite/rps-tournament
+    - /home/jkondratenko/.local/share/chezmoi
 startuppopupversion: 5
-lastversion: 0.48.0
+lastversion: 0.47.2
 customcommandshistory:
     - q
     - q!

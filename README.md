@@ -2,7 +2,7 @@
 
 ![image](./screenshot.png)
 
-This directory contains the dotfiles for my **KDE Catppuccin Fedora** system.
+This directory contains the dotfiles for my **Catppuccin Fedora** system.
 
 ## Installation
 

@@ -719,3 +719,6 @@
 2025/04/11 (19:47:04) | WARNING: ROCm SMI: Failed to get VRAM utilization
 2025/04/11 (19:47:04) | WARNING: ROCm SMI: Failed to get GPU power usage
 2025/04/11 (19:47:04) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2025/05/12 (16:46:57) | ===> btop++ v.1.4.0
+2025/05/12 (16:46:57) | ERROR: Couldn't determine terminal size of "STDOUT_FILENO"!
