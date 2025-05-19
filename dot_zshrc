@@ -73,6 +73,7 @@ eval "$(fzf --zsh)"
 ### Replacements
 alias g++='gcc -lstdc++'
 alias ls='lsd'
+alias neofetch='fastfetch'
 # alias tree='lsd --tree'
 alias rm='trash'
 alias cat='bat'
