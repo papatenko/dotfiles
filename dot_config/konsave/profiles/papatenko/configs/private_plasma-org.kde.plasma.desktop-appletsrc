@@ -14,18 +14,6 @@ location=3
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][1007][Applets][1008]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][1007][Applets][1008][Configuration]
-PreloadWeight=100
-popupHeight=525
-popupWidth=667
-
-[Containments][1007][Applets][1008][Configuration][General]
-favoritesPortedToKAstats=true
-
 [Containments][1007][Applets][1011]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
@@ -54,10 +42,6 @@ dateDisplayFormat=BesideTime
 DialogHeight=540
 DialogWidth=720
 
-[Containments][1007][Applets][1034]
-immutability=1
-plugin=org.kde.plasma.panelspacer
-
 [Containments][1007][Applets][1042]
 immutability=1
 plugin=org.kde.windowtitle
@@ -85,8 +69,24 @@ plugin=org.kde.plasma.appmenu
 DialogHeight=540
 DialogWidth=720
 
+[Containments][1007][Applets][1055]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][1007][Applets][1062]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][1007][Applets][1062][Configuration]
+PreloadWeight=100
+popupHeight=508
+popupWidth=647
+
+[Containments][1007][Applets][1062][Configuration][General]
+favoritesPortedToKAstats=true
+
 [Containments][1007][General]
-AppletOrder=1008;1049;1042;1053;1034;1011;1012;1025
+AppletOrder=1062;1049;1042;1053;1055;1011;1012;1025
 
 [Containments][1013]
 activityId=
@@ -122,14 +122,14 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][1013][Applets][1017][Configuration]
-PreloadWeight=95
+PreloadWeight=100
 
 [Containments][1013][Applets][1018]
 immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][1013][Applets][1018][Configuration]
-PreloadWeight=70
+PreloadWeight=75
 
 [Containments][1013][Applets][1019]
 immutability=1
@@ -140,7 +140,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][1013][Applets][1020][Configuration]
-PreloadWeight=70
+PreloadWeight=80
 
 [Containments][1013][Applets][1021]
 immutability=1
@@ -187,7 +187,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][1013][Applets][1029][Configuration]
-PreloadWeight=0
+PreloadWeight=4
 
 [Containments][1013][Applets][1030]
 immutability=1
@@ -206,54 +206,17 @@ plugin=org.kde.plasma.mediacontroller
 [Containments][1013][Applets][1036][Configuration]
 PreloadWeight=0
 
+[Containments][1013][Applets][1056]
+immutability=1
+plugin=org.kde.kdeconnect
+
 [Containments][1013][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][1013][General]
-extraItems=org.kde.plasma.brightness,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.vault
-knownItems=org.kde.plasma.brightness,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.vault
-
-[Containments][1031]
-ItemGeometries-1152x2048=
-ItemGeometries-1536x864=
-ItemGeometries-1920x1080=
-ItemGeometries-2048x1152=
-ItemGeometries-3072x1728=
-ItemGeometries-3840x2160=
-ItemGeometriesHorizontal=
-ItemGeometriesVertical=
-activityId=9f905d56-bb13-4105-b32a-cd35616397a0
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][1031][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][1031][Wallpaper][org.kde.color][General]
-Color=0,0,0
-
-[Containments][1031][Wallpaper][org.kde.image][General]
-Image=/home/justink/OneDrive/wallpapers/grey/1354383.jpeg
-PreviewImage=/home/justink/OneDrive/wallpapers/grey/1354383.jpeg
-SlidePaths=/home/justink/.local/share/wallpapers/,/usr/share/wallpapers/
-
-[Containments][1043]
-activityId=9f905d56-bb13-4105-b32a-cd35616397a0
-formfactor=0
-immutability=1
-lastScreen=2
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][1043][Wallpaper][org.kde.image][General]
-Image=/home/justink/OneDrive/wallpapers/grey/lance_mono.png
+extraItems=org.kde.plasma.brightness,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.vault,org.kde.kdeconnect
+knownItems=org.kde.plasma.brightness,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.vault,org.kde.kdeconnect
 
 [Containments][1044]
 activityId=
@@ -282,18 +245,12 @@ DialogWidth=720
 [Containments][1044][General]
 AppletOrder=1046;1045
 
-[Containments][809]
-ItemGeometries-0x0=
-ItemGeometries-1152x2048=
-ItemGeometries-1280x720=
-ItemGeometries-1536x864=
-ItemGeometries-1920x1080=
-ItemGeometries-2048x1152=
-ItemGeometries-2560x1440=
-ItemGeometries-512x384=
+[Containments][1057]
+ItemGeometries-1367x912=
+ItemGeometries-2133x1200=
+ItemGeometries-2226x1252=
 ItemGeometriesHorizontal=
-ItemGeometriesVertical=
-activityId=9f905d56-bb13-4105-b32a-cd35616397a0
+activityId=62a5d2a0-da16-4bd8-ae58-40495e2d991d
 formfactor=0
 immutability=1
 lastScreen=0
@@ -301,21 +258,41 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][809][ConfigDialog]
+[Containments][1057][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][809][Configuration]
-PreloadWeight=18
+[Containments][1057][General]
+positions={"1367x912":[],"2133x1200":[],"2226x1252":[]}
 
-[Containments][809][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=295
+[Containments][1057][Wallpaper][org.kde.image][General]
+Image=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
+PreviewImage=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
+SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
-[Containments][809][Wallpaper][org.kde.image][General]
-Blur=true
-Image=/home/justink/OneDrive/wallpapers/grey/1354383.jpeg
-SlidePaths=/home/justink/.local/share/wallpapers/,/usr/share/wallpapers/
+[Containments][1058]
+ItemGeometries-1200x2133=
+ItemGeometries-1252x2226=
+ItemGeometriesVertical=
+activityId=62a5d2a0-da16-4bd8-ae58-40495e2d991d
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][1058][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][1058][General]
+positions={"1200x2133":[],"1252x2226":[]}
+
+[Containments][1058][Wallpaper][org.kde.image][General]
+Image=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
+PreviewImage=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
+SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments1007Appletsts][1032][Configuration][Appearance]
 txt=%a
@@ -328,6 +305,9 @@ txt=%a
 
 [Containments1044Appletsts][1046][Configuration][Appearance]
 txt=%a
+
+[Containments1059Appletsts][1061][Configuration][General]
+launchers=
 
 [Containments866Appletsts][891][Configuration][Appearance]
 isBold=true

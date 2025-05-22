@@ -135,9 +135,8 @@ Word Completion Remove Tail=true
 Search History=res,hide,font,times ,blockquote,block
 
 [MainWindow]
-1536x864 screen: Height=835
-1536x864 screen: Width=768
-1536x864 screen: Window-Maximized=true
+1536x864 screen: Height=784
+1536x864 screen: Width=756
 2 screens: Height=1123
 2 screens: Width=1024
 2 screens: Window-Maximized=true

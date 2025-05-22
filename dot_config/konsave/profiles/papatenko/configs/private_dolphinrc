@@ -8,7 +8,7 @@ DirHistory[$e]=$HOME/comp-sci-projects/randomWebsites/incarnate-editors/
 
 [General]
 Version=202
-ViewPropsTimestamp=2022,6,16,19,35,19.714
+ViewPropsTimestamp=2025,5,12,10,2,28.289
 
 [IconsMode]
 PreviewSize=80
@@ -35,8 +35,6 @@ eDP Height 1536x864=588
 eDP Width 1536x864=469
 
 [MainWindow]
-MenuBar=Disabled
-ToolBarsMovable=Disabled
 eDP Height 1920x1080=1007
 eDP Width 1920x1080=960
 eDP XPosition 1920x1080=960

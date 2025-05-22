@@ -35,7 +35,6 @@ eDP Height 1536x864=588
 eDP Width 1536x864=469
 
 [MainWindow]
-MenuBar=Disabled
 eDP Height 1920x1080=1007
 eDP Width 1920x1080=960
 eDP XPosition 1920x1080=960

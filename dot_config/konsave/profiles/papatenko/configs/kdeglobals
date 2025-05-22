@@ -3,108 +3,132 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 
 [ColorEffects:Disabled]
 ChangeSelectionColor=
-Color=56,56,56
-ColorAmount=0
-ColorEffect=0
-ContrastAmount=0.65000000000000002
-ContrastEffect=1
+Color=36, 39, 58
+ColorAmount=0.30000000000000004
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=0
 Enable=
-IntensityAmount=0.10000000000000001
-IntensityEffect=2
+IntensityAmount=-1
+IntensityEffect=0
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
-Color=112,111,110
-ColorAmount=0.025000000000000001
-ColorEffect=2
-ContrastAmount=0.10000000000000001
-ContrastEffect=2
-Enable=false
+Color=36, 39, 58
+ColorAmount=0.5
+ColorEffect=3
+ContrastAmount=0
+ContrastEffect=0
+Enable=true
 IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=64,69,82
-BackgroundNormal=65,72,87
-DecorationFocus=82,148,226
-DecorationHover=82,148,226
-ForegroundActive=61,174,233
-ForegroundInactive=137,141,153
-ForegroundLink=29,153,243
-ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=211,218,227
-ForegroundPositive=39,174,96
-ForegroundVisited=155,89,182
+BackgroundAlternate=138,173,244
+BackgroundNormal=54, 58, 79
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
 
 [Colors:Complementary]
-ForegroundLink=29,153,243
-ForegroundVisited=155,89,182
+BackgroundAlternate=24, 25, 38
+BackgroundNormal=30, 32, 48
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
+
+[Colors:Header]
+BackgroundAlternate=24, 25, 38
+BackgroundNormal=30, 32, 48
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
 
 [Colors:Selection]
-BackgroundAlternate=29,153,243
-BackgroundNormal=82,148,226
-DecorationFocus=82,148,226
-DecorationHover=82,148,226
-ForegroundActive=252,252,252
-ForegroundInactive=147,186,227
-ForegroundLink=20,109,172
-ForegroundNegative=160,48,50
-ForegroundNeutral=182,85,0
-ForegroundNormal=211,218,227
-ForegroundPositive=27,123,67
-ForegroundVisited=155,89,182
+BackgroundAlternate=138,173,244
+BackgroundNormal=138,173,244
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=30, 32, 48
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=24, 25, 38
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
 
 [Colors:Tooltip]
-BackgroundAlternate=47,52,63
-BackgroundNormal=53,57,69
-DecorationFocus=82,148,226
-DecorationHover=82,148,226
-ForegroundActive=61,174,233
-ForegroundInactive=137,141,153
-ForegroundLink=29,153,243
-ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=211,218,227
-ForegroundPositive=39,174,96
-ForegroundVisited=155,89,182
+BackgroundAlternate=27,25,35
+BackgroundNormal=36, 39, 58
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
 
 [Colors:View]
-BackgroundAlternate=64,69,82
-BackgroundNormal=64,69,82
-DecorationFocus=82,148,226
-DecorationHover=82,148,226
-ForegroundActive=61,174,233
-ForegroundInactive=137,141,153
-ForegroundLink=29,153,243
-ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=211,218,227
-ForegroundPositive=39,174,96
-ForegroundVisited=155,89,182
+BackgroundAlternate=30, 32, 48
+BackgroundNormal=36, 39, 58
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
 
 [Colors:Window]
-BackgroundAlternate=47,52,63
-BackgroundNormal=47,52,63
-DecorationFocus=82,148,226
-DecorationHover=82,148,226
-ForegroundActive=61,174,233
-ForegroundInactive=137,141,153
-ForegroundLink=29,153,243
-ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=211,218,227
-ForegroundPositive=39,174,96
-ForegroundVisited=155,89,182
+BackgroundAlternate=24, 25, 38
+BackgroundNormal=30, 32, 48
+DecorationFocus=138,173,244
+DecorationHover=54, 58, 79
+ForegroundActive=245, 169, 127
+ForegroundInactive=165, 173, 203
+ForegroundLink=138,173,244
+ForegroundNegative=237, 135, 150
+ForegroundNeutral=238, 212, 159
+ForegroundNormal=202, 211, 245
+ForegroundPositive=166, 218, 149
+ForegroundVisited=198, 160, 246
 
 [DirSelect Dialog]
-DirSelectDialog Size=768,831
-History Items[$e]=file:$HOME/OneDrive/notes,file:$HOME/Games/smash,file:$HOME/Games,file:$HOME/Documents,file:$HOME/Downloads/3DS-DCIM,file:$HOME/OneDrive,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects/dig-arts,file:$HOME/Downloads/my-projects/3d-logos,file:$HOME,file:$HOME/Downloads,file:$HOME/comp-sci/python/snake/Pixelify_Sans,file:$HOME/Downloads/semester-5,file:$HOME/Pictures/crt,file:$HOME/Downloads/metro,file:$HOME/Downloads/mc-thumbnail,file:$HOME/Pictures/crt,file:$HOME/Pictures/dev_roadmap,file:$HOME/Pictures/arrows,file:$HOME/Pictures/gimp/rivals-thumbnail,file:$HOME/comp-sci/webdev/my-odin-projects,file:$HOME/Downloads/art,file:$HOME/Downloads/speech,file:$HOME/comp-sci/java,file:$HOME/Downloads/TTIGRAAHSIASC-main,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Downloads,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/sunset pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Galveston 2012,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Phone,file:$HOME/Documents/VMs,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum,file:$HOME/Downloads/Orchis-kde,file:$HOME/Games/Submissions/other_sub,file:$HOME/Games/Submissions/hello-ahh,file:$HOME/Games/Submissions/Hackathon_2024_Arena,file:$HOME/Games/Submissions/DragonSeige,file:$HOME/Documents/yt-vids,file:$HOME/Documents/VIDEO_TS,file:$HOME/Dropbox/HackerTime,file:$HOME/Downloads/vim-notion/dist,file:$HOME/Dropbox,file:$HOME/Dropbox,file:$HOME/Dropbox,gdrive:/google3,file:$HOME/Documents,gdrive:/google3/Obsidian Vault
+DirSelectDialog Size=683,847
+History Items[$e]=file:$HOME/OneDrive,file:$HOME/Packages,file:$HOME/Games,file:$HOME/Downloads,file:$HOME/Videos/OBS,file:$HOME/OneDrive/notes,file:$HOME/Games/smash,file:$HOME/Games,file:$HOME/Documents,file:$HOME/Downloads/3DS-DCIM,file:$HOME/OneDrive,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects,file:$HOME/Downloads/my-projects/dig-arts,file:$HOME/Downloads/my-projects/3d-logos,file:$HOME,file:$HOME/Downloads,file:$HOME/comp-sci/python/snake/Pixelify_Sans,file:$HOME/Downloads/semester-5,file:$HOME/Pictures/crt,file:$HOME/Downloads/metro,file:$HOME/Downloads/mc-thumbnail,file:$HOME/Pictures/crt,file:$HOME/Pictures/dev_roadmap,file:$HOME/Pictures/arrows,file:$HOME/Pictures/gimp/rivals-thumbnail,file:$HOME/comp-sci/webdev/my-odin-projects,file:$HOME/Downloads/art,file:$HOME/Downloads/speech,file:$HOME/comp-sci/java,file:$HOME/Downloads/TTIGRAAHSIASC-main,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Downloads,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/sunset pictures,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Galveston 2012,file:///run/media/justink/CCCOMA_X64FRE_EN-US_DV9/Users/Public/Documents/Phone,file:$HOME/Documents/VMs,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum/Orchis-dark-solid,file:$HOME/Downloads/Orchis-kde/Kvantum,file:$HOME/Downloads/Orchis-kde,file:$HOME/Games/Submissions/other_sub,file:$HOME/Games/Submissions/hello-ahh,file:$HOME/Games/Submissions/Hackathon_2024_Arena,file:$HOME/Games/Submissions/DragonSeige,file:$HOME/Documents/yt-vids,file:$HOME/Documents/VIDEO_TS,file:$HOME/Dropbox/HackerTime,file:$HOME/Downloads/vim-notion/dist,file:$HOME/Dropbox
+Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8c\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
 BrowserApplication=brave-browser.desktop
-ColorScheme=ArcDark
-ColorSchemeHash=fe6711d5312a664b695e8bc1d1d4b53f52ba20f0
+ColorSchemeHash=8934f8d6cffa7bcd10144e9b73c3f5b47de91506
 LastUsedCustomAccentColor=233,58,154
 Name=Catppuccin Mocha Blue
 TerminalApplication=kitty +open %U
@@ -121,7 +145,7 @@ Theme=Papirus-Dark
 
 [KDE]
 AnimationDurationFactor=0
-LookAndFeelPackage=org.kde.breezedark.desktop
+LookAndFeelPackage=Catppuccin-Macchiato-Blue
 ShowDeleteCommand=false
 contrast=4
 widgetStyle=Breeze
@@ -148,7 +172,7 @@ View Style=Simple
 
 [KScreen]
 ScaleFactor=1.25
-ScreenScaleFactors=eDP-1=1.25;HDMI-A-1=1.25;
+ScreenScaleFactors=eDP-1=1.25;HDMI-A-1=1.25;DP-1=1.25;
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480
@@ -160,10 +184,14 @@ MaximumRemoteSize=0
 SaveOptions=
 TipofDay=
 
+[Sounds]
+Enable=false
+Theme=freedesktop
+
 [WM]
-activeBackground=47,52,63
-activeBlend=47,52,63
-activeForeground=211,218,227
-inactiveBackground=47,52,63
-inactiveBlend=47,52,63
-inactiveForeground=102,106,115
+activeBackground=36,39,58
+activeBlend=202,211,245
+activeForeground=202,211,245
+inactiveBackground=24,25,38
+inactiveBlend=165,173,203
+inactiveForeground=165,173,203

@@ -18,6 +18,7 @@ PointerAccelerationProfile=1
 [Libinput][1578][22808][MOSART Semi. 2.4G Keyboard Mouse]
 PointerAcceleration=0.000
 PointerAccelerationProfile=1
+ScrollMethod=4
 
 [Libinput][1739][52861][SYNA32B3:01 06CB:CE7D Mouse]
 PointerAcceleration=0.000
@@ -25,12 +26,17 @@ PointerAccelerationProfile=1
 ScrollFactor=1.5
 
 [Libinput][1739][52861][SYNA32B3:01 06CB:CE7D Touchpad]
+Enabled=true
 NaturalScroll=true
 PointerAccelerationProfile=1
 
 [Libinput][2821][6527][ASUSTeK ROG GLADIUS III WIRELESS]
 PointerAccelerationProfile=1
 ScrollMethod=4
+
+[Libinput][4152][5924][SteelSeries SteelSeries Rival 600]
+PointerAccelerationProfile=1
+ScrollFactor=2
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true

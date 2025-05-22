@@ -33,7 +33,6 @@ DisplayPort-2 DisplayPort-3 YPosition 1280x1024 DisplayPort-3=304
 DisplayPort-4 DisplayPort-5=DisplayPort-4
 HDMI-A-0=HDMI-A-0
 MenuBar=Enabled
-ToolBarsMovable=Disabled
 eDP=eDP
 eDP Height 1536x864=799
 eDP Height 1920x1080=1007

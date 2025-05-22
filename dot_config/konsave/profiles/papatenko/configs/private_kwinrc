@@ -1,6 +1,11 @@
 [$Version]
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
 
+[Activities][LastVirtualDesktop]
+62a5d2a0-da16-4bd8-ae58-40495e2d991d=cab65364-165f-42d3-9099-bdd6a6d83f31
+9f905d56-bb13-4105-b32a-cd35616397a0=6f986973-5452-4e61-8359-b1d3f531d435
+d349e82b-069b-44e8-807d-bfc585cfd6d5=6f986973-5452-4e61-8359-b1d3f531d435
+
 [Compositing]
 LatencyPolicy=Medium
 OpenGLIsUnsafe=false
@@ -30,7 +35,7 @@ Meta=org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu
 
 [NightColor]
 Active=true
-EveningBeginFixed=2130
+EveningBeginFixed=2030
 Mode=Times
 MorningBeginFixed=0730
 
@@ -42,10 +47,25 @@ forceblurEnabled=true
 glideEnabled[$d]
 krohnkiteEnabled=true
 kwin4_effect_logoutEnabled=false
+kwin4_effect_shapecornersEnabled=false
 minimizeallEnabled=false
 poloniumEnabled=true
 synchronizeskipswitcherEnabled=false
 videowallEnabled=true
+
+[Round-Corners]
+ActiveOutlineUseCustom=false
+ActiveOutlineUsePalette=true
+ActiveSecondOutlineUseCustom=false
+ActiveSecondOutlineUsePalette=true
+InactiveOutlineThickness=2
+InactiveOutlineUseCustom=false
+InactiveOutlineUsePalette=true
+InactiveSecondOutlineThickness=2
+InactiveSecondOutlineUseCustom=false
+InactiveSecondOutlineUsePalette=true
+OutlineThickness=2
+SecondOutlineThickness=2
 
 [Script-forceblur]
 blurExceptMatching=true
@@ -55,11 +75,6 @@ patterns=
 [Script-krohnkite]
 directionalKeyDwm=false
 directionalKeyFocus=true
-screenGapBottom=4
-screenGapLeft=4
-screenGapRight=4
-screenGapTop=4
-tileLayoutGap=4
 
 [Script-polonium]
 Borders=0
@@ -70,6 +85,9 @@ InsertionPoint=1
 padding=4
 
 [Tiling][022d8fd5-bf58-56fb-bcb8-1e84f9f55a6e]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][06515967-80eb-519f-8988-70095da314b2]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][06a0f18e-a2a0-5029-b4c1-e51205db9a26]
@@ -89,6 +107,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Tiling][1a92e2fa-1b23-5e8a-b619-ff3dcd6c7cb7]
 tiles={"layoutDirection":"vertical","tiles":[]}
+
+[Tiling][212d4a61-6348-55dc-ad66-5b20cd40df8e]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][28d7ea7c-6ef1-5420-9dae-1bab2e5ea7eb]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -171,6 +192,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][8ca212c1-2a33-5bc0-823c-aadd21ce1bec]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][8f66d3d6-1ff0-5921-ad2d-3f71b538331b]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][92e842d7-5928-5c43-884a-4912e7cc82ed]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -181,6 +205,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][a1a88571-9a70-5eed-8a1a-fc3118230873]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][a3fdbd59-9ade-5b7d-9ac7-d84391aaf770]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][a470211b-7880-58d4-a41c-f3b61de14354]
@@ -231,7 +258,13 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][cb8244cc-29db-56bc-878d-8a54cd3cecca]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][d046b9f0-55b7-53f6-88dd-2b48a2e2e75b]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][d3c1e1a9-fe24-55c4-9712-f463b0dde51e]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][d57d5891-2319-52e5-870d-afe112b8ebf9]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d64e2022-59f7-52af-b2cf-9b03c6e33771]
@@ -243,10 +276,16 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][def1d2d2-5d2a-5bb8-a4ec-58b7164d1a08]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][e18c833d-fa66-5919-9c0d-4dcd37b1a98d]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][e26e5cbc-8127-5a76-a169-be79c9dd47ac]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][ea607176-15ea-57bd-8c52-5d4072eeb4c6]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][ed39b2a4-1e89-575d-8f80-864a4608c8f4]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][f2601567-e6d5-5598-88cd-cda281678a5f]
@@ -266,10 +305,10 @@ BorderlessMaximizedWindows=false
 SeparateScreenFocus=true
 
 [Xwayland]
-Scale=1.25
+Scale=1.65
 
 [org.kde.kdecoration2]
 BorderSize=None
 BorderSizeAuto=false
 library=org.kde.kwin.aurorae
-theme=__aurorae__svg__Arc-Dark
+theme=__aurorae__svg__CatppuccinMacchiato-Classic
