@@ -1,8 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/jkondratenko/.local/share/chezmoi
+    - /home/jkondratenko/OneDrive/projects/comp_sci/webdev/react/portfolio
     - /home/jkondratenko/OneDrive/projects/comp_sci/webdev/vite/rps-tournament
     - /home/jkondratenko/OneDrive/projects/comp_sci/webdev/gemini/HackTX-2024
-    - /home/jkondratenko/.local/share/chezmoi
     - /home/jkondratenko/OneDrive/projects/comp_sci/python/hackathon-2024
 startuppopupversion: 5
 lastversion: 0.47.2

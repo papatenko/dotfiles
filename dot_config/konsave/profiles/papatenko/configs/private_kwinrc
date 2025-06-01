@@ -2,7 +2,7 @@
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
 
 [Activities][LastVirtualDesktop]
-62a5d2a0-da16-4bd8-ae58-40495e2d991d=cab65364-165f-42d3-9099-bdd6a6d83f31
+62a5d2a0-da16-4bd8-ae58-40495e2d991d=c0774328-f482-4743-88d2-37598d5c1aa3
 9f905d56-bb13-4105-b32a-cd35616397a0=6f986973-5452-4e61-8359-b1d3f531d435
 d349e82b-069b-44e8-807d-bfc585cfd6d5=6f986973-5452-4e61-8359-b1d3f531d435
 
@@ -29,6 +29,9 @@ Rows=1
 [Effect-diminactive]
 DimByGroup=false
 Strength=15
+
+[Effect-overview]
+BorderActivate=9
 
 [ModifierOnlyShortcuts]
 Meta=org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu
@@ -118,6 +121,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][308fd562-19ef-5630-b1d5-509d5a7c1ebe]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][39a68049-aa04-52cd-a82a-2353d194e914]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][3fb215c5-e25f-5fea-bd35-42b8199de010]
@@ -216,6 +222,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][aa4e3e19-fa61-5362-b472-443c365125d1]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][ac6930f2-993c-519f-a91e-02f7ddbfee53]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][ad675205-1af4-5186-bc52-98f388e0d39b]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -282,6 +291,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][e26e5cbc-8127-5a76-a169-be79c9dd47ac]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][e86b1511-2ed6-54e2-b459-79268cb1948f]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][ea607176-15ea-57bd-8c52-5d4072eeb4c6]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -305,7 +317,7 @@ BorderlessMaximizedWindows=false
 SeparateScreenFocus=true
 
 [Xwayland]
-Scale=1.65
+Scale=1.5
 
 [org.kde.kdecoration2]
 BorderSize=None

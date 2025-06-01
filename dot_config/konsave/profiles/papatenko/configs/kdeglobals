@@ -128,6 +128,7 @@ Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8c\
 
 [General]
 BrowserApplication=brave-browser.desktop
+ColorScheme=CatppuccinMacchiatoBlue
 ColorSchemeHash=8934f8d6cffa7bcd10144e9b73c3f5b47de91506
 LastUsedCustomAccentColor=233,58,154
 Name=Catppuccin Mocha Blue
@@ -135,8 +136,9 @@ TerminalApplication=kitty +open %U
 TerminalService=kitty-open.desktop
 UseSystemBell=true
 XftHintStyle=hintslight
-XftSubPixel=rgb
+XftSubPixel=none
 accentActiveTitlebar=false
+font=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 shadeSortColumn=true
 widgetStyle=Lightly
 
@@ -171,8 +173,8 @@ Speedbar Width=175
 View Style=Simple
 
 [KScreen]
-ScaleFactor=1.25
-ScreenScaleFactors=eDP-1=1.25;HDMI-A-1=1.25;DP-1=1.25;
+ScaleFactor=1.5
+ScreenScaleFactors=eDP-1=1.5;
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480

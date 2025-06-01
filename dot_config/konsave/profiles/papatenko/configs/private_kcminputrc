@@ -30,6 +30,9 @@ Enabled=true
 NaturalScroll=true
 PointerAccelerationProfile=1
 
+[Libinput][2362][628][PIXA3854:00 093A:0274 Touchpad]
+PointerAccelerationProfile=2
+
 [Libinput][2821][6527][ASUSTeK ROG GLADIUS III WIRELESS]
 PointerAccelerationProfile=1
 ScrollMethod=4

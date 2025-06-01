@@ -80,7 +80,7 @@ plugin=org.kde.plasma.kickoff
 [Containments][1007][Applets][1062][Configuration]
 PreloadWeight=100
 popupHeight=508
-popupWidth=647
+popupWidth=685
 
 [Containments][1007][Applets][1062][Configuration][General]
 favoritesPortedToKAstats=true
@@ -164,6 +164,9 @@ migrated=true
 immutability=1
 plugin=org.kde.plasma.vault
 
+[Containments][1013][Applets][1024][Configuration]
+PreloadWeight=55
+
 [Containments][1013][Applets][1027]
 immutability=1
 plugin=org.kde.plasma.battery
@@ -187,7 +190,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][1013][Applets][1029][Configuration]
-PreloadWeight=4
+PreloadWeight=0
 
 [Containments][1013][Applets][1030]
 immutability=1
@@ -209,6 +212,9 @@ PreloadWeight=0
 [Containments][1013][Applets][1056]
 immutability=1
 plugin=org.kde.kdeconnect
+
+[Containments][1013][Applets][1056][Configuration]
+PreloadWeight=55
 
 [Containments][1013][ConfigDialog]
 DialogHeight=540
@@ -247,8 +253,10 @@ AppletOrder=1046;1045
 
 [Containments][1057]
 ItemGeometries-1367x912=
+ItemGeometries-1504x1003=
 ItemGeometries-2133x1200=
 ItemGeometries-2226x1252=
+ItemGeometries-2256x1504=
 ItemGeometriesHorizontal=
 activityId=62a5d2a0-da16-4bd8-ae58-40495e2d991d
 formfactor=0
@@ -263,11 +271,11 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][1057][General]
-positions={"1367x912":[],"2133x1200":[],"2226x1252":[]}
+positions={"1367x912":[],"1504x1003":[],"2133x1200":[],"2226x1252":[],"2256x1504":[]}
 
 [Containments][1057][Wallpaper][org.kde.image][General]
-Image=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
-PreviewImage=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
+Image=/home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
+PreviewImage=/home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
 SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][1058]
@@ -290,8 +298,8 @@ DialogWidth=720
 positions={"1200x2133":[],"1252x2226":[]}
 
 [Containments][1058][Wallpaper][org.kde.image][General]
-Image=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
-PreviewImage=/home/jkondratenko/Pictures/wallpapers/grey/1354383.jpeg
+Image=/home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
+PreviewImage=/home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
 SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments1007Appletsts][1032][Configuration][Appearance]
