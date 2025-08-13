@@ -1,0 +1,52 @@
+[Desktop Entry]
+DefaultProfile=Real Default.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+1536x864 screen: Height=835
+1536x864 screen: Width=1536
+1536x864 screen: Window-Maximized=true
+1536x864 screen: XPosition=0
+1536x864 screen: YPosition=29
+1920x1080 screen: Height=1043
+1920x1080 screen: Width=954
+1920x1080 screen: XPosition=963
+1920x1080 screen: YPosition=34
+2 screens: Height=702
+2 screens: Width=1280
+2 screens: XPosition=1280
+2 screens: YPosition=978
+2048x1152 screen: Height=1123
+2048x1152 screen: Width=2048
+2048x1152 screen: Window-Maximized=true
+2048x1152 screen: XPosition=0
+2048x1152 screen: YPosition=29
+DisplayPort-2 DisplayPort-3=DisplayPort-2
+DisplayPort-2 DisplayPort-3 Height 1280x1024 DisplayPort-3=1004
+DisplayPort-2 DisplayPort-3 Height 2560x1440 DisplayPort-2=1376
+DisplayPort-2 DisplayPort-3 Width 1280x1024 DisplayPort-3=1260
+DisplayPort-2 DisplayPort-3 Width 2560x1440 DisplayPort-2=2540
+DisplayPort-2 DisplayPort-3 XPosition 1280x1024 DisplayPort-3=2570
+DisplayPort-2 DisplayPort-3 YPosition 1280x1024 DisplayPort-3=304
+DisplayPort-4 DisplayPort-5=DisplayPort-4
+HDMI-A-0=HDMI-A-0
+MenuBar=Enabled
+eDP=eDP
+eDP Height 1536x864=799
+eDP Height 1920x1080=1007
+eDP Width 1536x864=1536
+eDP Width 1920x1080=1920
+eDP Window-Maximized 1536x864=true
+eDP Window-Maximized 1920x1080=true
+eDP XPosition 1536x864=0
+eDP XPosition 1920x1080=0
+eDP YPosition 1536x864=30
+eDP YPosition 1920x1080=29
+
+[Notification Messages]
+CloseAllTabs=true
+
+[UiSettings]
+ColorScheme=

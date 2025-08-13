@@ -1,0 +1,27 @@
+[$Version]
+update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_value_default_enum
+
+[General]
+loginMode=emptySession
+
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=101bc14810e152000166342876900000009390005
+clientId2=101bc14810e152000166342876900000009390006
+clientId3=101bc14810e152000166344610700000009390008
+count=3
+discardCommand3[$e]=rm,$HOME/.config/session/systemsettings_101bc14810e152000166344610700000009390008_1663446172_95045
+program1=/usr/bin/msm_kde_notifier
+program2=/usr/bin/pamac-tray-plasma
+program3=/usr/bin/systemsettings
+restartCommand1=/usr/bin/msm_kde_notifier,-session,101bc14810e152000166342876900000009390005_1663446172_87231
+restartCommand2=/usr/bin/pamac-tray-plasma,-session,101bc14810e152000166342876900000009390006_1663446172_87252
+restartCommand3=/usr/bin/systemsettings,-session,101bc14810e152000166344610700000009390008_1663446172_95045
+restartStyleHint1=0
+restartStyleHint2=0
+restartStyleHint3=0
+userId1=justink
+userId2=justink
+userId3=justink

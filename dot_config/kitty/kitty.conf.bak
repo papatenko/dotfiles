@@ -3,7 +3,7 @@
 # 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -314,7 +314,7 @@ include current-theme.conf
 #: Stop blinking cursor after the specified number of seconds of
 #: keyboard inactivity. Set to zero to never stop blinking.
 
-# cursor_trail 0
+# cursor_trail
 
 #: Set this to a value larger than zero to enable a "cursor trail"
 #: animation. This is an animation that shows a "trail" following the
@@ -1068,7 +1068,7 @@ enabled_layouts tall, fat
 #: The second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-# tab_bar_style fade
+tab_bar_style powerline
 
 #: The tab bar style, can be one of:
 
@@ -1126,7 +1126,7 @@ enabled_layouts tall, fat
 #: The separator between tabs in the tab bar when using separator as
 #: the tab_bar_style.
 
-# tab_powerline_style angled
+tab_powerline_style slanted
 
 #: The powerline separator style between tabs in the tab bar when
 #: using powerline as the tab_bar_style, can be one of: angled,
@@ -1224,7 +1224,7 @@ tab_title_template "{index}: {title.split('/')[-1]}"
 
 #: The foreground and background colors.
 
-background_opacity 0.7
+# background_opacity 0.7
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -1249,7 +1249,7 @@ background_opacity 0.7
 #: will only work if dynamic_background_opacity was enabled in the
 #: original config.
 
-background_blur 1
+# background_blur 1
 
 #: Set to a positive value to enable background blur (blurring of the
 #: visuals behind a transparent window) on platforms that support it.
