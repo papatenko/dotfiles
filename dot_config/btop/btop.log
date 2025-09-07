@@ -803,3 +803,6 @@
 2025/08/17 (09:16:44) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
 2025/08/17 (09:16:44) | WARNING: ROCm SMI: Failed to get VRAM utilization
 2025/08/17 (09:16:44) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2025/09/07 (08:30:59) | ===> btop++ v.1.2.13
+2025/09/07 (08:30:59) | ERROR: Exception in runner thread -> Cpu:: -> key not found

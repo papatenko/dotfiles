@@ -72,3 +72,5 @@ alias rm='trash'
 alias cat='bat'
 eval "$(zoxide init --cmd cd zsh)"
 export MANPAGER='nvim +Man!'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

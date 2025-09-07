@@ -34,7 +34,7 @@ export FZF_DEFAULT_OPTS=" \
 
 export EDITOR="nvim"
 
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
 # ZVM Insert Mode Keybind
 # Only changing the escape key to `jk` in insert mode, we still
