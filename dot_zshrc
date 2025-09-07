@@ -56,6 +56,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 ### Keybindings
+bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey "^[[A" history-search-backward
@@ -64,6 +65,9 @@ bindkey '^[[B' history-search-forward
 ### Shell Integrations
 eval "$(fzf --zsh)"
 
+# FZF Support
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 ### Replacements
 alias g++='gcc -lstdc++'
 alias ls='lsd'
@@ -71,6 +75,3 @@ alias rm='trash'
 alias cat='bat'
 eval "$(zoxide init --cmd cd zsh)"
 export MANPAGER='nvim +Man!'
-
-# FZF Support
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
