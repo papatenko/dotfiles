@@ -1,6 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/jkondratenko/Nextcloud/projects/comp_sci/webdev/gemini/CodeRED-Astra-Redo
     - /home/jkondratenko/.local/share/chezmoi
+    - /home/jkondratenko/Nextcloud/projects/comp_sci/webdev/react/portfolio
     - /home/jkondratenko/Nextcloud/projects/comp_sci/webdev/gemini/CodeRED-Astra
 startuppopupversion: 5
 lastversion: 0.47.2
