@@ -11,4 +11,7 @@ export FZF_DEFAULT_OPTS=" \
 
 export EDITOR="nvim"
 
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.opencode/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.opencode/bin:/usr/local/cuda-12.3/bin:$PATH"
+
+# Ollama cuda support
+export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"

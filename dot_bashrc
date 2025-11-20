@@ -11,7 +11,7 @@ fi
 
 if ! \[\[ "$PATH" =\~ "$HOME/.local/bin:$HOME/bin:" \]\] 
 then    
-      PATH="$HOME/.local/bin:$HOME/bin:$PATH" 
+      PATH="$HOME/.local/bin:$HOME/bin:/usr/local/cuda-12.3/bin:$PATH" 
 fi 
 
 export PATH
@@ -30,4 +30,6 @@ if \[ -d \~/.bashrc.d \]; then
          done fi 
 unset rc
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(zoxide init --cmd cd bash)"
+eval "$(fzf --bash)"
+export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH

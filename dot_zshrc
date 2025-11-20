@@ -72,5 +72,6 @@ alias g++='gcc -lstdc++'
 alias ls='lsd'
 alias rm='trash'
 alias cat='bat'
+alias bat="batcat"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
