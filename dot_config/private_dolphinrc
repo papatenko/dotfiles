@@ -17,8 +17,6 @@ PreviewSize=80
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
-Recent Files[$e]=file:$HOME,file:$HOME
-Recent URLs[$e]=file:$HOME/comp-sci-projects/randomWebsites/incarnate-editors/,file:$HOME/Downloads/
 detailViewIconSize=16
 
 [KPropertiesDialog]
