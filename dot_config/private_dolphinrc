@@ -2,6 +2,8 @@
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
 
 [ExtractDialog]
+1504x1003 screen: Height=453
+1504x1003 screen: Width=752
 2 screens: Height=596
 2 screens: Width=1349
 DirHistory[$e]=$HOME/comp-sci-projects/randomWebsites/incarnate-editors/

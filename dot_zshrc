@@ -59,7 +59,6 @@ eval "$(fzf --zsh)"
 ### Replacements
 alias g++='gcc -lstdc++'
 alias ls='lsd'
-alias cat='bat'
 alias rm='trash'
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
