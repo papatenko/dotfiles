@@ -3,7 +3,7 @@
 # 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Catppuccin-Macchiato
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -2651,7 +2651,7 @@ map ctrl+alt+6 goto_tab 6
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMono Nerd Font"
+font_family      family="Hack Nerd Font"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
