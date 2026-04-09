@@ -2,11 +2,14 @@
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
 
 [ExtractDialog]
+1504x1003 screen: Height=453
+1504x1003 screen: Width=752
 2 screens: Height=596
 2 screens: Width=1349
 DirHistory[$e]=$HOME/comp-sci-projects/randomWebsites/incarnate-editors/
 
 [General]
+DoubleClickViewAction=none
 Version=202
 ViewPropsTimestamp=2025,5,12,10,2,28.289
 
@@ -16,8 +19,6 @@ PreviewSize=80
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
-Recent Files[$e]=file:$HOME,file:$HOME
-Recent URLs[$e]=file:$HOME/comp-sci-projects/randomWebsites/incarnate-editors/,file:$HOME/Downloads/
 detailViewIconSize=16
 
 [KPropertiesDialog]
@@ -46,3 +47,6 @@ History=ala,brave,cob
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[VersionControl]
+enabledPlugins=Dropbox

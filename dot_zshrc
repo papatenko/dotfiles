@@ -62,3 +62,10 @@ alias ls='lsd'
 alias rm='trash'
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/home/jkondratenko/.bun/_bun" ] && source "/home/jkondratenko/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

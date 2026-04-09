@@ -12,7 +12,7 @@ ScrollFactor=1.5
 PointerAccelerationProfile=1
 
 [Libinput][1133][16505][Logitech G Pro]
-PointerAcceleration=-0.200
+PointerAcceleration=0.000
 PointerAccelerationProfile=1
 
 [Libinput][1578][22808][MOSART Semi. 2.4G Keyboard Mouse]
@@ -30,8 +30,18 @@ Enabled=true
 NaturalScroll=true
 PointerAccelerationProfile=1
 
+[Libinput][2205][1583][llTECH Wireless-Receiver]
+PointerAccelerationProfile=1
+
+[Libinput][2362][628][PIXA3854:00 093A:0274 Mouse]
+PointerAccelerationProfile=1
+
 [Libinput][2362][628][PIXA3854:00 093A:0274 Touchpad]
 PointerAccelerationProfile=2
+
+[Libinput][273][6192][Rival 3 Wireless]
+PointerAccelerationProfile=1
+ScrollMethod=0
 
 [Libinput][2821][6527][ASUSTeK ROG GLADIUS III WIRELESS]
 PointerAccelerationProfile=1
@@ -40,6 +50,9 @@ ScrollMethod=4
 [Libinput][4152][5924][SteelSeries SteelSeries Rival 600]
 PointerAccelerationProfile=1
 ScrollFactor=2
+
+[Libinput][4152][6192][SteelSeries SteelSeries Rival 3 Wireless]
+PointerAccelerationProfile=1
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true
