@@ -3,7 +3,7 @@
 # 
 
 # BEGIN_KITTY_THEME
-# OneDark-Pro
+# Catppuccin-Macchiato
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -1796,7 +1796,7 @@ listen_on unix:/tmp/mykitty
 
 #: OS specific tweaks {{{
 
-# wayland_titlebar_color system
+wayland_titlebar_color #1E1E2F
 
 #: The color of the kitty window's titlebar on Wayland systems with
 #: client side window decorations such as GNOME. A value of system
