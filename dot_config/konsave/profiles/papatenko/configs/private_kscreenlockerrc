@@ -6,5 +6,5 @@ Autolock=false
 LockOnResume=false
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/home/justink/OneDrive/wallpapers/grey/lance_mono.png
-PreviewImage=/home/justink/OneDrive/wallpapers/grey/lance_mono.png
+Image=file:///home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
+PreviewImage=file:///home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg

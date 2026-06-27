@@ -9,14 +9,10 @@ OpenGLIsUnsafe=false
 Id_1=c0774328-f482-4743-88d2-37598d5c1aa3
 Id_2=cab65364-165f-42d3-9099-bdd6a6d83f31
 Id_3=6f986973-5452-4e61-8359-b1d3f531d435
-Id_4=7cab8259-d605-423a-99bc-52e7d4008906
-Id_5=e1828d4f-b358-476d-982a-19eabaef3a0d
 Name_1=\sDesktop 1\s
 Name_2=\sDesktop 2\s
 Name_3=\sDesktop 3\s
-Name_4=\sDesktop 4\s
-Name_5=\sDesktop 5\s
-Number=5
+Number=3
 Rows=1
 
 [Effect-diminactive]
@@ -34,7 +30,7 @@ Active=true
 
 [Plugins]
 forceblurEnabled=true
-krohnkiteEnabled=true
+krohnkiteEnabled=false
 kwin4_effect_geometry_changeEnabled=true
 kwin4_effect_logoutEnabled=false
 kwin4_effect_shapecornersEnabled=false
@@ -195,10 +191,15 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][6f986973-5452-4e61-8359-b1d3f531d435][1339f3e2-9a9b-42f7-a912-795719e5a732]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][6f986973-5452-4e61-8359-b1d3f531d435][33539cf9-8502-4e11-b02b-9c253cfb27ce]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6f986973-5452-4e61-8359-b1d3f531d435][403176d9-25cb-4868-b6aa-375672e25aa3]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6f986973-5452-4e61-8359-b1d3f531d435][6c0861dd-3854-4642-bc9d-6a93f7ba7910]
@@ -237,10 +238,15 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][7cab8259-d605-423a-99bc-52e7d4008906][1339f3e2-9a9b-42f7-a912-795719e5a732]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][7cab8259-d605-423a-99bc-52e7d4008906][33539cf9-8502-4e11-b02b-9c253cfb27ce]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][7cab8259-d605-423a-99bc-52e7d4008906][403176d9-25cb-4868-b6aa-375672e25aa3]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][7cab8259-d605-423a-99bc-52e7d4008906][6c0861dd-3854-4642-bc9d-6a93f7ba7910]
@@ -342,10 +348,15 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][1339f3e2-9a9b-42f7-a912-795719e5a732]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][33539cf9-8502-4e11-b02b-9c253cfb27ce]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][403176d9-25cb-4868-b6aa-375672e25aa3]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][6c0861dd-3854-4642-bc9d-6a93f7ba7910]
@@ -387,10 +398,15 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][1339f3e2-9a9b-42f7-a912-795719e5a732]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][33539cf9-8502-4e11-b02b-9c253cfb27ce]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][403176d9-25cb-4868-b6aa-375672e25aa3]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][6c0861dd-3854-4642-bc9d-6a93f7ba7910]
@@ -502,9 +518,8 @@ BorderlessMaximizedWindows=false
 SeparateScreenFocus=true
 
 [Xwayland]
-Scale=1.5
+Scale=1
 
 [org.kde.kdecoration2]
-BorderSize=None
-BorderSizeAuto=false
-library=org.kde.kwin.aurorae.v2
+library=org.kde.breeze
+theme=Breeze

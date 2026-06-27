@@ -1,0 +1,5 @@
+theme = Ayu
+maximize = true
+term = xterm-256color
+font-family = "JetBrainsMono Nerd Font"
+desktop-notifications = true

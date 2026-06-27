@@ -12,21 +12,15 @@ detailViewIconSize=16
 [PIMEventsPlugin]
 calendars=8
 
-[PlasmaViews][Panel 1007]
-alignment=132
+[PlasmaViews][Panel 1215]
 floating=0
+floatingApplets=1
 panelLengthMode=0
-panelOpacity=1
-panelVisibility=0
+panelOpacity=0
+shell=org.kde.plasma.desktop
 
-[PlasmaViews][Panel 1007][Defaults]
-thickness=32
-
-[PlasmaViews][Panel 1084]
-floating=0
-
-[PlasmaViews][Panel 1084][Defaults]
-thickness=32
+[PlasmaViews][Panel 1215][Defaults]
+thickness=46
 
 [ScreenConnectors]
 0=DisplayPort-2

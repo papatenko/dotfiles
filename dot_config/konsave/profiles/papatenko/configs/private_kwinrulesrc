@@ -49,10 +49,6 @@ desktopsrule=3
 wmclass=brave
 wmclassmatch=1
 
-[507eeb2b-4bec-4f67-9a24-7948e3991f81]
-Description=Min Size
-minsizerule=2
-
 [6]
 Description=New window settings
 wmclassmatch=1
@@ -94,8 +90,7 @@ noborder=true
 noborderrule=2
 
 [General]
-count=1
-rules=507eeb2b-4bec-4f67-9a24-7948e3991f81
+rules=
 
 [a8cf12cd-8994-4e9a-9615-340df3954f3c]
 Description=Settings for solaar

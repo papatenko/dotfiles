@@ -17,7 +17,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
-zinit snippet OMZP::dirhistory
+# zinit snippet OMZP::dirhistory
 
 # Load Completions
 autoload -U compinit && compinit
@@ -60,9 +60,46 @@ alias rm='trash'
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
+### AI
+_llm() {
+  local model="$1"
+  shift
+  if [ -t 0 ]; then
+    ollama run "$model" "$*"
+  else
+    local input
+    input=$(cat)
+    ollama run "$model" "$* $input"
+  fi
+}
+# gcmd() {
+#   _llm llama3.2:3b "write a single bash function or command for the following use case, return only the bash code plus a short explanation: $*"
+# }
+ask()     { _llm llama3.2:3b "$@"; }
+
 # bun completions
 [ -s "/home/jkondratenko/.bun/_bun" ] && source "/home/jkondratenko/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Bitwaden SSH
+export SSH_AUTH_SOCK="/home/jkondratenko/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+
+# Added by Antigravity CLI installer
+export PATH="/home/jkondratenko/.local/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/jkondratenko/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/jkondratenko/.opam/opam-init/init.zsh' ]] || source '/home/jkondratenko/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
