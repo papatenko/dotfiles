@@ -48,6 +48,10 @@ mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mut
 mute=Volume Mute,Volume Mute,Mute
 push_to_talk=none,none,Push to talk
 
+[krusader]
+_k_friendly_name=Krusader
+bring_main_window_to_top=Meta+K,Meta+K,Bring Main Window to Top
+
 [ksmserver]
 Halt Without Confirmation=none,none,Shut Down Without Confirmation
 Lock Session=\tScreensaver,Screensaver\tMeta+L,Lock Session
@@ -58,6 +62,11 @@ Reboot=none,none,Reboot
 Reboot Without Confirmation=none,none,Reboot Without Confirmation
 Shut Down=none,none,Shut Down
 _k_friendly_name=Session Management
+
+[ktorrent]
+_k_friendly_name=KTorrent
+queue_suspend=Alt+Shift+P,Alt+Shift+P,Suspend Torrents
+show_kt=Alt+Shift+T,Alt+Shift+T,Show/Hide KTorrent
 
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
@@ -352,10 +361,6 @@ toggle do not disturb=none,none,Toggle do not disturb
 
 [services][kitty.desktop]
 _launch=Meta+Return
-
-[services][org.kde.spectacle.desktop]
-CurrentMonitorScreenShot=none
-OpenWithoutScreenshot=none
 
 [token_chromium_019EDA0129F88BD76044ED76AB41D57D]
 _k_friendly_name=token_chromium_019EDA0129F88BD76044ED76AB41D57D

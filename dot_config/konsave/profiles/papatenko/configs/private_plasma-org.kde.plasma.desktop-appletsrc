@@ -312,16 +312,16 @@ DialogWidth=810
 immutability=1
 plugin=org.kde.plasma.marginsseparator
 
-[Containments][1215][Applets][1251]
+[Containments][1215][Applets][1252]
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
-[Containments][1215][Applets][1251][Configuration][General]
+[Containments][1215][Applets][1252][Configuration][General]
 expanding=false
 length=10
 
 [Containments][1215][General]
-AppletOrder=1250;1217;1251;1248;1249;1244;1216;1218;1245;1219;1220;1235
+AppletOrder=1250;1217;1252;1248;1249;1244;1216;1218;1245;1219;1220;1235
 
 [Containments1007Appletsts][1032][Configuration][Appearance]
 txt=%a
