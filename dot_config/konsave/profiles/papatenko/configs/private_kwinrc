@@ -222,6 +222,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][6f986973-5452-4e61-8359-b1d3f531d435][9b485411-e53d-43bd-be12-fdd6935a38ab]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][73f15541-bb3e-5d8e-8818-ce27d80208f3]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -379,6 +383,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][9b485411-e53d-43bd-be12-fdd6935a38ab]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][c08b99f5-8ff0-534a-b297-7205889d3a17]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -426,6 +434,10 @@ padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][97085c2f-4444-49bb-8bc8-3926eafdca54]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][9b485411-e53d-43bd-be12-fdd6935a38ab]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -518,7 +530,7 @@ BorderlessMaximizedWindows=false
 SeparateScreenFocus=true
 
 [Xwayland]
-Scale=1
+Scale=1.5
 
 [org.kde.kdecoration2]
 library=org.kde.breeze

@@ -259,6 +259,7 @@ DialogWidth=810
 
 [Containments][1215][Applets][1220][General]
 extraItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth
+iconSpacing=1
 knownItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth
 
 [Containments][1215][Applets][1235]
@@ -268,6 +269,10 @@ plugin=org.kde.plasma.digitalclock
 [Containments][1215][Applets][1235][Configuration]
 popupHeight=458
 popupWidth=560
+
+[Containments][1215][Applets][1235][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
 
 [Containments][1215][Applets][1244]
 immutability=1
@@ -312,16 +317,31 @@ DialogWidth=810
 immutability=1
 plugin=org.kde.plasma.marginsseparator
 
-[Containments][1215][Applets][1252]
+[Containments][1215][Applets][1253]
+immutability=1
+plugin=com.dv.fokus
+
+[Containments][1215][Applets][1253][Configuration]
+popupHeight=325
+popupWidth=324
+
+[Containments][1215][Applets][1253][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][1215][Applets][1253][Shortcuts]
+global=Meta+F
+
+[Containments][1215][Applets][1255]
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
-[Containments][1215][Applets][1252][Configuration][General]
+[Containments][1215][Applets][1255][Configuration][General]
 expanding=false
-length=10
+length=3
 
 [Containments][1215][General]
-AppletOrder=1250;1217;1252;1248;1249;1244;1216;1218;1245;1219;1220;1235
+AppletOrder=1250;1217;1255;1248;1253;1249;1244;1216;1218;1245;1219;1220;1235
 
 [Containments1007Appletsts][1032][Configuration][Appearance]
 txt=%a

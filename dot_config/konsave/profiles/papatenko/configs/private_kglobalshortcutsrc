@@ -291,6 +291,10 @@ seekforwardmedia=Media Fast Forward,Media Fast Forward,Media playback seek forwa
 seekforwardmedialong=none,none,Media playback seek forward 30s
 stopmedia=Media Stop,Media Stop,Stop media playback
 
+[openwhispr]
+_k_friendly_name=OpenWhispr
+dictation=F8,none,OpenWhispr dictation
+
 [org.chromium.Chromium]
 0C9254BAA4B99D36523B554BFBDD0F33-autofill_card=none,none,Autofill the last used card for the current website
 0C9254BAA4B99D36523B554BFBDD0F33-autofill_identity=none,none,Autofill the last used identity for the current website
@@ -341,6 +345,7 @@ activate widget 1074=none,none,Activate Application Launcher Widget
 activate widget 1091=none,none,Activate Application Launcher Widget
 activate widget 1210=none,none,Activate Application Launcher Widget
 activate widget 1216=Meta,none,Activate Application Launcher Widget
+activate widget 1253=Meta+F,none,Activate Fokus Widget
 clear history=none,none,Clear Notification History
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
@@ -361,6 +366,9 @@ toggle do not disturb=none,none,Toggle do not disturb
 
 [services][kitty.desktop]
 _launch=Meta+Return
+
+[services][org.kde.konsole.desktop]
+_launch=none
 
 [token_chromium_019EDA0129F88BD76044ED76AB41D57D]
 _k_friendly_name=token_chromium_019EDA0129F88BD76044ED76AB41D57D

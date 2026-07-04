@@ -13,7 +13,7 @@ detailViewIconSize=16
 calendars=8
 
 [PlasmaViews][Panel 1215]
-floating=0
+floating=1
 floatingApplets=1
 panelLengthMode=0
 panelOpacity=0
