@@ -24,18 +24,17 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # Completion Styling
-zstyle ':completion:*' matcher=list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors '{(s.:.)LS_COLORS}'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 ### History
-HISTSIZE=5000
+HISTSIZE=100000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
-HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_all_dups
@@ -52,30 +51,102 @@ bindkey '^[[B' history-search-forward
 
 ### Shell Integrations
 eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
+
+command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
+
+# atuin owns ^r; keep up/down as plain prefix-search (see bindkey block above)
+command -v atuin &>/dev/null && eval "$(atuin init zsh --disable-up-arrow)"
+
+# zoxide last: it wraps `cd`, and it warns if anything else initializes after it.
+eval "$(zoxide init --cmd cd zsh)"
 
 ### Replacements
 alias g++='gcc -lstdc++'
-alias ls='lsd'
 alias rm='trash'
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(starship init zsh)"
+alias ssh='kitten ssh'
+if command -v eza &>/dev/null; then
+  alias ls='eza --icons --group-directories-first'
+  alias ll='eza -l --icons --git --group-directories-first'
+  alias lt='eza --tree --level=2 --icons'
+fi
 
 ### AI
-_llm() {
-  local model="$1"
-  shift
-  if [ -t 0 ]; then
-    ollama run "$model" "$*"
+# Everything below runs through `codex exec`, which is already authenticated.
+#
+# `codex exec` prints a banner, session id, and token count to stdout, so the reply
+# is captured via -o (--output-last-message) instead. --ephemeral keeps one-shot
+# prompts out of the saved-session list; read-only sandbox means codex answers
+# rather than running anything itself.
+_codex() {
+  local out=$(mktemp) rc
+  if [[ -t 0 ]]; then
+    # Interactive: no stdin to forward, and codex would otherwise block waiting on it.
+    codex exec --ephemeral --skip-git-repo-check --color never -s read-only \
+      -o "$out" "$*" </dev/null >/dev/null 2>&1
   else
-    local input
-    input=$(cat)
-    ollama run "$model" "$* $input"
+    # Piped: codex appends stdin to the prompt as a <stdin> block.
+    codex exec --ephemeral --skip-git-repo-check --color never -s read-only \
+      -o "$out" "$*" >/dev/null 2>&1
   fi
+  rc=$?
+  # print -r adds the trailing newline codex omits, so the prompt isn't glued to the reply.
+  [[ -s $out ]] && print -r -- "$(<$out)"
+  rm -f "$out"
+  return $rc
 }
-# gcmd() {
-#   _llm llama3.2:3b "write a single bash function or command for the following use case, return only the bash code plus a short explanation: $*"
-# }
-ask()     { _llm llama3.2:3b "$@"; }
+
+ask() { _codex "$@"; }          # ask "question", or `cmd | ask "question"`
+alias askc='codex'              # drop into an interactive codex session
+
+# ^g: rewrite the current prompt buffer from English into a shell command,
+# left unexecuted and editable.
+_ai_cmd_zsh() {
+  setopt localoptions extendedglob
+  [[ -z "$BUFFER" ]] && return
+  local _old=$BUFFER
+  BUFFER="⌛ thinking..."
+  zle -I && zle redisplay
+  local _new=$(_codex "Output ONLY a runnable shell command for this request. No prose, no backticks, no markdown fences, no explanation: $_old")
+  # Belt and braces: strip backticks/fences if the model adds them anyway.
+  _new=${_new//\`/}
+  _new=${_new#(bash|sh|zsh)$'\n'}
+  _new=${_new##[[:space:]]##}
+  _new=${_new%%[[:space:]]##}
+  # On error or empty reply, restore what was typed rather than eating it.
+  BUFFER=${_new:-$_old}
+  zle end-of-line
+}
+if command -v codex &>/dev/null; then
+  zle -N _ai_cmd_zsh
+  bindkey '^g' _ai_cmd_zsh
+fi
+
+# Explain why the last command failed, using its real output.
+# WARNING: this RE-RUNS the last command to capture output. Never use it after
+# something with side effects (rm, git push, a migration) that partially succeeded.
+wtf() {
+  local cmd=$(fc -ln -1)
+  local out=$(eval "$cmd" 2>&1)
+  _codex "This shell command failed. Explain concisely why, then give the fix.
+
+Command: $cmd
+Output:
+$out"
+}
+
+# Propose a corrected version of the last command. Does not run anything.
+fixit() {
+  local cmd=$(fc -ln -1)
+  _codex "Output ONLY a corrected shell command, no prose, no backticks: $cmd"
+}
+
+# Draft a conventional-commit message from the staged diff, then open $EDITOR to review.
+gcm() {
+  git diff --cached --quiet && { echo "nothing staged"; return 1; }
+  local msg=$(git diff --cached | _codex "Write a conventional-commit message for this diff. Subject line under 72 chars. Body only if the change is non-obvious. Output only the message.")
+  git commit -e -m "$msg"
+}
 
 # bun completions
 [ -s "/home/jkondratenko/.bun/_bun" ] && source "/home/jkondratenko/.bun/_bun"
@@ -94,8 +165,6 @@ export PATH="/home/jkondratenko/.local/bin:$PATH"
 export PATH="$PATH:/home/jkondratenko/.lmstudio/bin"
 # End of LM Studio CLI section
 
-
-
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
 #   - the correct directories to the PATH
@@ -103,3 +172,5 @@ export PATH="$PATH:/home/jkondratenko/.lmstudio/bin"
 # This section can be safely removed at any time if needed.
 [[ ! -r '/home/jkondratenko/.opam/opam-init/init.zsh' ]] || source '/home/jkondratenko/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+
+alias brain="/home/jkondratenko/Nextcloud/Brain/.kitty-session.sh"
