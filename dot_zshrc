@@ -149,20 +149,20 @@ gcm() {
 }
 
 # bun completions
-[ -s "/home/jkondratenko/.bun/_bun" ] && source "/home/jkondratenko/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Bitwaden SSH
-export SSH_AUTH_SOCK="/home/jkondratenko/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
 
 # Added by Antigravity CLI installer
-export PATH="/home/jkondratenko/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/jkondratenko/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
 # BEGIN opam configuration
@@ -170,7 +170,7 @@ export PATH="$PATH:/home/jkondratenko/.lmstudio/bin"
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
-[[ ! -r '/home/jkondratenko/.opam/opam-init/init.zsh' ]] || source '/home/jkondratenko/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+[[ ! -r '$HOME/.opam/opam-init/init.zsh' ]] || source '$HOME/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
 
-alias brain="/home/jkondratenko/Nextcloud/Brain/.kitty-session.sh"
+alias brain="$HOME/Nextcloud/Brain/.kitty-session.sh"
