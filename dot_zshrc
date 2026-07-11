@@ -1,3 +1,16 @@
+# Keep remote SSH sessions fast and reliable. The full interactive config loads
+# plugin managers, prompt integrations, and desktop-adjacent helpers that can
+# block remote login setup over overlay networks.
+if [[ -n "${SSH_CONNECTION:-}" || -n "${SSH_CLIENT:-}" ]] && [[ -z "${PAPATENKO_FULL_ZSH_OVER_SSH:-}" ]]; then
+  export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.opencode/bin:$PATH"
+  export EDITOR="nvim"
+  alias ll='ls -alF'
+  alias la='ls -A'
+  alias l='ls -CF'
+  PROMPT='%n@%m:%~%# '
+  return
+fi
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
