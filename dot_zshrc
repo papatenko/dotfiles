@@ -179,3 +179,7 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 # END opam configuration
 
 alias brain="$HOME/Nextcloud/Brain/.kitty-session.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
