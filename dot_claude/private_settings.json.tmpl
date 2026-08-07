@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "{{ .chezmoi.homeDir }}/Nextcloud/Apps/Obsidian"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "composio@composio": true,
+    "warp@claude-code-warp": true,
+    "openviking-memory@openviking": true
+  },
+  "extraKnownMarketplaces": {
+    "composio": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/ComposioHQ/composio-plugin-cc.git"
+      }
+    },
+    "openviking": {
+      "source": {
+        "source": "directory",
+        "path": "{{ .chezmoi.homeDir }}/.openviking/marketplaces/openviking-claude"
+      }
+    }
+  },
+  "effortLevel": "low",
+  "theme": "dark",
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true,
+  "statusLine": {
+    "type": "command",
+    "command": "node \"{{ .chezmoi.homeDir }}/.openviking/openviking-repo/examples/claude-code-memory-plugin/scripts/statusline.mjs\"",
+    "padding": 0
+  }
+}

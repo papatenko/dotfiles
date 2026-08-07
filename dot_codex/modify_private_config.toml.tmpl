@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+# Managed by chezmoi (dot_codex/modify_config.toml.tmpl).
+# Ensures the OpenViking + Composio plugin/marketplace registrations are present
+# in ~/.codex/config.toml without touching mcp_servers (secrets), projects
+# (per-machine trust levels), or any other existing content in the file.
+import sys
+
+try:
+    import tomllib
+except ImportError:
+    import tomli as tomllib
+
+current_text = sys.stdin.read()
+try:
+    current = tomllib.loads(current_text) if current_text.strip() else {}
+except tomllib.TOMLDecodeError:
+    sys.stderr.write("modify_config.toml.tmpl: existing config.toml is not valid TOML, leaving untouched\n")
+    sys.stdout.write(current_text)
+    sys.exit(0)
+
+plugins = current.get("plugins", {})
+marketplaces = current.get("marketplaces", {})
+
+blocks = []
+
+if not plugins.get("openviking-memory@openviking", {}).get("enabled"):
+    blocks.append(
+        '[plugins."openviking-memory@openviking"]\n'
+        "enabled = true\n"
+    )
+
+if not plugins.get("composio@composio", {}).get("enabled"):
+    blocks.append(
+        '[plugins."composio@composio"]\n'
+        "enabled = true\n"
+    )
+
+if "openviking" not in marketplaces:
+    blocks.append(
+        "[marketplaces.openviking]\n"
+        'source_type = "git"\n'
+        f'source = "https://github.com/volcengine/OpenViking.git"\n'
+        'ref = "main"\n'
+        'sparse_paths = ["examples/codex-memory-plugin", ".agents"]\n'
+    )
+
+if "composio" not in marketplaces:
+    blocks.append(
+        "[marketplaces.composio]\n"
+        'source_type = "git"\n'
+        'source = "https://github.com/ComposioHQ/composio-plugin-openai.git"\n'
+    )
+
+output = current_text
+if blocks:
+    if output and not output.endswith("\n"):
+        output += "\n"
+    if output:
+        output += "\n"
+    output += "\n".join(blocks)
+
+sys.stdout.write(output)
