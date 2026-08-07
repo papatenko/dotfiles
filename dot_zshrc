@@ -64,7 +64,6 @@ eval "$(zoxide init --cmd cd zsh)"
 ### Replacements
 alias g++='gcc -lstdc++'
 alias rm='trash'
-alias ssh='kitten ssh'
 if command -v eza &>/dev/null; then
   alias ls='eza --icons --group-directories-first'
   alias ll='eza -l --icons --git --group-directories-first'
@@ -174,3 +173,17 @@ export PATH="$PATH:/home/jkondratenko/.lmstudio/bin"
 # END opam configuration
 
 alias brain="/home/jkondratenko/Nextcloud/Brain/.kitty-session.sh"
+
+# Composio CLI
+export COMPOSIO_INSTALL_DIR="/home/jkondratenko/.composio"
+export PATH="$COMPOSIO_INSTALL_DIR:$PATH"
+
+# kimi-code
+export PATH="/home/jkondratenko/.kimi-code/bin:$PATH"
+
+# Source Bitwarden token securely
+if [ -f "$HOME/.env.bitwarden" ]; then
+  set -a
+  source "$HOME/.env.bitwarden"
+  set +a
+fi

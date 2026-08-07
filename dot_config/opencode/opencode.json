@@ -1,8 +1,36 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["@warp-dot-dev/opencode-warp"],
-  "autoupdate": true,
-  "provider": {
-    
+  "plugin": [
+    "@warp-dot-dev/opencode-warp",
+    [
+      "./plugins/omniroute/dist/index.js",
+      {
+        "providerId": "omniroute",
+        "baseURL": "http://192.168.0.201:20128",
+        "autoSyncIntervalMs": 0
+      }
+    ]
+  ,
+    "@openviking/opencode-plugin",
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "model": "opencode-omniroute/auto/cheap",
+  "autoupdate": false,
+
+  "mcp": {
+    "openviking": {
+      "type": "local",
+      "command": [
+        "node",
+        "/home/jkondratenko/.openviking/opencode-mcp-proxy/openviking/servers/mcp-proxy.mjs"
+      ],
+      "enabled": true,
+      "timeout": 15000
+    },
+    "notebooklm": {
+      "type": "local",
+      "command": ["npx", "-y", "notebooklm-mcp@latest"],
+      "enabled": true
+    }
   }
 }

@@ -40,7 +40,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH
 # fi
 # unset __conda_setup
 
-
 # Added by Antigravity CLI installer
 export PATH="/home/jkondratenko/.local/bin:$PATH"
 

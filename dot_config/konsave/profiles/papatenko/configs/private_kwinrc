@@ -7,12 +7,8 @@ OpenGLIsUnsafe=false
 
 [Desktops]
 Id_1=c0774328-f482-4743-88d2-37598d5c1aa3
-Id_2=cab65364-165f-42d3-9099-bdd6a6d83f31
-Id_3=6f986973-5452-4e61-8359-b1d3f531d435
 Name_1=\sDesktop 1\s
-Name_2=\sDesktop 2\s
-Name_3=\sDesktop 3\s
-Number=3
+Number=1
 Rows=1
 
 [Effect-diminactive]
@@ -38,6 +34,7 @@ minimizeallEnabled=false
 poloniumEnabled=true
 synchronizeskipswitcherEnabled=false
 videowallEnabled=true
+zoomEnabled=false
 
 [Round-Corners]
 ActiveOutlineUseCustom=false
@@ -185,6 +182,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6f986973-5452-4e61-8359-b1d3f531d435][061bdc1b-b533-43b3-918a-357514ee270a]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6f986973-5452-4e61-8359-b1d3f531d435][08991d9b-eecf-4e1d-9c63-b2a1b659ef9a]
@@ -346,6 +344,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][061bdc1b-b533-43b3-918a-357514ee270a]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][08991d9b-eecf-4e1d-9c63-b2a1b659ef9a]
@@ -400,6 +399,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][061bdc1b-b533-43b3-918a-357514ee270a]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][cab65364-165f-42d3-9099-bdd6a6d83f31][08991d9b-eecf-4e1d-9c63-b2a1b659ef9a]
@@ -531,6 +531,7 @@ SeparateScreenFocus=true
 
 [Xwayland]
 Scale=1.5
+XwaylandEisNoPromptApps=handy
 
 [org.kde.kdecoration2]
 library=org.kde.breeze
