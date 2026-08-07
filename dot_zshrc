@@ -177,14 +177,22 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 [[ ! -r '$HOME/.opam/opam-init/init.zsh' ]] || source '$HOME/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
 
-alias brain="/home/jkondratenko/Nextcloud/Brain/.kitty-session.sh"
+alias brain="$HOME/Nextcloud/Brain/.kitty-session.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Composio CLI
-export COMPOSIO_INSTALL_DIR="/home/jkondratenko/.composio"
-export PATH="$COMPOSIO_INSTALL_DIR:$PATH"
+if [ -d "$HOME/.composio" ]; then
+  export COMPOSIO_INSTALL_DIR="$HOME/.composio"
+  export PATH="$COMPOSIO_INSTALL_DIR:$PATH"
+fi
 
 # kimi-code
-export PATH="/home/jkondratenko/.kimi-code/bin:$PATH"
+if [ -d "$HOME/.kimi-code/bin" ]; then
+  export PATH="$HOME/.kimi-code/bin:$PATH"
+fi
 
 # Source Bitwarden token securely
 if [ -f "$HOME/.env.bitwarden" ]; then
