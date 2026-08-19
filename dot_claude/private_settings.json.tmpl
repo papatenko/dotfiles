@@ -1,7 +1,7 @@
 {
   "permissions": {
     "additionalDirectories": [
-      "{{ .chezmoi.homeDir }}/Nextcloud/Apps/Obsidian"
+      "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
     ]
   },
   "model": "{{ if eq .chezmoi.hostname "DESKTOP-17L7TR0" }}opus{{ else }}sonnet{{ end }}",
@@ -66,7 +66,7 @@
       "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
       "### User-specific",
       "**Primary use of Claude Code**: software development",
-      "**Trusted repo**: The git repository the agent started in ({{ .chezmoi.homeDir }}/Nextcloud/Apps/Obsidian) — no remotes are configured, so treat it as local-only; visibility unknown/unqueryable, assume private",
+      "**Trusted repo**: The git repository the agent started in ({{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian) — no remotes are configured, so treat it as local-only; visibility unknown/unqueryable, assume private",
       "**Org-specific CLIs**: None configured"
 {{ else }}
       "### Org-wide",

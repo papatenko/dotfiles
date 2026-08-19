@@ -5,3 +5,11 @@ docs/
 .config/btop/btop.conf
 .config/btop/btop.log
 {{ end }}
+{{ if eq .chezmoi.os "windows" }}
+.zshrc
+.zshenv
+.tmux.conf
+.tmux/
+.glzr/
+.config/nvim-custom/nvim/lua/user
+{{ end }}
