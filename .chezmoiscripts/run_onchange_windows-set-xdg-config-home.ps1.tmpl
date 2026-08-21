@@ -1,0 +1,13 @@
+{{- if eq .chezmoi.os "windows" -}}
+# Windows doesn't set XDG_CONFIG_HOME, so XDG-aware CLI tools (nvim,
+# fastfetch, lazygit, ...) can't find configs synced under ~/.config and
+# silently fall back to their native Windows AppData paths instead.
+# hash: {{ "C:\\Users\\Admin\\.config" | sha256sum }}
+
+$desired = "$HOME\.config"
+$current = [Environment]::GetEnvironmentVariable("XDG_CONFIG_HOME", "User")
+if ($current -ne $desired) {
+    [Environment]::SetEnvironmentVariable("XDG_CONFIG_HOME", $desired, "User")
+    Write-Host "Set XDG_CONFIG_HOME=$desired (was: $current)"
+}
+{{ end -}}
