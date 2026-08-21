@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.ps1' session"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.sh' session"{{ end }},
+            "command": {{ if eq .chezmoi.os "windows" }}"pwsh -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.ps1' session"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.sh' session"{{ end }},
             "timeout": 10
           }
         ]
