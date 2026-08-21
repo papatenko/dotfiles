@@ -4,7 +4,6 @@
       "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
     ]
   },
-  "model": "{{ if eq .chezmoi.hostname "DESKTOP-17L7TR0" }}opus{{ else }}sonnet{{ end }}",
   "preferredNotifChannel": "terminal_bell",
   "hooks": {
     "SessionStart": [
