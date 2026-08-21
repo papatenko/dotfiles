@@ -5,6 +5,7 @@
     ]
   },
   "model": "{{ if eq .chezmoi.hostname "DESKTOP-17L7TR0" }}opus{{ else }}sonnet{{ end }}",
+  "preferredNotifChannel": "terminal_bell",
   "hooks": {
     "SessionStart": [
       {
@@ -12,7 +13,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.sh' session",
+            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.ps1' session"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.sh' session"{{ end }},
             "timeout": 10
           }
         ]
@@ -33,8 +34,8 @@
     },
     "openviking": {
       "source": {
-        "source": "directory",
-        "path": "{{ .chezmoi.homeDir }}/.openviking/marketplaces/openviking-claude"
+        "source": "url",
+        "url": "https://raw.githubusercontent.com/volcengine/OpenViking/main/.claude-plugin/marketplace.json"
       }
     }
   },
@@ -98,7 +99,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "node \"{{ .chezmoi.homeDir }}/.openviking/openviking-repo/examples/claude-code-memory-plugin/scripts/statusline.mjs\"",
+    "command": "bash -c 'p=$(ls -d \"$HOME\"/.claude/plugins/cache/openviking/openviking-memory/*/scripts/statusline.mjs 2>/dev/null | sort -V | tail -1); [ -n \"$p\" ] && exec node \"$p\"; exit 0'",
     "padding": 0
   }
 }
