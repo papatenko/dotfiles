@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+"""Keep Kimi Code's plan-first preference without replacing private config."""
+
+import re
+import sys
+
+
+current_text = sys.stdin.read()
+setting = "default_plan_mode = true"
+pattern = re.compile(r"(?m)^\s*default_plan_mode\s*=\s*(?:true|false)\s*(?:#.*)?$")
+
+if pattern.search(current_text):
+    output = pattern.sub(setting, current_text, count=1)
+else:
+    output = current_text
+    if output and not output.endswith("\n"):
+        output += "\n"
+    if output:
+        output += "\n"
+    output += setting + "\n"
+
+sys.stdout.write(output)
