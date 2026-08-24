@@ -1,0 +1,11 @@
+{{- if eq .chezmoi.os "windows" -}}
+# BrowserOS runs locally on each Windows workstation. Register its loopback MCP
+# endpoint in Claude Code without replacing unrelated user-managed MCP servers.
+$claude = Get-Command claude -ErrorAction SilentlyContinue
+if ($null -ne $claude) {
+  & $claude.Source mcp get browseros --scope user *> $null
+  if ($LASTEXITCODE -ne 0) {
+    & $claude.Source mcp add --transport http browseros http://127.0.0.1:9200/mcp --scope user
+  }
+}
+{{ end -}}
