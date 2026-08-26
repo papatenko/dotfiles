@@ -5,6 +5,7 @@
     "ENABLE_TOOL_SEARCH": "auto"
   },
 {{ end }}  "permissions": {
+    "defaultMode": "plan",
     "additionalDirectories": [
       "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
     ]
@@ -17,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.ps1' session"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.sh' session"{{ end }},
+            "command": {{ if eq .chezmoi.os "windows" }}"pwsh -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.ps1' session"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/herdr-agent-state.sh' session"{{ end }},
             "timeout": 10
           }
         ]
@@ -26,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/caveman-skill-autostart.ps1'"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/caveman-skill-autostart.sh'"{{ end }},
+            "command": {{ if eq .chezmoi.os "windows" }}"pwsh -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/caveman-skill-autostart.ps1'"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/caveman-skill-autostart.sh'"{{ end }},
             "timeout": 5
           }
         ]
@@ -45,7 +46,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
+            "command": {{ if eq .chezmoi.os "windows" }}"pwsh -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
           }
         ]
       }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
@@ -63,7 +64,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
+            "command": {{ if eq .chezmoi.os "windows" }}"pwsh -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
           }
         ]
       }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
