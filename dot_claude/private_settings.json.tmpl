@@ -1,5 +1,10 @@
 {
-  "permissions": {
+{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }}  "env": {
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:8787/w/claude",
+    "_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL": "1",
+    "ENABLE_TOOL_SEARCH": "auto"
+  },
+{{ end }}  "permissions": {
     "additionalDirectories": [
       "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
     ]
@@ -16,8 +21,149 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -File '{{ .chezmoi.homeDir }}/.claude/hooks/caveman-skill-autostart.ps1'"{{ else }}"bash '{{ .chezmoi.homeDir }}/.claude/hooks/caveman-skill-autostart.sh'"{{ end }},
+            "timeout": 5
+          }
+        ]
+      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }{{ end }}
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
+          }
+        ]
+      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }{{ end }}
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": {{ if eq .chezmoi.os "windows" }}"powershell -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
+          }
+        ]
+      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }{{ end }}
+    ]{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
       }
-    ]
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.local/bin/caveman' shrink-hook"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+          }
+        ]
+      }
+    ]{{ end }}
   },
   "enabledPlugins": {
     "composio@composio": true,
@@ -100,5 +246,10 @@
     "type": "command",
     "command": "bash -c 'p=$(ls -d \"$HOME\"/.claude/plugins/cache/openviking/openviking-memory/*/scripts/statusline.mjs 2>/dev/null | sort -V | tail -1); [ -n \"$p\" ] && exec node \"$p\"; exit 0'",
     "padding": 0
+  },
+  "voiceEnabled": true,
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
   }
 }

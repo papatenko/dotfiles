@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -eu
+
+# BrowserOS runs locally on each workstation. Register its loopback MCP endpoint
+# in Claude Code without replacing unrelated user-managed MCP servers.
+if command -v claude >/dev/null 2>&1; then
+  if ! claude mcp get browseros --scope user >/dev/null 2>&1; then
+    claude mcp add --transport http browseros http://127.0.0.1:9200/mcp --scope user
+  fi
+fi
