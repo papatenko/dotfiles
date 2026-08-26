@@ -14,7 +14,7 @@ servers = current.get("mcpServers")
 if not isinstance(servers, dict):
     servers = {}
 servers.pop("browseros", None)
-if servers.get("browseros-neo") == desired and isinstance(current.get("mcpServers"), dict):
+if "browseros" not in current.get("mcpServers", {}) and servers.get("browseros-neo") == desired and isinstance(current.get("mcpServers"), dict):
     sys.stdout.write(current_text)
     sys.exit(0)
 servers["browseros-neo"] = desired
