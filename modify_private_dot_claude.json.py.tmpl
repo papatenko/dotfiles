@@ -13,8 +13,9 @@ desired = {"url": "http://127.0.0.1:9011/mcp", "type": "http"}
 servers = current.get("mcpServers")
 if not isinstance(servers, dict):
     servers = {}
+had_legacy = "browseros" in servers
 servers.pop("browseros", None)
-if "browseros" not in current.get("mcpServers", {}) and servers.get("browseros-neo") == desired and isinstance(current.get("mcpServers"), dict):
+if not had_legacy and servers.get("browseros-neo") == desired and isinstance(current.get("mcpServers"), dict):
     sys.stdout.write(current_text)
     sys.exit(0)
 servers["browseros-neo"] = desired
