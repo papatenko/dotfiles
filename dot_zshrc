@@ -1,7 +1,3 @@
-# >>> cc-clip PATH (do not edit) >>>
-export PATH="$HOME/.local/bin:$PATH"
-# <<< cc-clip PATH (do not edit) <<<
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -193,10 +189,18 @@ if [ -d "$HOME/.composio" ]; then
   export PATH="$COMPOSIO_INSTALL_DIR:$PATH"
 fi
 
+# Claude Code
+alias claude="caveman claude"
+
 # kimi-code
 if [ -d "$HOME/.kimi-code/bin" ]; then
   export PATH="$HOME/.kimi-code/bin:$PATH"
 fi
+
+# Github Copilot
+export COPILOT_OTEL_ENABLED=true
+export COPILOT_OTEL_EXPORTER_TYPE=file
+export COPILOT_OTEL_FILE_EXPORTER_PATH="$HOME/.copilot/otel/copilot-otel-$(date +%Y%m%d).jsonl"
 
 # Source Bitwarden token securely
 if [ -f "$HOME/.env.bitwarden" ]; then
