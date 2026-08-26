@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # Managed by chezmoi (dot_codex/modify_config.toml.tmpl).
-# Ensures the OpenViking + Composio plugin/marketplace registrations are present
-# in ~/.codex/config.toml
-# without touching projects (per-machine trust levels) or other content.
+# Ensures the OpenViking + Composio plugin/marketplace registrations and the
+# local BrowserOS Neo HTTP MCP registration are present in ~/.codex/config.toml
+# without touching mcp_servers (secrets), projects (per-machine trust levels),
+# or any other existing content in the file.
 import sys
 
 try:
@@ -20,7 +21,15 @@ except tomllib.TOMLDecodeError:
 
 plugins = current.get("plugins", {})
 marketplaces = current.get("marketplaces", {})
+mcp_servers = current.get("mcp_servers", {})
+
 blocks = []
+
+if "browseros-neo" not in mcp_servers:
+    blocks.append(
+        "[mcp_servers.browseros-neo]\n"
+        'url = "http://127.0.0.1:9011/mcp"\n'
+    )
 
 if not plugins.get("openviking-memory@openviking", {}).get("enabled"):
     blocks.append(

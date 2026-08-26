@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+import json
+import sys
+
+current_text = sys.stdin.read()
+try:
+    current = json.loads(current_text) if current_text.strip() else {}
+except json.JSONDecodeError:
+    sys.stdout.write(current_text)
+    sys.exit(0)
+
+desired = {"url": "http://127.0.0.1:9011/mcp"}
+servers = current.get("mcpServers")
+if not isinstance(servers, dict):
+    servers = {}
+if servers.get("browseros-neo") == desired and isinstance(current.get("mcpServers"), dict):
+    sys.stdout.write(current_text)
+    sys.exit(0)
+servers["browseros-neo"] = desired
+current["mcpServers"] = servers
+sys.stdout.write(json.dumps(current, indent=2, ensure_ascii=False) + "\n")
