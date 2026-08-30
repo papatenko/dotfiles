@@ -208,3 +208,6 @@ if [ -f "$HOME/.env.bitwarden" ]; then
   source "$HOME/.env.bitwarden"
   set +a
 fi
+
+# Machine-local shell settings; intentionally not managed by Chezmoi.
+[[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
