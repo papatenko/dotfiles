@@ -73,7 +73,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
+            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'",
+            "timeout": 30
           }
         ]
       }
