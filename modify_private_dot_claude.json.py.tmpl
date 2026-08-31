@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import json
+import os
+import re
 import sys
 
 current_text = sys.stdin.read()
@@ -9,15 +11,26 @@ except json.JSONDecodeError:
     sys.stdout.write(current_text)
     sys.exit(0)
 
+home = os.path.expanduser("~")
+
+def portable_home(value):
+    if isinstance(value, str):
+        value = re.sub(r"'" + re.escape(home) + r"([^']*)'", r'"$HOME\1"', value)
+        return value.replace(home, "$HOME")
+    if isinstance(value, list):
+        return [portable_home(item) for item in value]
+    if isinstance(value, dict):
+        return {key: portable_home(item) for key, item in value.items()}
+    return value
+
+current = portable_home(current)
+
 desired = {"url": "http://127.0.0.1:9011/mcp", "type": "http"}
 servers = current.get("mcpServers")
 if not isinstance(servers, dict):
     servers = {}
 had_legacy = "browseros" in servers
 servers.pop("browseros", None)
-if not had_legacy and servers.get("browseros-neo") == desired and isinstance(current.get("mcpServers"), dict):
-    sys.stdout.write(current_text)
-    sys.exit(0)
 servers["browseros-neo"] = desired
 current["mcpServers"] = servers
 sys.stdout.write(json.dumps(current, indent=2, ensure_ascii=False) + "\n")

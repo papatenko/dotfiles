@@ -1,3 +1,8 @@
+# Default (500ms) is too tight for git.exe on Windows, especially inside
+# cloud-synced folders (Nextcloud/OneDrive) where antivirus + sync-client
+# file locking add real latency to process spawn.
+command_timeout = 2000
+
 [directory]
 truncation_length = 0
 truncate_to_repo = false
