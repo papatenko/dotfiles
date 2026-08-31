@@ -4,17 +4,22 @@ local config = wezterm.config_builder()
 -- Same scheme as kitty's current-theme.conf; wezterm ships it as a built-in.
 config.color_scheme = "Moonfly (Gogh)"
 
--- Keybinds ported from ~/.config/kitty/kitty.conf and tabs.conf
+-- Keybinds ported from ~/.config/kitty/kitty.conf and tabs.conf, plus
+-- Konsole's default pane-management shortcuts (Konsole has no user overrides
+-- on this system, so these are its stock defaults).
 config.keys = {
 	{ key = "Insert", mods = "SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
 
-	-- kitty: map ctrl+shift+alt+enter launch --location=hsplit --cwd=current
-	-- (wezterm splits already inherit the current pane's cwd by default)
-	{
-		key = "Enter",
-		mods = "CTRL|SHIFT|ALT",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
+	-- Konsole: Split View Left/Right (Ctrl+()
+	{ key = "(", mods = "CTRL", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	-- Konsole: Split View Top/Bottom (Ctrl+))
+	{ key = ")", mods = "CTRL", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	-- Konsole: Toggle Maximize Current View (Ctrl+Shift+E)
+	{ key = "E", mods = "CTRL|SHIFT", action = wezterm.action.TogglePaneZoomState },
+	-- Konsole: Expand/Shrink View (Ctrl+Shift+]/[) -- approximated as directional
+	-- resize since wezterm has no directionless "expand active pane" action.
+	{ key = "]", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Right", 5 }) },
+	{ key = "[", mods = "CTRL|SHIFT", action = wezterm.action.AdjustPaneSize({ "Left", 5 }) },
 
 	-- kitty: alt+1..9 goto_tab 1..9 (wezterm tabs are 0-indexed)
 	{ key = "1", mods = "ALT", action = wezterm.action.ActivateTab(0) },
