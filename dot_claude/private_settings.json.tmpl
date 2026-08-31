@@ -22,7 +22,7 @@
             "timeout": 10
           }
         ]
-      },
+      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
       {
         "hooks": [
           {
@@ -31,7 +31,7 @@
             "timeout": 5
           }
         ]
-      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
+      },
       {
         "hooks": [
           {
