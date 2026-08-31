@@ -1,47 +1,8 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
--- Moonfly (same scheme as kitty's current-theme.conf, ported by hand for exact color match)
--- https://github.com/bluz71/vim-moonfly-colors/blob/master/extras/moonfly-kitty.conf
-config.colors = {
-	background = "#080808",
-	foreground = "#bdbdbd",
-	cursor_bg = "#9e9e9e",
-	cursor_border = "#9e9e9e",
-	cursor_fg = "#080808",
-	selection_bg = "#b2ceee",
-	selection_fg = "#080808",
-	ansi = {
-		"#323437",
-		"#ff5d5d",
-		"#8cc85f",
-		"#e3c78a",
-		"#80a0ff",
-		"#cf87e8",
-		"#79dac8",
-		"#c6c6c6",
-	},
-	brights = {
-		"#949494",
-		"#ff5189",
-		"#36c692",
-		"#c6c684",
-		"#74b2ff",
-		"#ae81ff",
-		"#85dc85",
-		"#e4e4e4",
-	},
-	tab_bar = {
-		active_tab = {
-			bg_color = "#80a0ff",
-			fg_color = "#080808",
-		},
-		inactive_tab = {
-			bg_color = "#323437",
-			fg_color = "#b2b2b2",
-		},
-	},
-}
+-- Same scheme as kitty's current-theme.conf; wezterm ships it as a built-in.
+config.color_scheme = "Moonfly (Gogh)"
 
 -- Keybinds ported from ~/.config/kitty/kitty.conf and tabs.conf
 config.keys = {
