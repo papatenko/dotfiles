@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # Managed by chezmoi (dot_codex/modify_config.toml.tmpl).
-# Ensures the OpenViking + Composio plugin/marketplace registrations are
+# Ensures the OpenViking + Composio plugin/marketplace registrations and
+# Playwright MCP registration are
 # present in ~/.codex/config.toml
-# without touching mcp_servers (secrets), projects (per-machine trust levels),
+# without touching projects (per-machine trust levels),
 # or any other existing content in the file.
 import sys
 
@@ -49,6 +50,13 @@ if "composio" not in marketplaces:
         "[marketplaces.composio]\n"
         'source_type = "git"\n'
         'source = "https://github.com/ComposioHQ/composio-plugin-openai.git"\n'
+    )
+
+if "playwright" not in current.get("mcp_servers", {}):
+    blocks.append(
+        "[mcp_servers.playwright]\n"
+        'command = "npx"\n'
+        'args = ["-y", "@playwright/mcp@latest"]\n'
     )
 
 output = current_text
