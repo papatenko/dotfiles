@@ -85,6 +85,13 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Bitwaden SSH
 export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
 
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:$HOME/.lmstudio/bin"
+# End of LM Studio CLI section
+
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
 #   - the correct directories to the PATH
@@ -98,6 +105,25 @@ alias brain="$HOME/Nextcloud/Brain/.kitty-session.sh"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Composio CLI
+if [ -d "$HOME/.composio" ]; then
+  export COMPOSIO_INSTALL_DIR="$HOME/.composio"
+  export PATH="$COMPOSIO_INSTALL_DIR:$PATH"
+fi
+
+# Claude Code
+alias claude="caveman claude"
+
+# kimi-code
+if [ -d "$HOME/.kimi-code/bin" ]; then
+  export PATH="$HOME/.kimi-code/bin:$PATH"
+fi
+
+# Github Copilot
+export COPILOT_OTEL_ENABLED=true
+export COPILOT_OTEL_EXPORTER_TYPE=file
+export COPILOT_OTEL_FILE_EXPORTER_PATH="$HOME/.copilot/otel/copilot-otel-$(date +%Y%m%d).jsonl"
 
 # Source Bitwarden token securely
 if [ -f "$HOME/.env.bitwarden" ]; then
