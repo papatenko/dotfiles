@@ -9,7 +9,4 @@ export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border --preview-window
 
 export EDITOR="nvim"
 
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.opencode/bin:/usr/local/cuda-12.3/bin:$HOME/.fzf/bin:$PATH"
-
-# Ollama cuda support
-export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.fzf/bin:$PATH"
