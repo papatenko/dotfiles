@@ -15945,58 +15945,57 @@ function createOmniRouteProviderHook(opts, deps = {}) {
         rawCompressionCombos = cached2.rawCompressionCombos;
         rawConnections = cached2.rawConnections;
       } else {
-        rawModels = await fetcher(baseURL, apiKey, 1e4);
-        rawCombos = [];
-        if (wantCombos) {
-          try {
-            rawCombos = await combosFetcher(baseURL, managementReadToken, 1e4);
-          } catch (err) {
-            console.warn(
-              "[omniroute-plugin] combos fetch failed, falling back to models-only catalog",
-              err
-            );
-          }
+        const [
+          modelsRes,
+          combosRes,
+          autoCombosRes,
+          enrichmentRes,
+          compressionRes,
+          providersRes
+        ] = await Promise.allSettled([
+          fetcher(baseURL, apiKey, 3000),
+          wantCombos ? combosFetcher(baseURL, managementReadToken, 3000) : Promise.resolve([]),
+          wantAutoCombos ? autoCombosFetcher(baseURL, managementReadToken, 3000) : Promise.resolve([]),
+          wantEnrichment ? enrichmentFetcher(baseURL, managementReadToken, 3000) : Promise.resolve(/* @__PURE__ */ new Map()),
+          wantCompressionMeta ? compressionMetaFetcher(baseURL, managementReadToken, 3000) : Promise.resolve([]),
+          wantUsableOnly ? providersFetcher(baseURL, managementReadToken, 3000) : Promise.resolve([])
+        ]);
+
+        if (modelsRes.status === "fulfilled") {
+          rawModels = modelsRes.value;
+        } else {
+          rawModels = [];
         }
-        rawAutoCombos = [];
-        if (wantAutoCombos) {
-          try {
-            rawAutoCombos = await autoCombosFetcher(baseURL, managementReadToken, 5e3);
-          } catch {
-          }
+
+        rawCombos = combosRes.status === "fulfilled" ? combosRes.value : [];
+        if (combosRes.status === "rejected" && wantCombos) {
+          console.warn(
+            "[omniroute-plugin] combos fetch failed, falling back to models-only catalog",
+            combosRes.reason
+          );
         }
-        rawEnrichment = /* @__PURE__ */ new Map();
-        if (wantEnrichment) {
-          try {
-            rawEnrichment = await enrichmentFetcher(baseURL, managementReadToken, 1e4);
-          } catch (err) {
-            console.warn(
-              "[omniroute-plugin] enrichment fetch failed, falling back to raw ids",
-              err
-            );
-          }
+
+        rawAutoCombos = autoCombosRes.status === "fulfilled" ? autoCombosRes.value : [];
+
+        rawEnrichment = enrichmentRes.status === "fulfilled" ? enrichmentRes.value : /* @__PURE__ */ new Map();
+        if (enrichmentRes.status === "rejected" && wantEnrichment) {
+          console.warn(
+            "[omniroute-plugin] enrichment fetch failed, falling back to raw ids",
+            enrichmentRes.reason
+          );
         }
-        rawCompressionCombos = [];
-        if (wantCompressionMeta) {
-          try {
-            rawCompressionCombos = await compressionMetaFetcher(
-              baseURL,
-              managementReadToken,
-              1e4
-            );
-          } catch (err) {
-            console.warn("[omniroute-plugin] compression-metadata fetch failed", err);
-          }
+
+        rawCompressionCombos = compressionRes.status === "fulfilled" ? compressionRes.value : [];
+        if (compressionRes.status === "rejected" && wantCompressionMeta) {
+          console.warn("[omniroute-plugin] compression-metadata fetch failed", compressionRes.reason);
         }
-        rawConnections = [];
-        if (wantUsableOnly) {
-          try {
-            rawConnections = await providersFetcher(baseURL, managementReadToken, 1e4);
-          } catch (err) {
-            console.warn(
-              "[omniroute-plugin] /api/providers fetch failed; usableOnly filter disabled for this refresh",
-              err
-            );
-          }
+
+        rawConnections = providersRes.status === "fulfilled" ? providersRes.value : [];
+        if (providersRes.status === "rejected" && wantUsableOnly) {
+          console.warn(
+            "[omniroute-plugin] /api/providers fetch failed; usableOnly filter disabled for this refresh",
+            providersRes.reason
+          );
         }
         cache.set(cacheKey, {
           rawModels,
@@ -17017,65 +17016,66 @@ function createOmniRouteConfigHook(opts, deps = {}) {
       rawConnections = cached2.rawConnections;
     } else {
       let modelsFetchThrew = false;
-      try {
-        rawModels = await fetcher(baseURL, apiKey, 1e4);
-      } catch (err) {
+      const [
+        modelsRes,
+        combosRes,
+        autoCombosRes,
+        enrichmentRes,
+        compressionRes,
+        providersRes
+      ] = await Promise.allSettled([
+        fetcher(baseURL, apiKey, 2000),
+        combosFetcher(baseURL, managementReadToken, 2000),
+        wantAutoCombos ? autoCombosFetcher(baseURL, managementReadToken, 2000) : Promise.resolve([]),
+        wantEnrichment ? enrichmentFetcher(baseURL, managementReadToken, 2000) : Promise.resolve(/* @__PURE__ */ new Map()),
+        wantCompressionMeta ? compressionMetaFetcher(baseURL, managementReadToken, 2000) : Promise.resolve([]),
+        wantUsableOnly ? providersFetcher(baseURL, managementReadToken, 2000) : Promise.resolve([])
+      ]);
+
+      if (modelsRes.status === "fulfilled") {
+        rawModels = modelsRes.value;
+      } else {
         logger2.warn(
           "[omniroute-plugin] config shim: /v1/models fetch failed; publishing stub provider entry",
-          err
+          modelsRes.reason
         );
         rawModels = [];
         modelsFetchThrew = true;
       }
       const modelsFetchOk = !modelsFetchThrew && rawModels.length > 0;
-      rawCombos = [];
-      try {
-        rawCombos = await combosFetcher(baseURL, managementReadToken, 1e4);
-      } catch (err) {
+
+      rawCombos = combosRes.status === "fulfilled" ? combosRes.value : [];
+      if (combosRes.status === "rejected") {
         logger2.warn(
           "[omniroute-plugin] config shim: /api/combos fetch failed; publishing models-only static catalog",
-          err
+          combosRes.reason
         );
       }
-      rawAutoCombos = [];
-      if (wantAutoCombos) {
-        try {
-          rawAutoCombos = await autoCombosFetcher(baseURL, managementReadToken, 5e3);
-        } catch {
-        }
+
+      rawAutoCombos = autoCombosRes.status === "fulfilled" ? autoCombosRes.value : [];
+
+      rawEnrichment = enrichmentRes.status === "fulfilled" ? enrichmentRes.value : /* @__PURE__ */ new Map();
+      if (enrichmentRes.status === "rejected" && wantEnrichment) {
+        logger2.warn(
+          "[omniroute-plugin] config shim: /api/pricing/models fetch failed; publishing raw-id static catalog",
+          enrichmentRes.reason
+        );
       }
-      rawEnrichment = /* @__PURE__ */ new Map();
-      if (wantEnrichment) {
-        try {
-          rawEnrichment = await enrichmentFetcher(baseURL, managementReadToken, 1e4);
-        } catch (err) {
-          logger2.warn(
-            "[omniroute-plugin] config shim: /api/pricing/models fetch failed; publishing raw-id static catalog",
-            err
-          );
-        }
+
+      rawCompressionCombos = compressionRes.status === "fulfilled" ? compressionRes.value : [];
+      if (compressionRes.status === "rejected" && wantCompressionMeta) {
+        logger2.warn(
+          "[omniroute-plugin] config shim: /api/context/combos fetch failed; publishing combos without compression suffix",
+          compressionRes.reason
+        );
       }
-      rawCompressionCombos = [];
-      if (wantCompressionMeta) {
-        try {
-          rawCompressionCombos = await compressionMetaFetcher(baseURL, managementReadToken, 1e4);
-        } catch (err) {
-          logger2.warn(
-            "[omniroute-plugin] config shim: /api/context/combos fetch failed; publishing combos without compression suffix",
-            err
-          );
-        }
-      }
-      rawConnections = [];
-      if (wantUsableOnly) {
-        try {
-          rawConnections = await providersFetcher(baseURL, managementReadToken, 1e4);
-        } catch (err) {
-          logger2.warn(
-            "[omniroute-plugin] config shim: /api/providers fetch failed; usableOnly filter disabled for this refresh",
-            err
-          );
-        }
+
+      rawConnections = providersRes.status === "fulfilled" ? providersRes.value : [];
+      if (providersRes.status === "rejected" && wantUsableOnly) {
+        logger2.warn(
+          "[omniroute-plugin] config shim: /api/providers fetch failed; usableOnly filter disabled for this refresh",
+          providersRes.reason
+        );
       }
       if (modelsFetchThrew && wantDiskCache) {
         const snapshot = await diskSnapshotReader(resolved.providerId, snapshotFingerprint);
