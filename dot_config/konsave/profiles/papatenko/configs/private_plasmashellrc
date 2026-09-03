@@ -10,7 +10,7 @@
 calendars=8
 
 [PlasmaViews][Panel 1256]
-floating=0
+floating=1
 floatingApplets=1
 panelOpacity=0
 shell=org.kde.plasma.desktop
