@@ -1,3 +1,7 @@
+encryption = "age"
+[age]
+  identity = "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
+  recipient = "age1kvjqqcqss3yfsywc8gcyyj95x6cfh5p3e0w4jlk7asvjrgqmjeusw55t3r"
 {{ if eq .chezmoi.os "windows" -}}
 [interpreters.py]
   command = "python3"
