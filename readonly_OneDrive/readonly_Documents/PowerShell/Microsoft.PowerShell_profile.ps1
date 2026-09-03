@@ -13,6 +13,11 @@ $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";
 # and fail with cryptic errors like "couldn't find a configuration directory".
 if (-not $env:HOME) { $env:HOME = $HOME }
 
+# wsl.exe defaults to UTF-16LE output when stdout isn't a real console (e.g.
+# piped through an SSH-invoked non-interactive shell), which shows up as
+# garbled/random characters. WSL_UTF8 forces UTF-8 output in that case.
+if (-not $env:WSL_UTF8) { $env:WSL_UTF8 = '1' }
+
 # Prioritize Git Bash over the legacy C:\WINDOWS\system32\bash.exe WSL stub,
 # which direnv would otherwise pick up first and use to evaluate .envrc files.
 $gitBashDir = "C:\Program Files\Git\bin"
@@ -33,7 +38,11 @@ if (Get-Command starship -ErrorAction SilentlyContinue) {
 # Herdr's PTY doesn't, so the dropdown silently fails to render there. Fall back
 # to InlineView (single-line, no cursor query) inside Herdr panes.
 $predictionView = if ($env:HERDR_ENV -eq '1') { 'InlineView' } else { 'ListView' }
-Set-PSReadLineOption -PredictionSource History -PredictionViewStyle $predictionView -EditMode Windows
+if ($Host.UI.SupportsVirtualTerminal -and -not [Console]::IsOutputRedirected) {
+    Set-PSReadLineOption -PredictionSource History -PredictionViewStyle $predictionView -EditMode Windows
+} else {
+    Set-PSReadLineOption -EditMode Windows
+}
 
 ### Shell integrations (ported from dot_zshrc)
 if (Get-Command zoxide -ErrorAction SilentlyContinue) {
