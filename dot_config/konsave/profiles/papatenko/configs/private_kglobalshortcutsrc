@@ -322,7 +322,7 @@ powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 [plasmashell]
 Slideshow Wallpaper Next Image=none,none,Next Wallpaper Image
 _k_friendly_name=plasmashell
-activate application launcher=\tAlt+F1,Meta\tAlt+F1,Activate Application Launcher
+activate application launcher=Meta\tAlt+F1,Meta\tAlt+F1,Activate Application Launcher
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=none,none,Activate Task Manager Entry 10
 activate task manager entry 2=Meta+2,Meta+2,Activate Task Manager Entry 2
@@ -342,7 +342,7 @@ activate widget 1091=none,none,Activate Application Launcher Widget
 activate widget 1210=none,none,Activate Application Launcher Widget
 activate widget 1216=none,none,Activate Application Launcher Widget
 activate widget 1253=Meta+F,none,Activate Fokus Widget
-activate widget 1257=Meta,none,Activate Application Launcher Widget
+activate widget 1257=none,none,Activate Application Launcher Widget
 clear history=none,none,Clear Notification History
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
@@ -366,10 +366,6 @@ _launch=Meta+Return
 
 [services][org.kde.konsole.desktop]
 _launch=none
-
-[services][org.kde.spectacle.desktop]
-CurrentMonitorScreenShot=none
-OpenWithoutScreenshot=none
 
 [token_chromium_019EDA0129F88BD76044ED76AB41D57D]
 _k_friendly_name=token_chromium_019EDA0129F88BD76044ED76AB41D57D

@@ -156,7 +156,7 @@ widgetStyle=Lightly
 Theme=Papirus-Dark
 
 [KDE]
-AnimationDurationFactor=0.5
+AnimationDurationFactor=0
 LookAndFeelPackage=org.kde.breezedark.desktop
 ShowDeleteCommand=false
 contrast=4
