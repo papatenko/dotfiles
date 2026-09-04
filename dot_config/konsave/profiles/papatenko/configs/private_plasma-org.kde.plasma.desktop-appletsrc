@@ -153,7 +153,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][1256][Applets][1259][Configuration][General]
-launchers=applications:org.wezfurlong.wezterm.desktop,applications:code.desktop,applications:brave-browser.desktop,applications:org.telegram.desktop.desktop,file:///var/lib/flatpak/exports/share/applications/com.rustdesk.RustDesk.desktop
+launchers=applications:kitty.desktop,applications:dev.zed.Zed.desktop,applications:brave-browser.desktop,applications:org.telegram.desktop.desktop,file:///var/lib/flatpak/exports/share/applications/com.rustdesk.RustDesk.desktop
 
 [Containments][1256][Applets][1260]
 immutability=1
@@ -245,12 +245,17 @@ plugin=org.kde.plasma.brightness
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
+[Containments][1256][Applets][1261][Applets][1292]
+immutability=1
+plugin=org.kde.plasma.addons.katesessions
+
 [Containments][1256][Applets][1261][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
 [Containments][1256][Applets][1261][General]
-extraItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.volume
+extraItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.volume,org.kde.plasma.addons.katesessions,Nextcloud
+hiddenItems=tray-icon tray app 48874-1,Todoist_status_icon_1,Discover Notifier_org.kde.DiscoverNotifier,Desktop Sharing,org.kde.plasma.addons.katesessions,Xwayland Video Bridge,Slack_status_icon_1
 iconSpacing=1
 knownItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.volume
 
@@ -297,16 +302,9 @@ gpuIcon=GPU_Viewer
 layoutType=vertical
 mergeCpuTemp=true
 showBattery=false
+showGpu=false
 showNetwork=false
 showPower=false
-
-[Containments][1256][Applets][1288]
-immutability=1
-plugin=org.kde.plasma.colorpicker
-
-[Containments][1256][Applets][1288][Configuration]
-popupHeight=400
-popupWidth=560
 
 [Containments][1256][Applets][1289]
 immutability=1
@@ -325,7 +323,7 @@ popupHeight=400
 popupWidth=560
 
 [Containments][1256][General]
-AppletOrder=1258;1287;1290;1291;1288;1284;1289;1285;1257;1259;1286;1260;1261;1276
+AppletOrder=1257;1258;1287;1290;1291;1284;1289;1285;1259;1286;1260;1261;1276
 
 [Containments1007Appletsts][1032][Configuration][Appearance]
 txt=%a

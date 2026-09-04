@@ -524,6 +524,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Wayland]
 EnablePrimarySelection=false
+InputMethod[$d]
 
 [Windows]
 BorderlessMaximizedWindows=false
