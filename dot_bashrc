@@ -57,16 +57,3 @@ if [ -x "$HOME/anaconda3/bin/conda" ]; then
     unset __conda_setup
 fi
 # <<< conda initialize <<<
-
-# >>> headroom persistent env >>>
-export HEADROOM_PORT="8989"
-export HEADROOM_HOST="127.0.0.1"
-export HEADROOM_MODE="cache"
-export HEADROOM_BACKEND="anthropic"
-export HEADROOM_TELEMETRY="off"
-export ANTHROPIC_BASE_URL="http://127.0.0.1:8989"
-export ENABLE_TOOL_SEARCH="true"
-export COPILOT_PROVIDER_TYPE="anthropic"
-export COPILOT_PROVIDER_BASE_URL="http://127.0.0.1:8989"
-export OPENAI_BASE_URL="http://127.0.0.1:8989/v1"
-# <<< headroom persistent env <<<
