@@ -59,7 +59,13 @@ if "playwright" not in current.get("mcp_servers", {}):
         'command = "npx"\n'
         'args = ["-y", "@playwright/mcp@latest"]\n'
     )
-
+{{ if ne .chezmoi.os "windows" }}
+if "browser-harness" not in current.get("mcp_servers", {}):
+    blocks.append(
+        "[mcp_servers.browser-harness]\n"
+        'command = "browser-harness-mcp"\n'
+    )
+{{ end }}
 output = current_text
 
 # Caveman owns only these delimited blocks and the legacy standalone tables.

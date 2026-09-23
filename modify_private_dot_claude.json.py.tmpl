@@ -32,5 +32,6 @@ if not isinstance(servers, dict):
 had_legacy = "browseros" in servers
 servers.pop("browseros", None)
 servers["browseros-neo"] = desired
-current["mcpServers"] = servers
+{{ if ne .chezmoi.os "windows" }}servers.setdefault("browser-harness", {"type": "stdio", "command": "browser-harness-mcp", "args": []})
+{{ end }}current["mcpServers"] = servers
 sys.stdout.write(json.dumps(current, indent=2, ensure_ascii=False) + "\n")
