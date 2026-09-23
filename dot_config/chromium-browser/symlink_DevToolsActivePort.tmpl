@@ -1,0 +1,5 @@
+{{- if contains "microsoft" (lower .chezmoi.kernel.osrelease) -}}
+/mnt/c/Users/Admin/AppData/Local/BraveSoftware/Brave-Browser/User Data/DevToolsActivePort
+{{- else -}}
+{{ .chezmoi.homeDir }}/.config/BraveSoftware/Brave-Browser/DevToolsActivePort
+{{- end -}}
