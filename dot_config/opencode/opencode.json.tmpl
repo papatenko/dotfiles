@@ -1,6 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
+    "opencode-antigravity-auth@latest",
     "@warp-dot-dev/opencode-warp",
     [
       "./plugins/omniroute/dist/index.js",
@@ -13,8 +14,11 @@
   ,
     "@openviking/opencode-plugin",
     "superpowers@git+https://github.com/obra/superpowers.git",
-    "opencode-chrome-devtools@1.0.4"
+    "opencode-chrome-devtools@1.0.4",
+    "oh-my-openagent",
+    "@tarquinen/opencode-dcp@latest"
   ],
+  "lsp": true,
   "default_agent": "build",
   "model": "opencode-omniroute/opencode/deepseek-v4-flash",
   "autoupdate": false,
@@ -55,7 +59,24 @@
       "type": "local",
       "command": ["browser-harness-mcp"],
       "enabled": true
-    }{{ end }}
+    }{{ end }},
+    "omniroute-mcp": {
+      "type": "remote",
+      "url": "http://127.0.0.1:18201/api/mcp/stream",
+      "headers": {
+        "Authorization": "Bearer {env:OMNIROUTE_MCP_API_KEY}"
+      },
+      "oauth": false
+    },
+    "coolify": {
+      "type": "local",
+      "command": ["npx", "-y", "@masonator/coolify-mcp@latest"],
+      "enabled": true,
+      "env": {
+        "COOLIFY_API_TOKEN": "<YOUR_COOLIFY_TOKEN>",
+        "COOLIFY_API_URL": "https://<YOUR_COOLIFY_URL>"
+      }
+    }
   },
   "provider": {
     "openai": {
