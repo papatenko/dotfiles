@@ -1,6 +1,7 @@
 {
 {{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }}  "env": {
-    "ENABLE_TOOL_SEARCH": "auto"
+    "ENABLE_TOOL_SEARCH": "auto",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
 {{ end }}  "permissions": {
     "defaultMode": "plan",
@@ -8,6 +9,7 @@
       "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
     ]
   },
+  "model": "sonnet",
   "preferredNotifChannel": "terminal_bell",
   "hooks": {
     "SessionStart": [
@@ -46,7 +48,8 @@
   "enabledPlugins": {
     "composio@composio": true,
     "warp@claude-code-warp": true,
-    "openviking-memory@openviking": true
+    "openviking-memory@openviking": true,
+    "oh-my-claudecode@omc": true
   },
   "extraKnownMarketplaces": {
     "composio": {
@@ -59,6 +62,12 @@
       "source": {
         "source": "url",
         "url": "https://raw.githubusercontent.com/volcengine/OpenViking/main/.claude-plugin/marketplace.json"
+      }
+    },
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
       }
     }
   },
@@ -122,8 +131,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash -c 'p=$(ls -d \"$HOME\"/.claude/plugins/cache/openviking/openviking-memory/*/scripts/statusline.mjs 2>/dev/null | sort -V | tail -1); [ -n \"$p\" ] && exec node \"$p\"; exit 0'",
-    "padding": 0
+    "command": {{ if eq .chezmoi.os "windows" }}"bash -c 'p=$(ls -d \"$HOME\"/.claude/plugins/cache/openviking/openviking-memory/*/scripts/statusline.mjs 2>/dev/null | sort -V | tail -1); [ -n \"$p\" ] && exec node \"$p\"; exit 0'"{{ else }}"node ${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hud/omc-hud.mjs"{{ end }}
   },
   "voiceEnabled": true,
   "voice": {
