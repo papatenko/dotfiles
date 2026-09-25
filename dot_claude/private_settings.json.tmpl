@@ -1,7 +1,5 @@
 {
 {{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }}  "env": {
-    "ANTHROPIC_BASE_URL": "http://127.0.0.1:8787/w/claude",
-    "_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL": "1",
     "ENABLE_TOOL_SEARCH": "auto"
   },
 {{ end }}  "permissions": {
@@ -22,15 +20,7 @@
             "timeout": 10
           }
         ]
-      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }{{ end }}
+      }
     ],
     "Stop": [
       {
@@ -40,15 +30,7 @@
             "command": {{ if eq .chezmoi.os "windows" }}"pwsh -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
           }
         ]
-      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }{{ end }}
+      }
     ],
     "SessionEnd": [
       {
@@ -58,105 +40,8 @@
             "command": {{ if eq .chezmoi.os "windows" }}"pwsh -NoProfile -ExecutionPolicy Bypass -Command \"node '{{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs' --source=claude\""{{ else }}"/usr/bin/env node {{ .chezmoi.homeDir }}/.tokentracker/bin/notify.cjs --source=claude"{{ end }}
           }
         ]
-      }{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }{{ end }}
-    ]{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }},
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'",
-            "timeout": 30
-          }
-        ]
       }
     ],
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.local/bin/caveman' shrink-hook"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }
-    ],
-    "PostToolUseFailure": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }
-    ],
-    "PreCompact": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }
-    ],
-    "PostCompact": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }
-    ],
-    "SubagentStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }
-    ],
-    "SubagentStop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "'{{ .chezmoi.homeDir }}/.caveman/bin/caveman-proxy' native-hook claude --adapter '{{ .chezmoi.homeDir }}/.local/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js'"
-          }
-        ]
-      }
-    ]{{ end }}
   },
   "enabledPlugins": {
     "composio@composio": true,

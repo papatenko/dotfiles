@@ -68,23 +68,25 @@ if "browser-harness" not in current.get("mcp_servers", {}):
 {{ end }}
 output = current_text
 
-# Caveman owns only these delimited blocks and the legacy standalone tables.
-# Normalize them so `caveman doctor codex` can safely maintain its native route.
-for begin, end in [
-    ("# >>> caveman:native-tables", "# <<< caveman:native-tables"),
-]:
-    output = re.sub(
-        rf"(?ms)^{re.escape(begin)}\n.*?^{re.escape(end)}\n?",
-        "",
-        output,
-    )
-
+# Remove legacy Caveman routing while preserving all unrelated Codex settings.
+output = re.sub(
+    r"(?ms)^# >>> caveman:native-root\n.*?^# <<< caveman:native-root\n?",
+    "",
+    output,
+)
+output = re.sub(
+    r"(?ms)^# >>> caveman:native-tables\n.*?^# <<< caveman:native-tables\n?",
+    "",
+    output,
+)
 for table in ["model_providers.caveman", "mcp_servers.caveman"]:
     output = re.sub(
         rf"(?ms)^\[{re.escape(table)}\]\n.*?(?=^\[|^# ---|^# >>>|\Z)",
         "",
         output,
     )
+if current.get("model_provider") == "caveman":
+    output = re.sub(r"(?m)^model_provider = \"caveman\"\n?", "", output)
 
 output = re.sub(
     r"(?ms)^# --- Headroom MCP server ---\n\[mcp_servers\.headroom\]\n.*?^# --- end Headroom MCP server ---\n?",
@@ -94,18 +96,6 @@ output = re.sub(
 output = output.replace("# --- Headroom MCP server: serena ---", "# --- Serena MCP server ---")
 output = output.replace("# --- end Headroom MCP server: serena ---", "# --- end Serena MCP server ---")
 
-caveman_tables = (
-    "# >>> caveman:native-tables\n"
-    "[model_providers.caveman]\n"
-    'name = "Caveman"\n'
-    'base_url = "http://127.0.0.1:8787/chatgpt"\n'
-    'wire_api = "responses"\n'
-    "requires_openai_auth = true\n\n"
-    "[mcp_servers.caveman]\n"
-    'command = "{{ .chezmoi.homeDir }}/.caveman/bin/caveman-mcp"\n'
-    "# <<< caveman:native-tables\n"
-)
-output = output.rstrip() + "\n\n" + caveman_tables
 if blocks:
     if output and not output.endswith("\n"):
         output += "\n"

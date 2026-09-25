@@ -23,11 +23,6 @@
   "autoupdate": false,
 
   "mcp": {
-    "caveman": {
-      "type": "local",
-      "command": ["{{ .chezmoi.homeDir }}/.caveman/bin/caveman-mcp"],
-      "enabled": true
-    },
     "openviking": {
       "type": "local",
       "command": [
@@ -74,18 +69,6 @@
       "env": {
         "COOLIFY_API_TOKEN": "<YOUR_COOLIFY_TOKEN>",
         "COOLIFY_API_URL": "https://<YOUR_COOLIFY_URL>"
-      }
-    }
-  },
-  "provider": {
-    "openai": {
-      "options": {
-        "baseURL": "http://127.0.0.1:8787/w/opencode/openai/v1"
-      }
-    },
-    "anthropic": {
-      "options": {
-        "baseURL": "http://127.0.0.1:8787/w/opencode/anthropic/v1"
       }
     }
   },
