@@ -21,3 +21,16 @@ AppData/
 {{ if not (or (eq .chezmoi.hostname "jkondratenko") (and (eq .chezmoi.os "linux") (contains "microsoft" (lower .chezmoi.kernel.osrelease)))) }}
 .config/chromium-browser/
 {{ end }}
+{{ if eq .chezmoi.hostname "hermes" }}
+# Hermes (headless agent host) syncs only the coding-agent configs: Claude Code, Codex, OpenCode.
+# Skills are skipped (they symlink into the Obsidian vault, which Hermes does not have).
+*
+.config/*
+!.config/opencode
+!.config/opencode/**
+.claude.json
+.claude/hooks
+.claude/skills
+.codex/skills
+.config/opencode/AGENTS.md
+{{ end }}

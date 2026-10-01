@@ -23,7 +23,7 @@
   "autoupdate": false,
 
   "mcp": {
-    "openviking": {
+{{ if ne .chezmoi.hostname "hermes" }}    "openviking": {
       "type": "local",
       "command": [
         "node",
@@ -32,29 +32,29 @@
       "enabled": true,
       "timeout": 15000
     },
-    "notebooklm": {
+{{ end }}    "notebooklm": {
       "type": "local",
       "command": ["npx", "-y", "notebooklm-mcp@latest"],
       "enabled": true,
       "timeout": 900000
     },
-    "browseros-neo": {
+{{ if ne .chezmoi.hostname "hermes" }}    "browseros-neo": {
       "type": "remote",
       "url": "http://127.0.0.1:9011/mcp",
       "oauth": false,
       "codemode": false
     },
-    "playwright": {
+{{ end }}    "playwright": {
       "type": "local",
       "command": ["npx", "-y", "@playwright/mcp@latest"],
       "enabled": true
-    }{{ if ne .chezmoi.os "windows" }},
-    "browser-harness": {
+    },
+{{ if and (ne .chezmoi.os "windows") (ne .chezmoi.hostname "hermes") }}    "browser-harness": {
       "type": "local",
       "command": ["browser-harness-mcp"],
       "enabled": true
-    }{{ end }},
-    "omniroute-mcp": {
+    },
+{{ end }}{{ if ne .chezmoi.hostname "hermes" }}    "omniroute-mcp": {
       "type": "remote",
       "url": "http://127.0.0.1:18201/api/mcp/stream",
       "headers": {
@@ -62,7 +62,7 @@
       },
       "oauth": false
     },
-    "coolify": {
+{{ end }}    "coolify": {
       "type": "local",
       "command": ["npx", "-y", "@masonator/coolify-mcp@latest"],
       "enabled": true,
@@ -70,6 +70,11 @@
         "COOLIFY_API_TOKEN": "<YOUR_COOLIFY_TOKEN>",
         "COOLIFY_API_URL": "https://<YOUR_COOLIFY_URL>"
       }
+    },
+    "composio": {
+      "type": "remote",
+      "url": "https://connect.composio.dev/mcp",
+      "enabled": true
     }
   },
   "instructions": [

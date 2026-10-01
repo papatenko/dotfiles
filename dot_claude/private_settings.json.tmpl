@@ -9,7 +9,7 @@
       "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
     ]
   },
-  "model": "sonnet",
+  "model": "{{ if eq .chezmoi.hostname "hermes" }}haiku{{ else }}sonnet{{ end }}",
   "preferredNotifChannel": "terminal_bell",
   "hooks": {
     "SessionStart": [
