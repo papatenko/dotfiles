@@ -25,6 +25,9 @@ AppData/
 # Hermes (headless agent host) syncs only the coding-agent configs: Claude Code, Codex, OpenCode.
 # Skills are skipped (they symlink into the Obsidian vault, which Hermes does not have).
 *
+!.claude
+!.codex
+!.config
 .config/*
 !.config/opencode
 !.config/opencode/**
