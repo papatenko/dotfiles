@@ -1,5 +1,5 @@
 # Browser preference
 
-For browser or website tasks, use the `browseros-neo` MCP server and BrowserOS Neo first. Do not use Brave, Chrome, an in-app browser, browser DevTools, Playwright, or a headless fetcher unless BrowserOS Neo is unavailable or the user explicitly requests another browser.
+For browser or website tasks, use the `browser-harness` MCP server first. Fall back to the `playwright` MCP server only if browser-harness is unavailable or fails. Do not use Brave, Chrome, an in-app browser, browser DevTools, or a headless fetcher unless both are unavailable or the user explicitly requests another browser.
 
-Use an agent-owned BrowserOS Neo tab, preserve the user’s tabs, and follow the BrowserOS Neo snapshot -> act -> verify workflow.
+Use an agent-owned tab, preserve the user’s tabs, and follow a snapshot -> act -> verify workflow.
