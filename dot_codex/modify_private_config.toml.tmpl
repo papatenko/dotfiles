@@ -59,7 +59,7 @@ if "playwright" not in current.get("mcp_servers", {}):
         'command = "npx"\n'
         'args = ["-y", "@playwright/mcp@latest"]\n'
     )
-{{ if ne .chezmoi.os "windows" }}
+{{ if and (ne .chezmoi.os "windows") (ne .chezmoi.hostname "hermes") }}
 if "browser-harness" not in current.get("mcp_servers", {}):
     blocks.append(
         "[mcp_servers.browser-harness]\n"
