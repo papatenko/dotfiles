@@ -13,9 +13,8 @@
   ,
     "@openviking/opencode-plugin",
     "superpowers@git+https://github.com/obra/superpowers.git",
-    "opencode-chrome-devtools@1.0.4",
-{{ if ne .chezmoi.hostname "hermes" }}    "oh-my-openagent",
-{{ end }}    "@tarquinen/opencode-dcp@latest"
+    "opencode-chrome-devtools@1.0.4"{{ if ne .chezmoi.hostname "hermes" }},
+    "oh-my-openagent"{{ end }}
   ],
   "lsp": true,
   "default_agent": "build",
