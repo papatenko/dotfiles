@@ -37,13 +37,7 @@
       "enabled": true,
       "timeout": 900000
     },
-{{ if ne .chezmoi.hostname "hermes" }}    "browseros-neo": {
-      "type": "remote",
-      "url": "http://127.0.0.1:9011/mcp",
-      "oauth": false,
-      "codemode": false
-    },
-{{ end }}    "playwright": {
+    "playwright": {
       "type": "local",
       "command": ["npx", "-y", "@playwright/mcp@latest"],
       "enabled": true
