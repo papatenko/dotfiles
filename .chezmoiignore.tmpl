@@ -22,8 +22,8 @@ AppData/
 .config/chromium-browser/
 {{ end }}
 {{ if eq .chezmoi.hostname "hermes" }}
-# Hermes (headless agent host) syncs only the coding-agent configs: Claude Code, Codex, OpenCode.
-# Skills are skipped (they symlink into the Obsidian vault, which Hermes does not have).
+# Hermes (headless agent host) syncs coding-agent configs and vault-backed Claude/Codex skill links.
+# Skill content remains canonical in the shared Obsidian vault; Chezmoi manages discovery symlinks only.
 *
 !.claude
 !.codex
@@ -33,7 +33,5 @@ AppData/
 !.config/opencode/**
 .claude.json
 .claude/hooks
-.claude/skills
-.codex/skills
 .config/opencode/AGENTS.md
 {{ end }}
