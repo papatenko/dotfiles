@@ -29,6 +29,9 @@ memory/physical/used=61,174,233
 [Containments][1057][Applets][1150][Configuration][SensorColors]
 cpu/all/usage=61,174,233
 
+[Containments][1057][Applets][1325][Configuration][SensorColors]
+memory/physical/used=108,83,166
+
 [Containments][1057][ConfigDialog]
 DialogHeight=929
 DialogWidth=1504
@@ -131,8 +134,8 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][1295][Applets][1296][Configuration]
-popupHeight=509
-popupWidth=647
+popupHeight=524
+popupWidth=665
 
 [Containments][1295][Applets][1296][Configuration][General]
 favoritesPortedToKAstats=true
@@ -145,8 +148,12 @@ plugin=org.kde.plasma.pager
 immutability=1
 plugin=org.kde.plasma.icontasks
 
+[Containments][1295][Applets][1298][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
 [Containments][1295][Applets][1298][Configuration][General]
-launchers=applications:kitty.desktop,applications:dev.zed.Zed.desktop,preferred://browser,applications:org.telegram.desktop.desktop,applications:net.thunderbird.Thunderbird.desktop,applications:com.todoist.Todoist.desktop
+launchers=applications:kitty.desktop,applications:com.todoist.Todoist.desktop,preferred://browser,applications:org.telegram.desktop.desktop,applications:net.thunderbird.Thunderbird.desktop,applications:slack.desktop
 
 [Containments][1295][Applets][1299]
 immutability=1
@@ -234,41 +241,89 @@ plugin=org.kde.plasma.brightness
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
+[Containments][1295][Applets][1300][Applets][1324]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
 [Containments][1295][Applets][1300][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
 [Containments][1295][Applets][1300][General]
 extraItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.volume
-iconSpacing=1
 knownItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.volume
-
-[Containments][1295][Applets][1315]
-immutability=1
-plugin=org.kde.plasma.digitalclock
-
-[Containments][1295][Applets][1315][Configuration]
-popupHeight=400
-popupWidth=560
 
 [Containments][1295][Applets][1322]
 immutability=1
 plugin=org.kde.plasma.aiusage
 
 [Containments][1295][Applets][1322][Configuration]
-popupHeight=400
-popupWidth=560
+popupHeight=147
+popupWidth=280
 
-[Containments][1295][Applets][1323]
+[Containments][1295][Applets][1322][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][1295][Applets][1325]
+immutability=1
+plugin=org.kde.plasma.systemmonitor.memory
+
+[Containments][1295][Applets][1325][Configuration]
+CurrentPreset=org.kde.plasma.systemmonitor
+popupHeight=228
+popupWidth=230
+
+[Containments][1295][Applets][1325][Configuration][Appearance]
+chartFace=org.kde.ksysguard.piechart
+title=Memory Usage
+
+[Containments][1295][Applets][1325][Configuration][SensorColors]
+memory/physical/used=108,83,166
+
+[Containments][1295][Applets][1325][Configuration][Sensors]
+highPrioritySensorIds=["memory/physical/used"]
+lowPrioritySensorIds=["memory/physical/total"]
+totalSensors=["memory/physical/usedPercent"]
+
+[Containments][1295][Applets][1329]
 immutability=1
 plugin=com.dv.fokus
 
-[Containments][1295][Applets][1323][Configuration]
-popupHeight=400
-popupWidth=560
+[Containments][1295][Applets][1329][Configuration]
+popupHeight=393
+popupWidth=424
+
+[Containments][1295][Applets][1329][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][1295][Applets][1329][Configuration][General]
+session_history=[{"kind":"focus","day":"2026-09-28","at":1790633964151,"planned":1500,"actual":1500,"task":""},{"kind":"shortBreak","day":"2026-09-28","at":1790634676121,"planned":300,"actual":707,"task":""},{"kind":"focus","day":"2026-09-29","at":1790680564826,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-09-29","at":1790717870668,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-09-29","at":1790720008731,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-09-29","at":1790722408606,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-09-29","at":1790724334747,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-10-05","at":1791238456640,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-10-06","at":1791314471261,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-10-06","at":1791316786418,"planned":1560,"actual":1560,"task":""},{"kind":"focus","day":"2026-10-06","at":1791319301821,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-10-06","at":1791321609265,"planned":1500,"actual":1500,"task":""},{"kind":"focus","day":"2026-10-07","at":1791416759618,"planned":1500,"actual":1500,"task":""}]
+session_state={"stateVal":2,"initialSeconds":300,"running":false,"breakOvertime":false,"countingUp":false,"deadline":0,"remainingMs":300000,"startedAt":0,"taskSegmentStart":0,"savedAt":1791416759626,"bootId":"d57e1def-f72f-439d-8d45-6e4f2a213541"}
+
+[Containments][1295][Applets][1329][Shortcuts]
+global=Meta+F
+
+[Containments][1295][Applets][1331]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][1295][Applets][1331][Configuration]
+popupHeight=451
+popupWidth=552
+
+[Containments][1295][Applets][1331][Configuration][Appearance]
+fontFamily=Adwaita Mono
+fontStyleName=Regular
+fontWeight=400
+
+[Containments][1295][Applets][1331][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
 
 [Containments][1295][General]
-AppletOrder=1296;1297;1298;1299;1323;1322;1300;1315
+AppletOrder=1296;1297;1298;1299;1329;1322;1300;1325;1331
 
 [Containments1007Appletsts][1032][Configuration][Appearance]
 txt=%a

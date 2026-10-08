@@ -148,6 +148,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][523b19e8-32ea-5d2b-9aaf-8fe41072fc1c]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][5673a4cb-89d2-55b8-8d94-a7a79e78da50]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][58673f98-e709-5ab1-9fe5-4932ebfd41c2]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -355,6 +358,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][1a20ed9d-8ce2-4af2-b259-ea7ab522be84]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][c0774328-f482-4743-88d2-37598d5c1aa3][33539cf9-8502-4e11-b02b-9c253cfb27ce]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -535,5 +542,4 @@ Scale=1.5
 XwaylandEisNoPromptApps=handy
 
 [org.kde.kdecoration2]
-library=org.kde.breeze
-theme=Breeze
+BorderSize=Normal

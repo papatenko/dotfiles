@@ -10,30 +10,19 @@
 calendars=8
 
 [PlasmaTransientsConfig]
-popupHeight=432
-popupWidth=432
+popupHeight=400
+popupWidth=560
 
-[PlasmaViews][Panel 1256]
-floating=1
+[PlasmaViews][Panel 1295]
+floating=0
 floatingApplets=1
 panelOpacity=0
 shell=org.kde.plasma.desktop
 
-[PlasmaViews][Panel 1256][Defaults]
+[PlasmaViews][Panel 1295][Defaults]
 thickness=46
 
-[PlasmaViews][Panel 1293]
-floating=1
-shell=org.kde.plasma.desktop
-
-[PlasmaViews][Panel 1293][Defaults]
-thickness=27
-
-[PlasmaViews][Panel 1295]
-floating=1
-shell=org.kde.plasma.desktop
-
-[PlasmaViews][Panel 1295][Defaults]
+[PlasmaViews][Panel 2][Defaults]
 thickness=46
 
 [ScreenConnectors]
