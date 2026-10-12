@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Managed by chezmoi (dot_codex/modify_config.toml.tmpl).
 # Ensures the OpenViking + Composio plugin/marketplace registrations and
-# Playwright MCP registration are
+# Playwright + Hister MCP registrations are
 # present in ~/.codex/config.toml
 # without touching projects (per-machine trust levels),
 # or any other existing content in the file.
@@ -58,6 +58,11 @@ if "playwright" not in current.get("mcp_servers", {}):
         "[mcp_servers.playwright]\n"
         'command = "npx"\n'
         'args = ["-y", "@playwright/mcp@latest"]\n'
+    )
+if "hister" not in current.get("mcp_servers", {}):
+    blocks.append(
+        "[mcp_servers.hister]\n"
+        'url = "http://192.168.0.200:4433/mcp"\n'
     )
 {{ if and (ne .chezmoi.os "windows") (ne .chezmoi.hostname "hermes") }}
 if "browser-harness" not in current.get("mcp_servers", {}):
