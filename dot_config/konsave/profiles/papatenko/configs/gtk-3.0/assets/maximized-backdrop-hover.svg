@@ -8,24 +8,34 @@
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
-</g>
-
-<g fill="#a1a9b1" fill-opacity="1" stroke="none" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
->
-<circle cx="9" cy="9" r="9"/>
-</g>
-
-<g fill="none" stroke="#202428" stroke-opacity="1" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="round" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
->
-<polygon fill-rule="evenodd" vector-effect="none" points="4,9 9,4 14,9 9,14 " />
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#926ee4" fill-opacity="0.480003" stroke="#926ee4" stroke-opacity="0.720012" stroke-width="2.5025" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2.5,2.5)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-1.25125,2.74875 C-1.25125,0.539611 0.539611,-1.25125 2.74875,-1.25125 L42.2512,-1.25125 C44.4604,-1.25125 46.2512,0.539611 46.2512,2.74875 L46.2512,42.2512 C46.2512,44.4604 44.4604,46.2512 42.2512,46.2512 L2.74875,46.2512 C0.539611,46.2512 -1.25125,44.4604 -1.25125,42.2512 L-1.25125,2.74875 Z "/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#e7e5e8" stroke-opacity="1" stroke-width="1.001" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2.5,2.5)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
+>
+<image x="0" y="0" width="45" height="45" preserveAspectRatio="none" image-rendering="optimizeSpeed" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA6UlEQVRYhe2XsQ3CQBAEB3BCjISAD2gBAhogoBnXQzMENEATJI8tJGIiJJJPgT/5sHixE+/tTXCy9SCEEEKIQhlYB5rYboEamDjsvwH7eZgdLUMm6SR8AEZmvdc8gJ1FfGhcUDsLk/pqy4BV2uMkOvdapX8CSfdFkdKVU88FOGXkNsCi6zIP6TuwnofZ9VOwie0UOAPjLgs9zuOaIwyQclnZdxR505LuC0n3hYd0aGK7ygmmXOi60OM7XQGnJrYxIxs8dnr9EStg6dT1kb+46duXPEy9Vul9etN58ki92RT5GhdCCCFEsTwB2W0vLUzYC3YAAAAASUVORK5CYII=" />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
 </g>
 </g>

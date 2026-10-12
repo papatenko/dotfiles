@@ -8,18 +8,18 @@
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#a1a9b1" stroke-opacity="1" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="round" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="none" stroke="#bfbfc6" stroke-opacity="1" stroke-width="1.001" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2.5,2.5)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
-<polygon fill-rule="evenodd" vector-effect="none" points="4,9 9,4 14,9 9,14 " />
+<image x="0" y="0" width="45" height="45" preserveAspectRatio="none" image-rendering="optimizeSpeed" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA6UlEQVRYhe2XIQ7CQBBFH1CDJkFQwRVAYHBFcJmep5dBsK6ml8CAIEGjSDBrgZ10aNjwn/7z54lJmwUhhBBCZMrIOhBCuwNqYOaw/wY0VbU9WoZM0lH4AEzMeq95AHuL+Ni4oHYWJvbVlgGrtMdJ9O61Sv8Ekh6KLKULp54L0CXkNsCi7zIP6Tuwrqrt9VMwhHYOnIBpn4Ue53FNEQaIuaTsO7K8aUkPhaSHwkO6DKFdpQRjruy70OM7XQBdCO05IVt67PT6IxbA0qnrI39x07cveZh6rdJNfNN58oi9yWT5GhdCCCFEtjwBC8guvadG1zoAAAAASUVORK5CYII=" />
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
 </g>
 </g>

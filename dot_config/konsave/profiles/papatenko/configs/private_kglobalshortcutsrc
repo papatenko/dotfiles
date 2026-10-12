@@ -370,6 +370,10 @@ _launch=Meta+Return
 [services][org.kde.konsole.desktop]
 _launch=none
 
+[services][org.kde.spectacle.desktop]
+CurrentMonitorScreenShot=none
+OpenWithoutScreenshot=none
+
 [token_chromium_019EDA0129F88BD76044ED76AB41D57D]
 _k_friendly_name=token_chromium_019EDA0129F88BD76044ED76AB41D57D
 addSite=Alt+Shift+L,Alt+Shift+L,Toggle current site

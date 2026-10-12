@@ -9,10 +9,6 @@
 [PIMEventsPlugin]
 calendars=8
 
-[PlasmaTransientsConfig]
-popupHeight=400
-popupWidth=560
-
 [PlasmaViews][Panel 1295]
 floating=0
 floatingApplets=1

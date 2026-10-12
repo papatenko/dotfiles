@@ -8,19 +8,18 @@
 <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#fcfcfc" stroke-opacity="1" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+<g fill="none" stroke="#e7e5e8" stroke-opacity="1" stroke-width="1.001" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2.5,2.5)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
-<polyline fill="none" vector-effect="none" points="5,5 13,13 " />
-<polyline fill="none" vector-effect="none" points="13,5 5,13 " />
+<image x="0" y="0" width="45" height="45" preserveAspectRatio="none" image-rendering="optimizeSpeed" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABiElEQVRYhe2Xy23CQBBAXxKJGmy5m0QKFBCfKcAN4BQQaIACuCYpII5EukFQA1KiHFgkZPYzs/YFad5xP8MTGs/sgGEYhmEYN8qd9sJ+d3gEGmACbMqq+MyIUQNz4Aisy6rYau6rpJ3wN/BwsdyWVbFSxGiBt4ulP+BZI34vNj7R9IQBlvvdYSG57BE+OzQaCa30JLCeFA8Ip+J60UpvIntB8YRwKu4VKmn30bWRI1fiAuHXsio+NB7q6uFEFsAycqQtq2IlFI7F8ZIljUy8A6aR/SxhhkgjEw+RLcxQafLEBwkzhjQ68cHCjCXNSfwrkcNdWRWzMX5LW6e9uCoREwaYSjtnijFyOlXW+qjeKj6GVg+t8JlB4tnpIRDuInviR5aPLGlhp5tpW76UnCFA1ZqlLV/joB0CauA9csRbhwXitWYC0qbHPLIXbBzun4ylSizuFVrpY2A92ekS4qG4XrTSazfTXSJuzQHxXxdXTM6H+NSbxlUPeBfjpTeN/2hjGIZhGIZxk/wDeG+rXdFyEgwAAAAASUVORK5CYII=" />
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="Noto Sans" font-size="10" font-weight="400" font-style="normal" 
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
 </g>
 </g>
