@@ -69,6 +69,12 @@
       "url": "https://connect.composio.dev/mcp",
       "enabled": true
     },
+    "webui": {
+      "type": "local",
+      "command": ["{{ .chezmoi.homeDir }}/.local/bin/course-rag-mcp"],
+      "enabled": true,
+      "timeout": 300000
+    },
     "hister": {
       "type": "remote",
       "url": "http://192.168.0.200:4433/mcp",
