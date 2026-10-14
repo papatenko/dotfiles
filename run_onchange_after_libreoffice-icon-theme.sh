@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Set the LibreOffice icon style (no Papirus/Adwaita set exists for LO 26.x).
-# Change STYLE and re-apply to switch: sukapura, karasa_jaga, colibre, breeze, sifr.
-STYLE=sukapura
+# Change STYLE and re-apply to switch (e.g. sukapura_dark_svg, sukapura_svg, karasa_jaga_svg, colibre_dark_svg).
+STYLE=sukapura_dark_svg
 F="$HOME/.config/libreoffice/4/user/registrymodifications.xcu"
 [ -f "$F" ] || exit 0
 if pgrep -x soffice.bin >/dev/null; then
