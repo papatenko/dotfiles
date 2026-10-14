@@ -262,7 +262,7 @@ immutability=1
 plugin=org.kde.plasma.aiusage
 
 [Containments][1295][Applets][1322][Configuration]
-popupHeight=125
+popupHeight=141
 popupWidth=280
 
 [Containments][1295][Applets][1322][Configuration][ConfigDialog]
