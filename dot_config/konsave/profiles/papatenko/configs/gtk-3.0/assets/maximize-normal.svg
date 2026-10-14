@@ -12,10 +12,21 @@ font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal
 >
 </g>
 
-<g fill="none" stroke="#e7e5e8" stroke-opacity="1" stroke-width="1.001" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2.5,2.5)"
+<g fill="none" stroke="#fcfcfc" stroke-opacity="1" stroke-width="1.001" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
 font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
 >
-<image x="0" y="0" width="45" height="45" preserveAspectRatio="none" image-rendering="optimizeSpeed" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABkUlEQVRYhe2XvUpDQRBGjyZi7U9xL1toIbey0EqwscsziIovINhqJ3b6AGlMoyB5jIDpJE0KK02hxbLbpEupaLOIASPM7kRQ9pSX+818DLMzu5DJZDKZTOaPMqMZzFm/BVwKJEOgWZqiI8mjbXoNeBLK3oCGxPis3NpkSlMMgEehrAYcSQSqpgPnEZolyc/qpktTtIV9LWYalaY0xSmwA9wCD8Az8AK8asSvawT5jtIUXaD79ZuzfgPopeadSqUnUZqiD9jUOCLTzvrKWV9LzPmeqBdX+grwzvobZ/1mZM5RpO6TmPZYBg6Be2f9boS+H6EZI6Wn54BrZ30l1LUScoLCQZwHjiWCMFWS5rjG9NiWCsIc349Y+aA0pxdiRGFztsMlS7TGNUwn3RTDJWsg0Wi0hwmb7tfQqHQd6DnrbVgcozDWWuHQqaO1xuvACrAKrAMHwJ2z/kIp/hjTvnucOOv3tINKTQ8jcpxFaH5EaroZ3nQSqjDW1BAdxNIUHWd9I7zpJLN1UW4tk8lkMpnMP+QDWGBfa2/jkNoAAAAASUVORK5CYII=" />
+</g>
+
+<g fill="#fcfcfc" fill-opacity="1" stroke="none" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M5,7.5 L5,12 C5,12.5523 5.44772,13 6,13 L10.5,13 L5,7.5 Z "/>
+<path vector-effect="none" fill-rule="evenodd" d="M7.5,5 L12,5 C12.5523,5 13,5.44772 13,6 L13,10.5 L7.5,5 Z "/>
+</g>
+
+<g fill="none" stroke="#fcfcfc" stroke-opacity="1" stroke-width="1.001" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(2.5,0,0,2.5,2.5,2.5)"
+font-family="Inter Variable" font-size="10" font-weight="400" font-style="normal" 
+>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"

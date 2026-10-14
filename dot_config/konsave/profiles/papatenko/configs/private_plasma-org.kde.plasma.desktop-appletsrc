@@ -46,7 +46,7 @@ Image=/home/jkondratenko/Nextcloud/pics/wallpapers/grey/frieren.jpeg
 SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][1057][Wallpaper][org.kde.image][General]
-Image=file:///home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
+Image=/home/jkondratenko/Nextcloud/Pictures/wallpapers/purple/wp7482480-going-merry-wallpapers.jpg
 SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][1058]
@@ -81,7 +81,7 @@ Image=/home/jkondratenko/Nextcloud/pics/wallpapers/grey/frieren.jpeg
 SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][1058][Wallpaper][org.kde.image][General]
-Image=file:///home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
+Image=/home/jkondratenko/Nextcloud/Pictures/wallpapers/purple/wp7482480-going-merry-wallpapers.jpg
 SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][1072]
@@ -103,7 +103,7 @@ DialogWidth=810
 positions={"2560x1440":[]}
 
 [Containments][1072][Wallpaper][org.kde.image][General]
-Image=file:///home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
+Image=/home/jkondratenko/Nextcloud/Pictures/wallpapers/purple/wp7482480-going-merry-wallpapers.jpg
 SlidePaths=/home/jkondratenko/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][1073]
@@ -119,6 +119,9 @@ wallpaperplugin=org.kde.image
 
 [Containments][1073][General]
 positions={"1252x2226":[]}
+
+[Containments][1073][Wallpaper][org.kde.image][General]
+Image=/home/jkondratenko/Nextcloud/Pictures/wallpapers/purple/wp7482480-going-merry-wallpapers.jpg
 
 [Containments][1295]
 activityId=
@@ -154,11 +157,11 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][1295][Applets][1298][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
+DialogHeight=634
+DialogWidth=818
 
 [Containments][1295][Applets][1298][Configuration][General]
-launchers=applications:kitty.desktop,applications:com.todoist.Todoist.desktop,preferred://browser,applications:org.telegram.desktop.desktop,applications:net.thunderbird.Thunderbird.desktop,applications:slack.desktop
+launchers=applications:kitty.desktop,applications:com.todoist.Todoist.desktop,preferred://browser,applications:net.thunderbird.Thunderbird.desktop,applications:org.telegram.desktop.desktop,applications:slack.desktop,applications:com.microsoft.VSCode.desktop
 
 [Containments][1295][Applets][1300]
 activityId=
@@ -259,7 +262,7 @@ immutability=1
 plugin=org.kde.plasma.aiusage
 
 [Containments][1295][Applets][1322][Configuration]
-popupHeight=141
+popupHeight=125
 popupWidth=280
 
 [Containments][1295][Applets][1322][Configuration][ConfigDialog]
@@ -323,20 +326,12 @@ fontWeight=400
 DialogHeight=630
 DialogWidth=810
 
-[Containments][1295][Applets][1337]
-immutability=1
-plugin=luisbocanegra.kdematerialyou.colors
-
-[Containments][1295][Applets][1337][Configuration]
-popupHeight=344
-popupWidth=360
-
 [Containments][1295][Applets][1342]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
 
 [Containments][1295][General]
-AppletOrder=1296;1297;1298;1342;1337;1329;1322;1300;1325;1331
+AppletOrder=1296;1297;1298;1342;1329;1322;1300;1325;1331
 
 [Containments1007Appletsts][1032][Configuration][Appearance]
 txt=%a
