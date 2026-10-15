@@ -53,6 +53,24 @@ if "composio" not in marketplaces:
         'source = "https://github.com/ComposioHQ/composio-plugin-openai.git"\n'
     )
 
+if not plugins.get("ponytail@ponytail", {}).get("enabled"):
+    blocks.append(
+        '[plugins."ponytail@ponytail"]\n'
+        "enabled = true\n"
+    )
+
+if "ponytail" not in marketplaces:
+    blocks.append(
+        "[marketplaces.ponytail]\n"
+        'source_type = "git"\n'
+        'source = "https://github.com/DietrichGebert/ponytail.git"\n'
+    )
+
+if "n8n" not in current.get("mcp_servers", {}):
+    blocks.append(
+        "[mcp_servers.n8n]\n"
+        'url = "https://n8n.papatenko.org/mcp-server/http"\n'
+    )
 if "playwright" not in current.get("mcp_servers", {}):
     blocks.append(
         "[mcp_servers.playwright]\n"
