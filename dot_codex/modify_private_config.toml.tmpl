@@ -73,6 +73,14 @@ if "browser-harness" not in current.get("mcp_servers", {}):
 {{ end }}
 output = current_text
 
+# Status line: model + context window only (no five-hour/weekly limits).
+STATUS_LINE = 'status_line = ["model-with-reasoning", "context-remaining", "current-dir"]\n'
+if "status_line" not in current.get("tui", {}):
+    if "tui" in current:
+        output = re.sub(r"(?m)^\[tui\]\n", "[tui]\n" + STATUS_LINE, output, count=1)
+    else:
+        blocks.append("[tui]\n" + STATUS_LINE)
+
 # Remove legacy Caveman routing while preserving all unrelated Codex settings.
 output = re.sub(
     r"(?ms)^# >>> caveman:native-root\n.*?^# <<< caveman:native-root\n?",
