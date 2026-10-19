@@ -7,7 +7,9 @@ uv tool install --python 3.12 --upgrade --force 'browser-harness[mcp]'
 browser-harness recordings disable
 browser-harness telemetry disable
 {{ if contains "microsoft" (lower .chezmoi.kernel.osrelease) }}
-# WSL: relay CDP to Windows Brave (NAT networking hides its 127.0.0.1:9222).
+# WSL: relay CDP to Windows Brave (NAT networking hides its 127.0.0.1 port).
+# Relay follows Brave's DevToolsActivePort port (2026-10-19).
 systemctl --user daemon-reload
-systemctl --user enable --now browser-harness-cdp-relay.service
+systemctl --user enable browser-harness-cdp-relay.service
+systemctl --user restart browser-harness-cdp-relay.service
 {{ end }}{{ end -}}

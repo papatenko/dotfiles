@@ -44,6 +44,7 @@
 {{ if and (ne .chezmoi.os "windows") (ne .chezmoi.hostname "hermes") }}    "browser-harness": {
       "type": "local",
       "command": ["browser-harness-mcp"],
+      "environment": { "BU_NAME": "brave" },
       "enabled": true
     },
 {{ end }}{{ if ne .chezmoi.hostname "hermes" }}    "omniroute-mcp": {

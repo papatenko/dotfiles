@@ -87,15 +87,25 @@ if "hister" not in current.get("mcp_servers", {}):
         "[mcp_servers.hister]\n"
         'url = "http://192.168.0.200:4433/mcp"\n'
     )
+output = current_text
 {{ if and (ne .chezmoi.os "windows") (ne .chezmoi.hostname "hermes") }}
-if "browser-harness" not in current.get("mcp_servers", {}):
+# Own daemon name so a Browser Lab BU_CDP_URL session on "default" can't hijack it.
+BH_ENV = 'env = { BU_NAME = "brave" }\n'
+browser_harness = current.get("mcp_servers", {}).get("browser-harness")
+if browser_harness is None:
     blocks.append(
         "[mcp_servers.browser-harness]\n"
         'command = "browser-harness-mcp"\n'
+        + BH_ENV
+    )
+elif "env" not in browser_harness:
+    output = re.sub(
+        r"(?m)^\[mcp_servers\.browser-harness\]\n",
+        lambda m: m.group(0) + BH_ENV,
+        output,
+        count=1,
     )
 {{ end }}
-output = current_text
-
 # Status line: model + context window only (no five-hour/weekly limits).
 STATUS_LINE = 'status_line = ["model-with-reasoning", "context-remaining", "current-dir"]\n'
 if "status_line" not in current.get("tui", {}):
