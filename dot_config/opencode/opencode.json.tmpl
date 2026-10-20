@@ -30,6 +30,22 @@
       "enabled": true,
       "timeout": 15000
     },
+{{ end }}{{ if ne .chezmoi.hostname "hermes" }}    "n8n": {
+      "type": "remote",
+      "url": "https://n8n.papatenko.org/mcp-server/http",
+      "enabled": true
+    },
+    "obsidian-vault": {
+      "type": "local",
+      "command": ["uvx", "mcp-obsidian"],
+      "environment": {
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+        "OBSIDIAN_API_KEY": "{env:OBSIDIAN_API_KEY}",
+        "OBSIDIAN_HOST": "127.0.0.1",
+        "OBSIDIAN_PORT": "27124"
+      },
+      "enabled": true
+    },
 {{ end }}    "notebooklm": {
       "type": "local",
       "command": ["npx", "-y", "notebooklm-mcp@latest"],

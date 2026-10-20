@@ -25,13 +25,12 @@ def portable_home(value):
 
 current = portable_home(current)
 
-desired = {"url": "http://127.0.0.1:9011/mcp", "type": "http"}
 servers = current.get("mcpServers")
-if not isinstance(servers, dict):
+if isinstance(servers, dict):
+    for name in ("browseros", "browseros-neo", "caveman"):
+        servers.pop(name, None)
+else:
     servers = {}
-had_legacy = "browseros" in servers
-servers.pop("browseros", None)
-servers["browseros-neo"] = desired
 {{ if ne .chezmoi.os "windows" }}servers.setdefault("browser-harness", {"type": "stdio", "command": "browser-harness-mcp", "args": []})
 {{ end }}current["mcpServers"] = servers
 sys.stdout.write(json.dumps(current, indent=2, ensure_ascii=False) + "\n")
