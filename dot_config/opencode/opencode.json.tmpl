@@ -100,8 +100,28 @@
       "type": "remote",
       "url": "http://192.168.0.200:4433/mcp",
       "enabled": true
+    },
+{{ if and (ne .chezmoi.os "windows") (ne .chezmoi.hostname "hermes") }}    "google-workspace-personal": {
+      "type": "local",
+      "command": ["uvx", "workspace-mcp", "--single-user", "--tools", "gmail", "drive", "calendar", "docs", "sheets", "slides"],
+      "environment": {
+        "GOOGLE_CLIENT_SECRET_PATH": "{{ .chezmoi.homeDir }}/.config/google-workspace-mcp/client_secret.json",
+        "WORKSPACE_MCP_CREDENTIALS_DIR": "{{ .chezmoi.homeDir }}/.config/google-workspace-mcp/personal",
+        "USER_GOOGLE_EMAIL": "jkcondor13@gmail.com"
+      },
+      "enabled": true
+    },
+    "google-workspace-work": {
+      "type": "local",
+      "command": ["uvx", "workspace-mcp", "--single-user", "--tools", "gmail", "drive", "calendar", "docs", "sheets", "slides"],
+      "environment": {
+        "GOOGLE_CLIENT_SECRET_PATH": "{{ .chezmoi.homeDir }}/.config/google-workspace-mcp/client_secret.json",
+        "WORKSPACE_MCP_CREDENTIALS_DIR": "{{ .chezmoi.homeDir }}/.config/google-workspace-mcp/work",
+        "USER_GOOGLE_EMAIL": "justin@momentafire.com"
+      },
+      "enabled": true
     }
-  },
+{{ end }}  },
   "instructions": [
     "{{ .chezmoi.homeDir }}/.config/opencode/global-instructions.md"
   ]
