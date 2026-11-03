@@ -138,7 +138,8 @@ ForegroundVisited=155,89,182
 [General]
 AccentColor=146,110,228
 BrowserApplication=brave-browser.desktop
-ColorSchemeHash=9d38eb71ded8ff549da26d57d7cbab9164da243a
+ColorScheme=BreezeDark
+ColorSchemeHash=0efb452114ece4d3338057cb89f434aff85d80d0
 LastUsedCustomAccentColor=146,110,228
 Name=Catppuccin Mocha Blue
 TerminalApplication=kitty +open %U
@@ -148,19 +149,23 @@ XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
 accentActiveTitlebar=false
-font=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Inter Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Inter Variable,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 shadeSortColumn=true
-widgetStyle=Lightly
+smallestReadableFont=Inter Variable,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Inter Variable,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Papirus-Dark
 
 [KDE]
-AnimationDurationFactor=0
+AnimationDurationFactor=0.5
 LookAndFeelPackage=org.kde.breezedark.desktop
 ShowDeleteCommand=false
 contrast=4
 frameContrast=0.2
+widgetStyle=Klassy
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -201,6 +206,7 @@ Theme=freedesktop
 [WM]
 activeBackground=39,44,49
 activeBlend=252,252,252
+activeFont=Inter Variable,10,-1,5,600,0,0,0,0,0,0,0,0,0,0,1
 activeForeground=252,252,252
 inactiveBackground=32,36,40
 inactiveBlend=161,169,177

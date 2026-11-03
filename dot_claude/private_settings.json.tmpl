@@ -140,6 +140,12 @@
 {{ end }}
     ]
   },
+  "omcHud": {
+    "elements": {
+      "rateLimits": false,
+      "contextBar": true
+    }
+  },
   "statusLine": {
     "type": "command",
     "command": {{ if eq .chezmoi.os "windows" }}"bash -c 'p=$(ls -d \"$HOME\"/.claude/plugins/cache/openviking/openviking-memory/*/scripts/statusline.mjs 2>/dev/null | sort -V | tail -1); [ -n \"$p\" ] && exec node \"$p\"; exit 0'"{{ else }}"node ${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hud/omc-hud.mjs"{{ end }}

@@ -1,8 +1,8 @@
 [Unit]
-Description=Relay WSL 127.0.0.1:9222 to Windows Brave CDP for browser-harness
+Description=Relay Windows Brave CDP (port from DevToolsActivePort) into WSL for browser-harness
 
 [Service]
-ExecStart=/usr/bin/python3 %h/Nextcloud/Apps/Obsidian/skills/technical/browser-harness/scripts/cdp-wsl-relay.py 9222
+ExecStart=/usr/bin/python3 %h/Nextcloud/Apps/Obsidian/skills/technical/browser-harness/scripts/cdp-wsl-relay.py
 Restart=on-failure
 RestartSec=5
 

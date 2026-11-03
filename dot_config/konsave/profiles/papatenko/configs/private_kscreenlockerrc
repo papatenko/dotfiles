@@ -6,5 +6,5 @@ Autolock=false
 LockOnResume=false
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=file:///home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
-PreviewImage=file:///home/jkondratenko/Pictures/wallpapers/grey/frieren.jpeg
+Image=/home/jkondratenko/Nextcloud/Pictures/wallpapers/purple/wp7482480-going-merry-wallpapers.jpg
+PreviewImage=/home/jkondratenko/Nextcloud/Pictures/wallpapers/purple/wp7482480-going-merry-wallpapers.jpg

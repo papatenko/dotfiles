@@ -25,13 +25,28 @@ def portable_home(value):
 
 current = portable_home(current)
 
-desired = {"url": "http://127.0.0.1:9011/mcp", "type": "http"}
 servers = current.get("mcpServers")
-if not isinstance(servers, dict):
+if isinstance(servers, dict):
+    for name in ("browseros", "browseros-neo", "caveman"):
+        servers.pop(name, None)
+else:
     servers = {}
-had_legacy = "browseros" in servers
-servers.pop("browseros", None)
-servers["browseros-neo"] = desired
+
+# Claude Code does not expand a literal "$HOME" in stdio MCP launch fields
+# (ENOENT on spawn), so keep real per-machine paths there.
+def expand_home(value):
+    if isinstance(value, str):
+        return value.replace("$HOME", home)
+    if isinstance(value, list):
+        return [expand_home(item) for item in value]
+    return value
+
+for server in servers.values():
+    if isinstance(server, dict):
+        for field in ("command", "args"):
+            if field in server:
+                server[field] = expand_home(server[field])
+
 {{ if ne .chezmoi.os "windows" }}servers.setdefault("browser-harness", {"type": "stdio", "command": "browser-harness-mcp", "args": []})
 {{ end }}current["mcpServers"] = servers
 sys.stdout.write(json.dumps(current, indent=2, ensure_ascii=False) + "\n")

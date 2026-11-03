@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Managed by chezmoi (dot_codex/modify_config.toml.tmpl).
 # Ensures the OpenViking + Composio plugin/marketplace registrations and
-# Playwright MCP registration are
+# Playwright + Hister MCP registrations are
 # present in ~/.codex/config.toml
 # without touching projects (per-machine trust levels),
 # or any other existing content in the file.
@@ -53,20 +53,84 @@ if "composio" not in marketplaces:
         'source = "https://github.com/ComposioHQ/composio-plugin-openai.git"\n'
     )
 
+if not plugins.get("ponytail@ponytail", {}).get("enabled"):
+    blocks.append(
+        '[plugins."ponytail@ponytail"]\n'
+        "enabled = true\n"
+    )
+
+if "ponytail" not in marketplaces:
+    blocks.append(
+        "[marketplaces.ponytail]\n"
+        'source_type = "git"\n'
+        'source = "https://github.com/DietrichGebert/ponytail.git"\n'
+    )
+
+if "n8n" not in current.get("mcp_servers", {}):
+    blocks.append(
+        "[mcp_servers.n8n]\n"
+        'url = "https://n8n.papatenko.org/mcp-server/http"\n'
+    )
+if "pressable" not in current.get("mcp_servers", {}):
+    blocks.append(
+        "[mcp_servers.pressable]\n"
+        'url = "https://mcp.pressable.com"\n'
+    )
 if "playwright" not in current.get("mcp_servers", {}):
     blocks.append(
         "[mcp_servers.playwright]\n"
         'command = "npx"\n'
         'args = ["-y", "@playwright/mcp@latest"]\n'
     )
+if "hister" not in current.get("mcp_servers", {}):
+    blocks.append(
+        "[mcp_servers.hister]\n"
+        'url = "http://192.168.0.200:4433/mcp"\n'
+    )
+output = current_text
 {{ if and (ne .chezmoi.os "windows") (ne .chezmoi.hostname "hermes") }}
-if "browser-harness" not in current.get("mcp_servers", {}):
+# Own daemon name so a Browser Lab BU_CDP_URL session on "default" can't hijack it.
+BH_ENV = 'env = { BU_NAME = "brave" }\n'
+browser_harness = current.get("mcp_servers", {}).get("browser-harness")
+if browser_harness is None:
     blocks.append(
         "[mcp_servers.browser-harness]\n"
         'command = "browser-harness-mcp"\n'
+        + BH_ENV
+    )
+elif "env" not in browser_harness:
+    output = re.sub(
+        r"(?m)^\[mcp_servers\.browser-harness\]\n",
+        lambda m: m.group(0) + BH_ENV,
+        output,
+        count=1,
     )
 {{ end }}
-output = current_text
+# Keep Codex status-line settings consistent across Fedora and desktop-wsl.
+STATUS_LINE_ITEMS = ["model-with-reasoning", "current-dir", "git-branch", "pull-request-number", "context-used", "five-hour-limit", "weekly-limit"]
+STATUS_LINE = 'status_line = ["model-with-reasoning", "current-dir", "git-branch", "pull-request-number", "context-used", "five-hour-limit", "weekly-limit"]\n'
+tui = current.get("tui", {})
+if tui.get("status_line") != STATUS_LINE_ITEMS:
+    if "tui" not in current:
+        blocks.append("[tui]\n" + STATUS_LINE)
+    elif "status_line" in tui:
+        pattern = r"(?ms)^status_line[ \t]*=[ \t]*\[[\s\S]*?\][ \t]*(?:#.*)?$"
+        output, replaced = re.subn(pattern, STATUS_LINE.rstrip("\n"), output, count=1)
+        if replaced != 1:
+            sys.stderr.write("modify_config.toml.tmpl: could not safely replace tui.status_line; leaving untouched\n")
+            sys.stdout.write(current_text)
+            sys.exit(0)
+    else:
+        output, inserted = re.subn(
+            r"(?m)^\[tui\][ \t]*$",
+            lambda match: match.group(0) + "\n" + STATUS_LINE.rstrip("\n"),
+            output,
+            count=1,
+        )
+        if inserted != 1:
+            sys.stderr.write("modify_config.toml.tmpl: could not safely add tui.status_line; leaving untouched\n")
+            sys.stdout.write(current_text)
+            sys.exit(0)
 
 # Remove legacy Caveman routing while preserving all unrelated Codex settings.
 output = re.sub(
