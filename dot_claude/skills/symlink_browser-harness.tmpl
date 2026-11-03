@@ -1,1 +1,1 @@
-{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian/skills/technical/browser-harness
+{{ if eq .chezmoi.hostname "hermes" }}{{ .chezmoi.homeDir }}/.hermes/skills/devops/browser-harness{{ else }}{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian/skills/technical/browser-harness{{ end }}
