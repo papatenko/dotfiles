@@ -9,7 +9,7 @@
       "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
     ]
   },
-  "model": "{{ if eq .chezmoi.hostname "hermes" }}haiku{{ else }}sonnet{{ end }}",
+  "model": "{{ if eq .chezmoi.hostname "hermes" }}haiku{{ else if eq .chezmoi.hostname "jkondratenko" }}opus{{ else }}sonnet{{ end }}",
   "preferredNotifChannel": "terminal_bell",
   "hooks": {
 {{ if ne .chezmoi.hostname "hermes" }}    "SessionStart": [
@@ -142,8 +142,11 @@
   },
   "omcHud": {
     "elements": {
-      "rateLimits": false,
-      "contextBar": true
+      "rateLimits": true,
+      "omcLabel": false,
+      "contextBar": true,
+      "updateNotification": false,
+      "showSessionDuration": false
     }
   },
   "statusLine": {
