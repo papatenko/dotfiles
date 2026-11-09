@@ -129,6 +129,10 @@ if [ -f "$HOME/.env.bitwarden" ]; then
   set +a
 fi
 
+# Second Claude Code account (separate login); plain `claude` stays on the default account.
+# ~/.claude-team is built by run_onchange_after_claude-team.sh.
+alias claude-team='CLAUDE_CONFIG_DIR="$HOME/.claude-team" claude'
+
 # Machine-local shell settings; intentionally not managed by Chezmoi.
 [[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
