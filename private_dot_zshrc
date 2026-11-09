@@ -147,3 +147,19 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+# Codex's Linux clipboard falls back to X11 when GNOME lacks data-control.
+# GNOME rotates the Xwayland auth file, so select the one that can reach DISPLAY.
+codex() {
+  local auth
+  if [[ -n ${WAYLAND_DISPLAY:-} && -n ${DISPLAY:-} ]] && ! xdpyinfo -display "$DISPLAY" >/dev/null 2>&1; then
+    for auth in /run/user/"$UID"/.mutter-Xwaylandauth.*(N); do
+      [[ -r $auth ]] || continue
+      if XAUTHORITY="$auth" xdpyinfo -display "$DISPLAY" >/dev/null 2>&1; then
+        XAUTHORITY="$auth" command codex "$@"
+        return
+      fi
+    done
+  fi
+  command codex "$@"
+}
