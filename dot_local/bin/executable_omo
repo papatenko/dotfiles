@@ -1,3 +1,0 @@
-#!/bin/sh
-# opencode + oh-my-openagent; plain `opencode` stays vanilla
-exec env OPENCODE_CONFIG="$HOME/.config/opencode-omo/opencode.json" opencode "$@"
