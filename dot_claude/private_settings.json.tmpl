@@ -1,9 +1,17 @@
 {
-{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }}  "env": {
-    "ENABLE_TOOL_SEARCH": "auto",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  "env": {
+{{ if ne .chezmoi.hostname "DESKTOP-17L7TR0" }}    "ENABLE_TOOL_SEARCH": "auto",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+{{ end }}    "OPENVIKING_RECALL_COMPRESS": "off",
+    "OPENVIKING_RECALL_LIMIT": "3",
+    "OPENVIKING_RECALL_TOKEN_BUDGET": "600",
+    "OPENVIKING_SCORE_THRESHOLD": "0.5",
+    "OPENVIKING_PROFILE_TOKEN_BUDGET": "800",
+    "OPENVIKING_RESUME_CONTEXT_BUDGET": "2000",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "60"
   },
-{{ end }}  "permissions": {
+  "permissions": {
     "defaultMode": "plan",
     "additionalDirectories": [
       "{{ .chezmoi.homeDir }}/{{ if eq .chezmoi.os "windows" }}Nextcloud2{{ else }}Nextcloud{{ end }}/Apps/Obsidian"
@@ -57,10 +65,10 @@
     ]
   },
   "enabledPlugins": {
-    "composio@composio": true,
+    "composio@composio": false,
     "warp@claude-code-warp": true,
     "openviking-memory@openviking": true,
-    "oh-my-claudecode@omc": true
+    "oh-my-claudecode@omc": false
   },
   "extraKnownMarketplaces": {
     "composio": {

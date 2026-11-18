@@ -27,7 +27,7 @@ current = portable_home(current)
 
 servers = current.get("mcpServers")
 if isinstance(servers, dict):
-    for name in ("browseros", "browseros-neo", "caveman"):
+    for name in ("browseros", "browseros-neo", "caveman", "obsidian-vault", "browser-harness"):
         servers.pop(name, None)
 else:
     servers = {}
@@ -47,6 +47,6 @@ for server in servers.values():
             if field in server:
                 server[field] = expand_home(server[field])
 
-{{ if ne .chezmoi.os "windows" }}servers.setdefault("browser-harness", {"type": "stdio", "command": "browser-harness-mcp", "args": []})
-{{ end }}current["mcpServers"] = servers
+# browser-harness MCP removed 2026-11-18 (token audit); use the browser-harness skill/CLI.
+current["mcpServers"] = servers
 sys.stdout.write(json.dumps(current, indent=2, ensure_ascii=False) + "\n")
