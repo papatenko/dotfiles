@@ -71,13 +71,14 @@
       },
       "oauth": false
     },
-{{ end }}    "coolify": {
-      "type": "local",
-      "command": ["npx", "-y", "@masonator/coolify-mcp@latest"],
-      "enabled": true,
-      "env": {
-        "COOLIFY_API_TOKEN": "<YOUR_COOLIFY_TOKEN>",
-        "COOLIFY_API_URL": "https://<YOUR_COOLIFY_URL>"
+{{ end }}    "servers": {
+      "coolify": {
+        "type": "local",
+        "command": ["npx", "-y", "@masonator/coolify-mcp@latest"],
+        "environment": {
+          "COOLIFY_ACCESS_TOKEN": "{env:COOLIFY_ACCESS_TOKEN}",
+          "COOLIFY_BASE_URL": "http://192.168.0.201:8000"
+        }
       }
     },
     "composio": {
@@ -109,7 +110,7 @@
         "WORKSPACE_MCP_CREDENTIALS_DIR": "{{ .chezmoi.homeDir }}/.config/google-workspace-mcp/personal",
         "USER_GOOGLE_EMAIL": "jkcondor13@gmail.com"
       },
-      "enabled": true
+      "enabled": false
     },
     "google-workspace-work": {
       "type": "local",
@@ -119,7 +120,7 @@
         "WORKSPACE_MCP_CREDENTIALS_DIR": "{{ .chezmoi.homeDir }}/.config/google-workspace-mcp/work",
         "USER_GOOGLE_EMAIL": "justin@momentafire.com"
       },
-      "enabled": true
+      "enabled": false
     }
 {{ end }}  },
   "instructions": [
